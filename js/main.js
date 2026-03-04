@@ -73,8 +73,8 @@ const I18N = {
     stmt_text:'Andrelook is a world brands store with a personal touch. Large selection, size assistance and fast replies. For those who appreciate quality — in Tallinn or delivered across Europe.',
     contact_title:'Get in touch', contact_sub:'Fastest replies are on Telegram.\nWe\'ll help you choose, size and order.',
     contact_btn:'Telegram',
-    filter_all:'All', filter_suits:'Suits', filter_outer:'Outerwear',
-    filter_knit:'Knitwear', filter_shirts:'Shirts', filter_trous:'Trousers',
+    filter_all:'All', filter_warm:'Warm Jackets', filter_vests:'Vests',
+    filter_light:'Light Jackets', filter_hoodies:'Hoodies', filter_tshirts:'T-Shirts',
     cat_season:'Collection 2025',
     inquiry_btn:'Inquire', on_request:'On request',
     modal_label:'Request info',
@@ -109,8 +109,8 @@ const I18N = {
     stmt_text:'Andrelook — магазин мировых брендов с личным подходом. Большой ассортимент, помощь с размером и быстрые ответы. Работаем для тех, кто ценит качество — вживую в Таллине или с доставкой по Европе.',
     contact_title:'Написать нам', contact_sub:'Самые быстрые ответы — в Telegram.\nПоможем с выбором, размером и оформлением заказа.',
     contact_btn:'Telegram',
-    filter_all:'Все', filter_suits:'Костюмы', filter_outer:'Верхняя одежда',
-    filter_knit:'Трикотаж', filter_shirts:'Рубашки', filter_trous:'Брюки',
+    filter_all:'Все', filter_warm:'Тёплые куртки', filter_vests:'Жилетки',
+    filter_light:'Лёгкие куртки', filter_hoodies:'Кофты', filter_tshirts:'Футболки',
     cat_season:'Коллекция 2025',
     inquiry_btn:'Запросить', on_request:'По запросу',
     modal_label:'Запросить информацию',
@@ -145,8 +145,8 @@ const I18N = {
     stmt_text:'Andrelook on maailma brändide pood isikliku lähenemisega. Suur valik, suuruse abi ja kiired vastused. Tallinnas isiklikult või tarniga üle Euroopa.',
     contact_title:'Võta ühendust', contact_sub:'Kiiremad vastused on Telegramis.\nAitame valida ja tellimust vormistada.',
     contact_btn:'Telegram',
-    filter_all:'Kõik', filter_suits:'Ülikonnad', filter_outer:'Pealisrõivad',
-    filter_knit:'Kudumid', filter_shirts:'Särgid', filter_trous:'Püksid',
+    filter_all:'Kõik', filter_warm:'Soojad jakid', filter_vests:'Vestid',
+    filter_light:'Kerged jakid', filter_hoodies:'Kampsunid', filter_tshirts:'T-särgid',
     cat_season:'Kollektsioon 2025',
     inquiry_btn:'Küsi', on_request:'Päringul',
     modal_label:'Küsi infot',
@@ -160,95 +160,84 @@ const I18N = {
 
 /* ── Products ────────────────────────────────── */
 const PRODUCTS = [
+  // ─ ТЁПЛЫЕ КУРТКИ ─────────────────────────────
   {
-    id:1, names:{en:'Structured Blazer',ru:'Структурированный жакет',et:'Struktureeritud jakk'},
-    category:'suits', cats:{en:'Suits',ru:'Костюмы',et:'Ülikonnad'},
-    descs:{
-      en:'Straight-cut blazer in Italian wool. Shaped lapel, fitted lining, two chest pockets. A wardrobe staple for office and evening.',
-      ru:'Жакет прямого силуэта из итальянской шерсти. Фигурный лацкан, приталенная подкладка, два нагрудных кармана. Универсальная вещь для офиса и вечера.',
-      et:'Sirge lõikega jakk Itaalia villast. Kujundatud reväärid, tailored vooder, kaks rinnataskut.',
+    id: 1,
+    names: { en: 'Moncler Down Jacket', ru: 'Пуховик Moncler', et: 'Moncler unejope' },
+    category: 'warm-jackets',
+    cats: { en: 'Warm Jackets', ru: 'Тёплые куртки', et: 'Soojad jakid' },
+    descs: {
+      en: 'Classic Moncler down jacket. Water-resistant nylon shell, white goose down fill. Iconic badge on sleeve.',
+      ru: 'Классический пуховик Moncler. Водоотталкивающий нейлон, наполнитель — белый гусиный пух. Фирменный шеврон на рукаве.',
+      et: 'Klassikaline Moncler unejope. Veekindel nailon, valge haneuled täidis. Ikoonilised õlalapp.',
     },
-    images:[], color:'#2B2B28', brand:'Zara / Massimo Dutti',
+    images: [],
+    color: '#1C1C1A',
+    brand: 'Moncler',
   },
+
+  // ─ ЖИЛЕТКИ ───────────────────────────────────
   {
-    id:2, names:{en:'Double-Breasted Coat',ru:'Двубортное пальто',et:'Kahereana mantel'},
-    category:'outerwear', cats:{en:'Outerwear',ru:'Верхняя одежда',et:'Pealisrõivad'},
-    descs:{
-      en:'Classic coat in heavy wool blend. Double-breasted closure, wide lapels, viscose lining. Timeless silhouette.',
-      ru:'Классическое пальто из плотной смеси шерсти. Двубортная застёжка, широкие лацканы, подкладка из вискозы. Вневременной силуэт.',
-      et:'Klassikaline mantel tihedast villasegust. Kahereane kinnistus, laiad reväärid, viskoos vooder.',
+    id: 2,
+    names: { en: 'Down Vest', ru: 'Пуховый жилет', et: 'Sulepuhk vest' },
+    category: 'vests',
+    cats: { en: 'Vests', ru: 'Жилетки', et: 'Vestid' },
+    descs: {
+      en: 'Lightweight down vest. Quilted construction, zip pockets, packable design.',
+      ru: 'Лёгкий пуховый жилет. Стёганая конструкция, карманы на молнии, компактный.',
+      et: 'Kerge sulepuhk vest. Quilitud konstruktsioon, lukuga taskud.',
     },
-    images:[], color:'#3D3833', brand:'Max Mara',
+    images: [],
+    color: '#3D3028',
+    brand: 'Stone Island',
   },
+
+  // ─ ЛЁГКИЕ КУРТКИ ─────────────────────────────
   {
-    id:3, names:{en:'Cashmere Sweater',ru:'Кашемировый свитер',et:'Kašmiirpunn'},
-    category:'knitwear', cats:{en:'Knitwear',ru:'Трикотаж',et:'Kudumid'},
-    descs:{
-      en:'Premium Mongolian cashmere. Fine knit, round neck, oversized cut. Shoulder seam shifted for a relaxed, elevated look.',
-      ru:'Монгольский кашемир высшего сорта. Мелкая вязка, круглый вырез, объёмный крой. Плечевой шов смещён для расслабленного образа.',
-      et:'Premium Mongoolia kaašmiir. Peen kude, ümar kaelaava, oversized lõige.',
+    id: 3,
+    names: { en: 'Bomber Jacket', ru: 'Куртка-бомбер', et: 'Pommitaja jope' },
+    category: 'light-jackets',
+    cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
+    descs: {
+      en: 'Classic bomber silhouette. Lightweight shell, ribbed cuffs and hem, zip closure.',
+      ru: 'Классический силуэт бомбера. Лёгкая оболочка, рибана на манжетах и поясе, застёжка-молния.',
+      et: 'Klassikaline pommitaja siluett. Kerge kate, ribitud mansettid.',
     },
-    images:[], color:'#B5A898', brand:'Loro Piana',
+    images: [],
+    color: '#2B2B28',
+    brand: 'Acne Studios',
   },
+
+  // ─ КОФТЫ ─────────────────────────────────────
   {
-    id:4, names:{en:'Oversized Linen Shirt',ru:'Льняная рубашка оверсайз',et:'Lina särgid oversized'},
-    category:'shirts', cats:{en:'Shirts',ru:'Рубашки',et:'Särgid'},
-    descs:{
-      en:'100% washed linen. Elongated cut, stand collar, no-button cuffs. Effortlessly cool for all seasons.',
-      ru:'100% стираный лён. Удлинённый крой, воротник-стойка, манжеты без пуговиц. Беззаботный стиль для любого сезона.',
-      et:'100% pestud lina. Pikendatud lõige, püstkraed, nuputa mansettid.',
+    id: 4,
+    names: { en: 'Zip Hoodie', ru: 'Худи на молнии', et: 'Lukuga kapuuts' },
+    category: 'hoodies',
+    cats: { en: 'Hoodies', ru: 'Кофты', et: 'Kampsunid' },
+    descs: {
+      en: 'Premium cotton zip hoodie. Relaxed fit, kangaroo pocket, brushed interior.',
+      ru: 'Худи на молнии из премиального хлопка. Свободный крой, карман-кенгуру, начёсанная подкладка.',
+      et: 'Premium puuvillane lukuga kapuuts. Lõdv lõige, känguru tasku.',
     },
-    images:[], color:'#D9D2C6', brand:'Loro Piana / Brunello',
+    images: [],
+    color: '#5C574F',
+    brand: 'Essentials / Fear of God',
   },
+
+  // ─ ФУТБОЛКИ ──────────────────────────────────
   {
-    id:5, names:{en:'Tailored Trousers',ru:'Брюки со стрелкой',et:'Püksid voltidega'},
-    category:'trousers', cats:{en:'Trousers',ru:'Брюки',et:'Püksid'},
-    descs:{
-      en:'Straight cut, high waist. Italian stretch wool, sharp crease, side pockets. Elegant and comfortable all day.',
-      ru:'Прямой крой, высокая посадка. Итальянская шерсть-стрейч, чёткая стрелка, боковые карманы.',
-      et:'Sirge lõige, kõrge vöökohad. Itaalia stretch vill, terav voltide joon, külgtaskud.',
+    id: 5,
+    names: { en: 'Oversized Tee', ru: 'Футболка оверсайз', et: 'Oversized T-särk' },
+    category: 'tshirts',
+    cats: { en: 'T-Shirts', ru: 'Футболки', et: 'T-särgid' },
+    descs: {
+      en: '100% premium cotton. Oversized silhouette, dropped shoulders, ribbed collar.',
+      ru: '100% премиальный хлопок. Оверсайз силуэт, заниженные плечи, рибана на вороте.',
+      et: '100% premium puuvill. Oversized siluett, langetatud õlad.',
     },
-    images:[], color:'#5C574F', brand:'Theory / Acne Studios',
-  },
-  {
-    id:6, names:{en:'Silk Blouse',ru:'Шёлковая блуза',et:'Siidpluus'},
-    category:'shirts', cats:{en:'Shirts',ru:'Рубашки',et:'Särgid'},
-    descs:{
-      en:'Natural silk 22 momme. Relaxed cut, V-neck, concealed buttons. Luxurious drape for effortless dressing.',
-      ru:'Натуральный шёлк 22 momme. Свободный крой, V-образный вырез, потайные пуговицы. Роскошное падение ткани.',
-      et:'Naturaalne siid 22 momme. Vaba lõige, V-kaelus, varjatud nupud.',
-    },
-    images:[], color:'#E8E0D5', brand:'Valentino / Celine',
-  },
-  {
-    id:7, names:{en:'Cocoon Puffer',ru:'Пуховик-кокон',et:'Kookon-sulepuhk'},
-    category:'outerwear', cats:{en:'Outerwear',ru:'Верхняя одежда',et:'Pealisrõivad'},
-    descs:{
-      en:'Cocoon silhouette, cropped cut. White goose down 800 fill power, matte nylon shell. Maximum warmth, minimal bulk.',
-      ru:'Силуэт кокон, укороченный крой. Белый гусиный пух 800 fill power, матовая нейлоновая оболочка. Максимум тепла, минимум объёма.',
-      et:'Kookonsiluett, lühendatud lõige. Valge haneuled 800 fill power, matt nailon kate.',
-    },
-    images:[], color:'#C5BDB4', brand:'Moncler',
-  },
-  {
-    id:8, names:{en:'Chunky Cardigan',ru:'Вязаный кардиган',et:'Jäme kardigan'},
-    category:'knitwear', cats:{en:'Knitwear',ru:'Трикотаж',et:'Kudumid'},
-    descs:{
-      en:'Merino wool, chunky knit. Long cut, patch pockets, buffalo horn buttons. The perfect oversized layer.',
-      ru:'Мериносовая шерсть, крупная вязка. Длинный крой, накладные карманы, пуговицы из буйволиного рога.',
-      et:'Meriinosvill, jäme kude. Pikk lõige, pealeõmmeldud taskud, pühvelsarve nupud.',
-    },
-    images:[], color:'#8C8278', brand:'Toteme / Aritzia',
-  },
-  {
-    id:9, names:{en:'Wide Linen Trousers',ru:'Льняные брюки',et:'Laiad linapüksid'},
-    category:'trousers', cats:{en:'Trousers',ru:'Брюки',et:'Püksid'},
-    descs:{
-      en:'100% linen. Wide cut, elastic drawstring waist. Relaxed and breathable — summer collection.',
-      ru:'100% лён. Широкий крой, эластичный пояс с завязками. Свободно и дышаще — летняя коллекция.',
-      et:'100% lina. Lai lõige, elastne nöörpants. Lõdv ja hingav — suvekollektsioon.',
-    },
-    images:[], color:'#DDD7CE', brand:'Zara Premium / Arket',
+    images: [],
+    color: '#B5A898',
+    brand: 'Stone Island / CP Company',
   },
 ];
 
