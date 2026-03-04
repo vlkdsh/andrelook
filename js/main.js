@@ -4,10 +4,8 @@
 
 /* ── Config ─────────────────────────────────── */
 const CONFIG = {
-  telegram : 'andrelook',       // username без @
-  whatsapp : '79000000000',     // номер без +, без пробелов
-  tgText   : (name) => `Здравствуйте! Хочу узнать подробнее о позиции: «${name}».`,
-  waText   : (name) => `Здравствуйте! Хочу узнать подробнее о позиции: «${name}».`,
+  telegram : 'andrelookstore',
+  tgText   : (name) => `Здравствуйте! Интересует позиция: «${name}». Подскажите, пожалуйста, наличие и размеры.`,
 };
 
 /* ── Product Data ────────────────────────────── */
@@ -18,7 +16,6 @@ const PRODUCTS = [
     category: 'suits',
     categoryLabel: 'Костюмы',
     description: 'Жакет прямого силуэта из итальянской шерсти. Фигурный лацкан, приталенная подкладка, два нагрудных кармана.',
-    price: 'По запросу',
     image: '',
     color: '#2B2B28',
   },
@@ -28,7 +25,6 @@ const PRODUCTS = [
     category: 'outerwear',
     categoryLabel: 'Верхняя одежда',
     description: 'Классическое пальто из плотной шерсти. Двубортная застёжка, широкие лацканы, подкладка из вискозы.',
-    price: 'По запросу',
     image: '',
     color: '#3D3833',
   },
@@ -37,8 +33,7 @@ const PRODUCTS = [
     name: 'Кашемировый свитер',
     category: 'knitwear',
     categoryLabel: 'Трикотаж',
-    description: 'Монгольский кашемир высшего сорта. Мелкая вязка, круглый вырез, объёмный крой. Плечевой шов смещён.',
-    price: 'По запросу',
+    description: 'Монгольский кашемир высшего сорта. Мелкая вязка, круглый вырез, объёмный крой.',
     image: '',
     color: '#B5A898',
   },
@@ -47,8 +42,7 @@ const PRODUCTS = [
     name: 'Льняная рубашка оверсайз',
     category: 'shirts',
     categoryLabel: 'Рубашки',
-    description: 'Бельгийский стираный лён 100%. Удлинённый крой, воротник-стойка, манжеты без пуговиц.',
-    price: 'По запросу',
+    description: 'Стираный лён 100%. Удлинённый крой, воротник-стойка, свободный силуэт.',
     image: '',
     color: '#D9D2C6',
   },
@@ -57,8 +51,7 @@ const PRODUCTS = [
     name: 'Брюки со стрелкой',
     category: 'trousers',
     categoryLabel: 'Брюки',
-    description: 'Прямой крой, высокая посадка. Шерсть-стрейч итальянского производства, чёткая стрелка, боковые карманы.',
-    price: 'По запросу',
+    description: 'Прямой крой, высокая посадка. Шерсть-стрейч итальянского производства, чёткая стрелка.',
     image: '',
     color: '#5C574F',
   },
@@ -68,7 +61,6 @@ const PRODUCTS = [
     category: 'shirts',
     categoryLabel: 'Рубашки',
     description: 'Натуральный шёлк 22 momme. Свободный крой, V-образный вырез, потайные пуговицы.',
-    price: 'По запросу',
     image: '',
     color: '#E8E0D5',
   },
@@ -77,8 +69,7 @@ const PRODUCTS = [
     name: 'Пуховик-кокон',
     category: 'outerwear',
     categoryLabel: 'Верхняя одежда',
-    description: 'Форма кокон, укороченный силуэт. Белый гусиный пух 800 fill power, матовая нейлоновая оболочка.',
-    price: 'По запросу',
+    description: 'Форма кокон, укороченный силуэт. Белый гусиный пух 800 fill power, матовая оболочка.',
     image: '',
     color: '#C5BDB4',
   },
@@ -87,8 +78,7 @@ const PRODUCTS = [
     name: 'Вязаный кардиган',
     category: 'knitwear',
     categoryLabel: 'Трикотаж',
-    description: 'Мериносовая шерсть, крупная вязка. Длинный крой, накладные карманы, пуговицы из буйволиного рога.',
-    price: 'По запросу',
+    description: 'Мериносовая шерсть, крупная вязка. Длинный крой, накладные карманы.',
     image: '',
     color: '#8C8278',
   },
@@ -97,59 +87,34 @@ const PRODUCTS = [
     name: 'Льняные брюки',
     category: 'trousers',
     categoryLabel: 'Брюки',
-    description: 'Французский вощёный лён. Широкий крой, эластичный пояс с завязками. Летняя коллекция.',
-    price: 'По запросу',
+    description: 'Лён 100%. Широкий крой, эластичный пояс с завязками. Летняя коллекция.',
     image: '',
     color: '#DDD7CE',
   },
 ];
 
-/* ─────────────────────────────────────────────
-   УТИЛИТЫ
-   ───────────────────────────────────────────── */
+/* ── Утилиты ────────────────────────────────── */
 function buildTgLink(name) {
   return `https://t.me/${CONFIG.telegram}?text=${encodeURIComponent(CONFIG.tgText(name))}`;
 }
 
-function buildWaLink(name) {
-  return `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(CONFIG.waText(name))}`;
-}
-
-/* ─────────────────────────────────────────────
-   HEADER
-   ───────────────────────────────────────────── */
+/* ── Header ─────────────────────────────────── */
 function initHeader() {
   const header    = document.querySelector('.site-header');
   const hamburger = document.getElementById('hamburger');
   const mobileNav = document.getElementById('mobile-nav');
-
   if (!header) return;
 
-  /* Scroll */
   const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  /* Active link */
-  const page = location.pathname;
-  document.querySelectorAll('.nav-link').forEach((link) => {
-    const href = link.getAttribute('href');
-    if (href && page.includes(href) && href !== '/') {
-      link.classList.add('active');
-    } else if (href === 'index.html' && (page === '/' || page.endsWith('index.html'))) {
-      link.classList.add('active');
-    }
-  });
-
-  /* Hamburger */
   if (!hamburger || !mobileNav) return;
-
   hamburger.addEventListener('click', () => {
     const open = hamburger.classList.toggle('open');
     mobileNav.classList.toggle('open', open);
     document.body.style.overflow = open ? 'hidden' : '';
   });
-
   mobileNav.addEventListener('click', (e) => {
     if (e.target.tagName === 'A') {
       hamburger.classList.remove('open');
@@ -159,43 +124,27 @@ function initHeader() {
   });
 }
 
-/* ─────────────────────────────────────────────
-   SCROLL REVEAL
-   ───────────────────────────────────────────── */
+/* ── Scroll Reveal ──────────────────────────── */
 function initReveal() {
   const els = document.querySelectorAll('.reveal');
   if (!els.length) return;
-
   const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
+    (entries) => entries.forEach((e) => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    }),
     { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
   );
-
   els.forEach((el) => observer.observe(el));
 }
 
-/* ─────────────────────────────────────────────
-   MODAL
-   ───────────────────────────────────────────── */
+/* ── Modal ──────────────────────────────────── */
 function openModal(product) {
   const overlay = document.getElementById('modal-overlay');
   const nameEl  = document.getElementById('modal-product-name');
   const tgBtn   = document.getElementById('modal-tg');
-  const waBtn   = document.getElementById('modal-wa');
-
   if (!overlay) return;
-
   nameEl.textContent = product.name;
   tgBtn.href = buildTgLink(product.name);
-  waBtn.href = buildWaLink(product.name);
-
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -211,15 +160,12 @@ function initModal() {
   const overlay  = document.getElementById('modal-overlay');
   const closeBtn = document.getElementById('modal-close');
   if (!overlay) return;
-
   closeBtn?.addEventListener('click', closeModal);
   overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 }
 
-/* ─────────────────────────────────────────────
-   RENDER PRODUCTS
-   ───────────────────────────────────────────── */
+/* ── Render Products ────────────────────────── */
 function createProductCard(product) {
   const card = document.createElement('article');
   card.className = 'product-card';
@@ -236,7 +182,7 @@ function createProductCard(product) {
       <h2 class="product-card__name">${product.name}</h2>
       <p class="product-card__desc">${product.description}</p>
       <div class="product-card__footer">
-        <span class="product-card__price">${product.price}</span>
+        <span class="product-card__price">По запросу</span>
         <button class="btn-inquiry" aria-label="Запросить информацию о ${product.name}">
           <span>Запросить</span>
         </button>
@@ -259,27 +205,17 @@ function renderProducts(filter = 'all') {
   grid.innerHTML = '';
 
   if (!filtered.length) {
-    grid.innerHTML = `
-      <div class="empty-state">
-        <p>В этой категории пока нет позиций</p>
-      </div>`;
+    grid.innerHTML = `<div class="empty-state"><p>В этой категории пока нет позиций</p></div>`;
     return;
   }
 
-  filtered.forEach((product, i) => {
-    const card = createProductCard(product);
-    card.style.animationDelay = `${i * 0.05}s`;
-    grid.appendChild(card);
-  });
+  filtered.forEach((product) => grid.appendChild(createProductCard(product)));
 }
 
-/* ─────────────────────────────────────────────
-   FILTERS
-   ───────────────────────────────────────────── */
+/* ── Filters ────────────────────────────────── */
 function initFilters() {
   const buttons = document.querySelectorAll('.filter-btn');
   if (!buttons.length) return;
-
   buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
       buttons.forEach((b) => b.classList.remove('active'));
@@ -289,13 +225,10 @@ function initFilters() {
   });
 }
 
-/* ─────────────────────────────────────────────
-   NUMBERS COUNTER (index)
-   ───────────────────────────────────────────── */
+/* ── Number Counter ─────────────────────────── */
 function animateNumbers() {
   const items = document.querySelectorAll('.number[data-target]');
   if (!items.length) return;
-
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
@@ -303,11 +236,8 @@ function animateNumbers() {
       const target = parseInt(el.dataset.target, 10);
       const suffix = el.dataset.suffix || '';
       let   start  = 0;
-      const dur    = 1200;
-      const step   = 16;
-      const inc    = target / (dur / step);
-
-      const tick = () => {
+      const inc    = target / (1200 / 16);
+      const tick   = () => {
         start = Math.min(start + inc, target);
         el.textContent = Math.round(start) + suffix;
         if (start < target) requestAnimationFrame(tick);
@@ -316,13 +246,10 @@ function animateNumbers() {
       observer.unobserve(el);
     });
   }, { threshold: 0.5 });
-
   items.forEach((el) => observer.observe(el));
 }
 
-/* ─────────────────────────────────────────────
-   INIT
-   ───────────────────────────────────────────── */
+/* ── Init ───────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   initHeader();
   initReveal();
