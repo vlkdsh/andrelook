@@ -82,7 +82,7 @@ const I18N = {
     modal_tg:'Write on Telegram',
     back_catalog:'← Back to catalog',
     prod_avail:'Availability: on request', prod_delivery:'Delivery across Europe', prod_meeting:'Personal meeting in Tallinn',
-    footer_copy:'© 2025 Andrelook · Tallinn',
+    footer_copy:'© 2025 Andrelook',
   },
   ru: {
     nav_home:'Главная', nav_catalog:'Каталог', nav_how:'Как купить', nav_contact:'Контакты',
@@ -118,7 +118,7 @@ const I18N = {
     modal_tg:'Написать в Telegram',
     back_catalog:'← Назад в каталог',
     prod_avail:'Наличие: по запросу', prod_delivery:'Доставка по Европе', prod_meeting:'Личная встреча в Таллине',
-    footer_copy:'© 2025 Andrelook · Таллин',
+    footer_copy:'© 2025 Andrelook',
   },
   et: {
     nav_home:'Avaleht', nav_catalog:'Kataloog', nav_how:'Kuidas osta', nav_contact:'Kontakt',
@@ -154,7 +154,7 @@ const I18N = {
     modal_tg:'Kirjuta Telegramis',
     back_catalog:'← Tagasi kataloogi',
     prod_avail:'Saadavus: päringul', prod_delivery:'Tarne üle Euroopa', prod_meeting:'Isiklik kohtumine Tallinnas',
-    footer_copy:'© 2025 Andrelook · Tallinn',
+    footer_copy:'© 2025 Andrelook',
   },
 };
 
