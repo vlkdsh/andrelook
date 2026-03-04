@@ -350,90 +350,87 @@ function createProductCard(product) {
   const cat  = product.cats[currentLang]  || product.cats.ru;
   const imgs = product.images && product.images.length ? product.images : [];
   const hasMultiple = imgs.length > 1;
-  let currentIndex = 0;
+  let idx = 0;
 
-  // Блок изображения
-  const imgWrap = document.createElement('div');
-  imgWrap.className = 'product-card__img-wrap';
+  /* ── Фото-блок ── */
+  const thumb = document.createElement('div');
+  thumb.className = 'pc-thumb';
 
   if (imgs.length) {
     const imgEl = document.createElement('img');
-    imgEl.src = imgs[0];
-    imgEl.alt = name;
+    imgEl.src   = imgs[0];
+    imgEl.alt   = name;
     imgEl.loading = 'lazy';
-    imgWrap.appendChild(imgEl);
+    thumb.appendChild(imgEl);
+
+    // прозрачная ссылка поверх фото
+    const cover = document.createElement('a');
+    cover.href      = `product.html?id=${product.id}`;
+    cover.className = 'pc-cover';
+    thumb.appendChild(cover);
 
     if (hasMultiple) {
-      // Стрелки
       const prev = document.createElement('button');
-      prev.className = 'card-arrow card-arrow--prev';
-      prev.setAttribute('aria-label', 'Предыдущее фото');
+      prev.className = 'pc-arrow pc-arrow--l';
       prev.innerHTML = `<svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>`;
 
       const next = document.createElement('button');
-      next.className = 'card-arrow card-arrow--next';
-      next.setAttribute('aria-label', 'Следующее фото');
+      next.className = 'pc-arrow pc-arrow--r';
       next.innerHTML = `<svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>`;
 
-      // Точки
-      const dotsWrap = document.createElement('div');
-      dotsWrap.className = 'card-dots';
+      const dots = document.createElement('div');
+      dots.className = 'pc-dots';
       imgs.forEach((_, i) => {
-        const dot = document.createElement('button');
-        dot.className = 'card-dot' + (i === 0 ? ' active' : '');
-        dot.setAttribute('aria-label', `Фото ${i + 1}`);
-        dotsWrap.appendChild(dot);
+        const d = document.createElement('span');
+        d.className = 'pc-dot' + (i === 0 ? ' on' : '');
+        dots.appendChild(d);
       });
 
-      imgWrap.appendChild(prev);
-      imgWrap.appendChild(next);
-      imgWrap.appendChild(dotsWrap);
+      thumb.appendChild(prev);
+      thumb.appendChild(next);
+      thumb.appendChild(dots);
 
-      function goTo(index) {
-        currentIndex = (index + imgs.length) % imgs.length;
-        imgEl.src = imgs[currentIndex];
-        dotsWrap.querySelectorAll('.card-dot').forEach((d, i) => {
-          d.classList.toggle('active', i === currentIndex);
-        });
+      function goTo(n) {
+        idx = (n + imgs.length) % imgs.length;
+        imgEl.src = imgs[idx];
+        dots.querySelectorAll('.pc-dot').forEach((d, i) => d.classList.toggle('on', i === idx));
       }
-
-      prev.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); goTo(currentIndex - 1); });
-      next.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); goTo(currentIndex + 1); });
-      dotsWrap.querySelectorAll('.card-dot').forEach((dot, i) => {
-        dot.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); goTo(i); });
-      });
+      prev.onclick = e => { e.preventDefault(); e.stopPropagation(); goTo(idx - 1); };
+      next.onclick = e => { e.preventDefault(); e.stopPropagation(); goTo(idx + 1); };
+      dots.querySelectorAll('.pc-dot').forEach((d, i) =>
+        d.addEventListener('click', e => { e.stopPropagation(); goTo(i); })
+      );
     }
   } else {
     const ph = document.createElement('div');
-    ph.className = 'product-card__placeholder';
+    ph.className = 'pc-placeholder';
     ph.style.background = product.color;
     ph.innerHTML = `<span>${product.brand}</span>`;
-    imgWrap.appendChild(ph);
+    const cover = document.createElement('a');
+    cover.href = `product.html?id=${product.id}`;
+    cover.className = 'pc-cover';
+    thumb.appendChild(ph);
+    thumb.appendChild(cover);
   }
 
-  // Ссылка на страницу товара — оборачивает только изображение
-  const imgLink = document.createElement('a');
-  imgLink.href = `product.html?id=${product.id}`;
-  imgLink.appendChild(imgWrap);
-
-  // Тело карточки
+  /* ── Тело карточки ── */
   const body = document.createElement('div');
-  body.className = 'product-card__body';
+  body.className = 'pc-body';
   body.innerHTML = `
-    <span class="product-card__category">${cat}</span>
-    <a href="product.html?id=${product.id}" class="product-card__name-link">
-      <h2 class="product-card__name">${name}</h2>
-    </a>
-    <p class="product-card__brand">${product.brand}</p>
-    <div class="product-card__footer">
-      <span class="product-card__price">${t('on_request')}</span>
+    <div class="pc-meta">
+      <span class="pc-cat">${cat}</span>
+    </div>
+    <a href="product.html?id=${product.id}" class="pc-name">${name}</a>
+    <p class="pc-brand">${product.brand}</p>
+    <div class="pc-footer">
+      <span class="pc-price">${t('on_request')}</span>
       <button class="btn-inquiry"><span>${t('inquiry_btn')}</span></button>
     </div>`;
 
-  card.appendChild(imgLink);
+  card.appendChild(thumb);
   card.appendChild(body);
 
-  card.querySelector('.btn-inquiry').addEventListener('click', () => openModal(product));
+  body.querySelector('.btn-inquiry').addEventListener('click', () => openModal(product));
   return card;
 }
 
