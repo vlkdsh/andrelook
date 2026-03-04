@@ -15,14 +15,46 @@ const CONFIG = {
   },
 };
 
+/* ── Ticker phrases per language ─────────────── */
+const TICKER_PHRASES = {
+  ru: [
+    'Смотрите каталог',
+    'Ничего не покупайте',
+    'Просто смотрите',
+    'Ладно, можно купить',
+    'Мы не против',
+    'Хороший выбор',
+    'Мы так и знали',
+  ],
+  en: [
+    'Browse the catalog',
+    'Don\'t buy anything',
+    'Just look',
+    'Okay, you can buy',
+    'We don\'t mind',
+    'Good choice',
+    'We knew it',
+  ],
+  et: [
+    'Vaadake kataloogi',
+    'Ärge ostke midagi',
+    'Lihtsalt vaadake',
+    'Okei, võite osta',
+    'Me ei pane pahaks',
+    'Hea valik',
+    'Me teadsime seda',
+  ],
+};
+
 /* ── Translations ────────────────────────────── */
 const I18N = {
   en: {
     nav_home:'Home', nav_catalog:'Catalog', nav_how:'How to buy', nav_contact:'Contact',
-    hero_label:'World brands · Tallinn · Europe',
-    hero_lines:['Style,','quality &','attention to detail'],
-    hero_sub:'Carefully selected pieces that look great and effortlessly transform your wardrobe.',
+    hero_location:'Tallinn, Estonia',
+    hero_delivery:'Delivery across Europe',
+    hero_tagline:'World brands · Personal approach',
     hero_cta:'View Collection',
+    hero_note:'Tallinn · Europe',
     stat_1_lbl:'Items in catalog', stat_2_lbl:'World brands', stat_3_lbl:'Delivery countries',
     col_title:'Collection', col_all:'Full catalog →',
     cat_suits:'Suits', cat_outer:'Outerwear', cat_knit:'Knitwear', cat_shirts:'Shirts & Blouses',
@@ -54,10 +86,11 @@ const I18N = {
   },
   ru: {
     nav_home:'Главная', nav_catalog:'Каталог', nav_how:'Как купить', nav_contact:'Контакты',
-    hero_label:'Мировые бренды · Таллин · Европа',
-    hero_lines:['Стиль,','качество и','внимание к деталям'],
-    hero_sub:'Тщательно подобранные вещи, которые красиво сидят и легко преображают ваш гардероб.',
+    hero_location:'Таллин, Эстония',
+    hero_delivery:'Доставка по Европе',
+    hero_tagline:'Мировые бренды · Личный подход',
     hero_cta:'Смотреть коллекцию',
+    hero_note:'Таллин · Европа',
     stat_1_lbl:'Позиций в каталоге', stat_2_lbl:'Мировых брендов', stat_3_lbl:'Стран доставки',
     col_title:'Коллекция', col_all:'Весь каталог →',
     cat_suits:'Костюмы', cat_outer:'Верхняя одежда', cat_knit:'Трикотаж', cat_shirts:'Рубашки и блузы',
@@ -89,10 +122,11 @@ const I18N = {
   },
   et: {
     nav_home:'Avaleht', nav_catalog:'Kataloog', nav_how:'Kuidas osta', nav_contact:'Kontakt',
-    hero_label:'Maailma brändid · Tallinn · Euroopa',
-    hero_lines:['Stiil,','kvaliteet ja','tähelepanu detailidele'],
-    hero_sub:'Hoolikalt valitud riided, mis istuvad hästi ja muudavad teie garderoobi.',
+    hero_location:'Tallinn, Eesti',
+    hero_delivery:'Tarne üle Euroopa',
+    hero_tagline:'Maailma brändid · Isiklik lähenemine',
     hero_cta:'Vaata kollektsiooni',
+    hero_note:'Tallinn · Euroopa',
     stat_1_lbl:'Toodet kataloogis', stat_2_lbl:'Maailma brändi', stat_3_lbl:'Tarne riiki',
     col_title:'Kollektsioon', col_all:'Kogu kataloog →',
     cat_suits:'Ülikonnad', cat_outer:'Pealisrõivad', cat_knit:'Kudumid', cat_shirts:'Särgid & Pluusid',
@@ -229,6 +263,7 @@ function setLang(lang) {
   currentLang = lang;
   localStorage.setItem('al_lang', lang);
   applyTranslations();
+  renderTicker();
   renderProducts(currentFilter);
   if (document.getElementById('product-detail')) {
     renderProductPage();
@@ -236,11 +271,9 @@ function setLang(lang) {
 }
 
 function applyTranslations() {
-  /* data-i18n elements */
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const val = t(el.dataset.i18n);
     if (!val) return;
-    /* contact_sub has line break */
     if (el.dataset.i18n === 'contact_sub') {
       el.innerHTML = val.replace('\n', '<br>');
     } else {
@@ -248,16 +281,6 @@ function applyTranslations() {
     }
   });
 
-  /* Hero title lines */
-  const lines   = document.querySelectorAll('.hero-line');
-  const heroArr = t('hero_lines');
-  if (lines.length && Array.isArray(heroArr)) {
-    lines.forEach((el, i) => {
-      if (heroArr[i] !== undefined) el.textContent = heroArr[i];
-    });
-  }
-
-  /* Active lang btn */
   document.querySelectorAll('.lang-btn').forEach((btn) => {
     btn.classList.toggle('active', btn.dataset.lang === currentLang);
   });
@@ -267,6 +290,19 @@ function applyTranslations() {
 
 function buildTgLink(name) {
   return `https://t.me/${CONFIG.telegram}?text=${encodeURIComponent(CONFIG.tgText(name, currentLang))}`;
+}
+
+/* ── Ticker ──────────────────────────────────── */
+function renderTicker() {
+  const el = document.getElementById('ticker-inner');
+  if (!el) return;
+
+  const phrases = TICKER_PHRASES[currentLang] || TICKER_PHRASES.ru;
+  // дублируем для бесшовной прокрутки
+  const all = [...phrases, ...phrases];
+  el.innerHTML = all.map((p, i) =>
+    `<span>${p}</span><span class="dot" aria-hidden="true">·</span>`
+  ).join('');
 }
 
 /* ── Header ─────────────────────────────────── */
@@ -441,10 +477,8 @@ function renderProductPage() {
 
   document.title = `${name} — Andrelook`;
 
-  /* Back link */
   document.querySelectorAll('[data-i18n="back_catalog"]').forEach(el => el.textContent = t('back_catalog'));
 
-  /* Main image */
   const mainEl = document.getElementById('product-main-img');
   if (mainEl) {
     mainEl.innerHTML = imgs.length
@@ -452,7 +486,6 @@ function renderProductPage() {
       : `<div class="product-placeholder-lg" style="background:${p.color}"><span>${p.brand}</span></div>`;
   }
 
-  /* Thumbs */
   const thumbsEl = document.getElementById('product-thumbs');
   if (thumbsEl) {
     if (imgs.length > 1) {
@@ -474,7 +507,6 @@ function renderProductPage() {
     }
   }
 
-  /* Info */
   const infoEl = document.getElementById('product-info');
   if (infoEl) {
     infoEl.innerHTML = `
@@ -522,6 +554,7 @@ function initCatalogURLFilter() {
 document.addEventListener('DOMContentLoaded', () => {
   initHeader();
   applyTranslations();
+  renderTicker();
   initReveal();
   initModal();
   initFilters();
