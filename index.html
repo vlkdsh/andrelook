@@ -12,9 +12,8 @@
 <body>
 
   <!-- ══ HEADER ════════════════════════════════ -->
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <div class="container header-inner">
-
       <a href="index.html">
         <img src="images/logo.png" alt="Andrelook" class="logo-img" />
       </a>
@@ -38,7 +37,6 @@
     </div>
   </header>
 
-  <!-- Mobile nav -->
   <nav class="mobile-nav" id="mobile-nav">
     <a href="index.html"   class="nav-link" data-i18n="nav_home">Главная</a>
     <a href="catalog.html" class="nav-link" data-i18n="nav_catalog">Каталог</a>
@@ -55,80 +53,82 @@
 
     <!-- ══ HERO ══════════════════════════════════ -->
     <section class="hero">
-      <div class="hero-bg-text">Andrelook</div>
+      <div class="hero-watermark" aria-hidden="true">A</div>
 
-      <div class="hero-inner">
-        <div class="hero-content">
-          <span class="hero-label" data-i18n="hero_label">Мировые бренды · Таллин · Европа</span>
-
-          <h1 class="hero-title">
-            <span class="hero-line">Стиль,</span>
-            <span class="hero-line"><em>качество и</em></span>
-            <span class="hero-line">внимание к деталям</span>
-          </h1>
-
-          <p class="hero-sub" data-i18n="hero_sub">
-            Тщательно подобранные вещи, которые красиво сидят и легко преображают ваш гардероб.
-          </p>
-
-          <div class="hero-cta">
-            <a href="catalog.html" class="btn-primary">
-              <span data-i18n="hero_cta">Смотреть коллекцию</span>
-            </a>
-          </div>
+      <div class="hero-top">
+        <div class="hero-eyebrow">
+          <div class="hero-eyebrow-line"></div>
+          <span data-i18n="hero_label">Мировые бренды · Таллин · Европа</span>
         </div>
 
-        <div class="hero-aside">
-          <span class="hero-aside-label">Andrelook</span>
-          <div class="hero-scroll">
-            <div class="hero-scroll-line"></div>
+        <h1 class="hero-title">
+          <span class="hero-line" data-i18n-line="0">Стиль,</span>
+          <span class="hero-line" data-i18n-line="1">качество и</span>
+          <span class="hero-line" data-i18n-line="2">внимание к деталям</span>
+        </h1>
+      </div>
+
+      <div class="hero-bottom">
+        <p class="hero-sub" data-i18n="hero_sub">
+          Тщательно подобранные вещи, которые красиво сидят и легко преображают ваш гардероб.
+        </p>
+        <div class="hero-actions">
+          <a href="catalog.html" class="btn-primary">
+            <span data-i18n="hero_cta">Смотреть коллекцию</span>
+          </a>
+          <div class="hero-scroll-hint">
+            <div class="hero-scroll-bar"></div>
             <span>scroll</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══ BRAND STRIP ════════════════════════════ -->
-    <div class="brand-strip" aria-hidden="true">
-      <div class="brand-strip-inner">
-        <span>Moncler</span><span class="sep">·</span>
-        <span>Loro Piana</span><span class="sep">·</span>
-        <span>Valentino</span><span class="sep">·</span>
-        <span>Max Mara</span><span class="sep">·</span>
-        <span>Brunello Cucinelli</span><span class="sep">·</span>
-        <span>Celine</span><span class="sep">·</span>
-        <span>Toteme</span><span class="sep">·</span>
-        <span>Acne Studios</span><span class="sep">·</span>
-        <span>Theory</span><span class="sep">·</span>
-        <span>Arket</span><span class="sep">·</span>
-        <!-- duplicate for seamless loop -->
-        <span>Moncler</span><span class="sep">·</span>
-        <span>Loro Piana</span><span class="sep">·</span>
-        <span>Valentino</span><span class="sep">·</span>
-        <span>Max Mara</span><span class="sep">·</span>
-        <span>Brunello Cucinelli</span><span class="sep">·</span>
-        <span>Celine</span><span class="sep">·</span>
-        <span>Toteme</span><span class="sep">·</span>
-        <span>Acne Studios</span><span class="sep">·</span>
-        <span>Theory</span><span class="sep">·</span>
-        <span>Arket</span><span class="sep">·</span>
+    <!-- ══ BRAND TICKER ═══════════════════════════ -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-inner">
+        <span>Moncler</span><span class="dot">·</span>
+        <span>Loro Piana</span><span class="dot">·</span>
+        <span>Valentino</span><span class="dot">·</span>
+        <span>Max Mara</span><span class="dot">·</span>
+        <span>Brunello Cucinelli</span><span class="dot">·</span>
+        <span>Celine</span><span class="dot">·</span>
+        <span>Toteme</span><span class="dot">·</span>
+        <span>Acne Studios</span><span class="dot">·</span>
+        <span>Theory</span><span class="dot">·</span>
+        <span>Arket</span><span class="dot">·</span>
+        <span>Zara Premium</span><span class="dot">·</span>
+        <span>Massimo Dutti</span><span class="dot">·</span>
+        <!-- duplicate -->
+        <span>Moncler</span><span class="dot">·</span>
+        <span>Loro Piana</span><span class="dot">·</span>
+        <span>Valentino</span><span class="dot">·</span>
+        <span>Max Mara</span><span class="dot">·</span>
+        <span>Brunello Cucinelli</span><span class="dot">·</span>
+        <span>Celine</span><span class="dot">·</span>
+        <span>Toteme</span><span class="dot">·</span>
+        <span>Acne Studios</span><span class="dot">·</span>
+        <span>Theory</span><span class="dot">·</span>
+        <span>Arket</span><span class="dot">·</span>
+        <span>Zara Premium</span><span class="dot">·</span>
+        <span>Massimo Dutti</span><span class="dot">·</span>
       </div>
     </div>
 
-    <!-- ══ STATS ═════════════════════════════════ -->
-    <section class="stats">
+    <!-- ══ STATS ══════════════════════════════════ -->
+    <section class="stats-bar">
       <div class="container">
         <div class="stats-grid">
-          <div class="stat-item">
-            <span class="stat-num" data-target="120" data-suffix="+" data-i18n="stat_1_num">120+</span>
+          <div class="stat-item reveal">
+            <span class="stat-num" data-target="120" data-suffix="+">120+</span>
             <span class="stat-lbl" data-i18n="stat_1_lbl">Позиций в каталоге</span>
           </div>
-          <div class="stat-item">
-            <span class="stat-num" data-target="30" data-suffix="+" data-i18n="stat_2_num">30+</span>
+          <div class="stat-item reveal" style="transition-delay:.1s">
+            <span class="stat-num" data-target="30" data-suffix="+">30+</span>
             <span class="stat-lbl" data-i18n="stat_2_lbl">Мировых брендов</span>
           </div>
-          <div class="stat-item">
-            <span class="stat-num" data-target="15" data-suffix="" data-i18n="stat_3_num">15</span>
+          <div class="stat-item reveal" style="transition-delay:.2s">
+            <span class="stat-num" data-target="15" data-suffix="">15</span>
             <span class="stat-lbl" data-i18n="stat_3_lbl">Стран доставки</span>
           </div>
         </div>
@@ -142,33 +142,27 @@
           <h2 class="section-title" data-i18n="col_title">Коллекция</h2>
           <a href="catalog.html" class="section-link" data-i18n="col_all">Весь каталог →</a>
         </div>
-        <div class="categories-grid reveal">
-          <a href="catalog.html?filter=suits" class="cat-card">
+
+        <div class="categories-layout reveal">
+          <a href="catalog.html?filter=outerwear" class="cat-card cat-card--large">
             <div class="cat-card__visual cat-card__visual--1"></div>
-            <div class="cat-card__info">
-              <span class="cat-card__name" data-i18n="cat_suits">Костюмы</span>
-              <span class="cat-card__count" data-i18n="cat_pos1">12 позиций</span>
-            </div>
-          </a>
-          <a href="catalog.html?filter=outerwear" class="cat-card">
-            <div class="cat-card__visual cat-card__visual--2"></div>
-            <div class="cat-card__info">
+            <div class="cat-card__label">
               <span class="cat-card__name" data-i18n="cat_outer">Верхняя одежда</span>
               <span class="cat-card__count" data-i18n="cat_pos2">18 позиций</span>
             </div>
           </a>
-          <a href="catalog.html?filter=knitwear" class="cat-card">
-            <div class="cat-card__visual cat-card__visual--3"></div>
-            <div class="cat-card__info">
-              <span class="cat-card__name" data-i18n="cat_knit">Трикотаж</span>
-              <span class="cat-card__count" data-i18n="cat_pos3">24 позиции</span>
+          <a href="catalog.html?filter=suits" class="cat-card cat-card--small">
+            <div class="cat-card__visual cat-card__visual--2"></div>
+            <div class="cat-card__label">
+              <span class="cat-card__name" data-i18n="cat_suits">Костюмы</span>
+              <span class="cat-card__count" data-i18n="cat_pos1">12 позиций</span>
             </div>
           </a>
-          <a href="catalog.html?filter=shirts" class="cat-card">
-            <div class="cat-card__visual cat-card__visual--4"></div>
-            <div class="cat-card__info">
-              <span class="cat-card__name" data-i18n="cat_shirts">Рубашки и блузы</span>
-              <span class="cat-card__count" data-i18n="cat_pos4">16 позиций</span>
+          <a href="catalog.html?filter=knitwear" class="cat-card cat-card--small">
+            <div class="cat-card__visual cat-card__visual--3"></div>
+            <div class="cat-card__label">
+              <span class="cat-card__name" data-i18n="cat_knit">Трикотаж</span>
+              <span class="cat-card__count" data-i18n="cat_pos3">24 позиции</span>
             </div>
           </a>
         </div>
@@ -210,12 +204,15 @@
     <section class="section statement">
       <div class="container">
         <div class="statement-inner reveal">
-          <p class="statement-label" data-i18n="stmt_label">Наш подход</p>
+          <div class="statement-kicker">
+            <div class="statement-kicker-line"></div>
+            <span data-i18n="stmt_label">Наш подход</span>
+          </div>
           <blockquote class="statement-quote" data-i18n="stmt_quote">
             «Мы тщательно подбираем вещи, которые красиво сидят и легко преображают ваш гардероб.»
           </blockquote>
           <p class="statement-text" data-i18n="stmt_text">
-            Andrelook — магазин мировых брендов с личным подходом. Большой ассортимент, помощь с размером и быстрые ответы.
+            Andrelook — магазин мировых брендов с личным подходом. Большой ассортимент, помощь с размером и быстрые ответы. Работаем для тех, кто ценит качество — вживую в Таллине или с доставкой по всей Европе.
           </p>
         </div>
       </div>
@@ -226,9 +223,11 @@
       <div class="container">
         <div class="contact-inner reveal">
           <h2 class="contact-title" data-i18n="contact_title">Написать нам</h2>
-          <p class="contact-sub" data-i18n="contact_sub">Самые быстрые ответы — в Telegram.</p>
+          <p class="contact-sub" data-i18n="contact_sub">Самые быстрые ответы — в Telegram.<br>Поможем с выбором, размером и оформлением заказа.</p>
           <div class="contact-links">
-            <a href="https://t.me/andrelookstore" class="contact-btn" target="_blank" rel="noopener" data-i18n="contact_btn">Telegram</a>
+            <a href="https://t.me/andrelookstore" class="btn-primary" target="_blank" rel="noopener">
+              <span data-i18n="contact_btn">Telegram</span>
+            </a>
           </div>
         </div>
       </div>
