@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Каталог Andrelook — премиальная одежда. Костюмы, верхняя одежда, трикотаж, рубашки." />
+  <meta name="description" content="Каталог Andrelook — мировые бренды одежды. Таллин и доставка по Европе." />
   <title>Каталог — Andrelook</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,24 +15,23 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="logo">ANDRELOOK</a>
-
       <nav class="nav" aria-label="Основная навигация">
-        <a href="index.html"   class="nav-link">Главная</a>
-        <a href="catalog.html" class="nav-link active">Каталог</a>
+        <a href="index.html"         class="nav-link">Главная</a>
+        <a href="catalog.html"       class="nav-link active">Каталог</a>
+        <a href="index.html#how"     class="nav-link">Как купить</a>
         <a href="index.html#contact" class="nav-link">Контакты</a>
       </nav>
-
-      <button class="hamburger" id="hamburger" aria-label="Открыть меню" aria-expanded="false">
+      <button class="hamburger" id="hamburger" aria-label="Открыть меню">
         <span></span>
         <span></span>
       </button>
     </div>
   </header>
 
-  <!-- Mobile nav -->
-  <nav class="mobile-nav" id="mobile-nav" aria-label="Мобильная навигация">
+  <nav class="mobile-nav" id="mobile-nav">
     <a href="index.html"         class="nav-link">Главная</a>
     <a href="catalog.html"       class="nav-link">Каталог</a>
+    <a href="index.html#how"     class="nav-link">Как купить</a>
     <a href="index.html#contact" class="nav-link">Контакты</a>
   </nav>
 
@@ -42,28 +41,28 @@
     <div class="catalog-hero">
       <div class="container">
         <h1 class="catalog-title">Каталог</h1>
-        <p class="catalog-sub">Коллекция 2025</p>
+        <p class="catalog-sub">Мировые бренды · Коллекция 2025</p>
       </div>
     </div>
 
     <!-- ══ FILTERS ═══════════════════════════════ -->
-    <div class="filters-bar" role="navigation" aria-label="Фильтры каталога">
+    <div class="filters-bar">
       <div class="container">
-        <div class="filters" role="list">
-          <button class="filter-btn active" data-filter="all"      role="listitem">Все</button>
-          <button class="filter-btn"        data-filter="suits"    role="listitem">Костюмы</button>
-          <button class="filter-btn"        data-filter="outerwear" role="listitem">Верхняя одежда</button>
-          <button class="filter-btn"        data-filter="knitwear"  role="listitem">Трикотаж</button>
-          <button class="filter-btn"        data-filter="shirts"    role="listitem">Рубашки</button>
-          <button class="filter-btn"        data-filter="trousers"  role="listitem">Брюки</button>
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">Все</button>
+          <button class="filter-btn" data-filter="suits">Костюмы</button>
+          <button class="filter-btn" data-filter="outerwear">Верхняя одежда</button>
+          <button class="filter-btn" data-filter="knitwear">Трикотаж</button>
+          <button class="filter-btn" data-filter="shirts">Рубашки</button>
+          <button class="filter-btn" data-filter="trousers">Брюки</button>
         </div>
       </div>
     </div>
 
     <!-- ══ PRODUCTS ═══════════════════════════════ -->
-    <section class="catalog-main" aria-label="Товары каталога">
+    <section class="catalog-main">
       <div class="container">
-        <div class="products-grid" id="products-grid" role="list">
+        <div class="products-grid" id="products-grid">
           <!-- Заполняется через JS -->
         </div>
       </div>
@@ -75,35 +74,31 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <span class="footer-logo">ANDRELOOK</span>
-      <nav class="footer-nav" aria-label="Навигация в подвале">
+      <nav class="footer-nav">
         <a href="index.html">Главная</a>
         <a href="catalog.html">Каталог</a>
-        <a href="index.html#contact">Контакты</a>
+        <a href="index.html#how">Как купить</a>
+        <a href="https://t.me/andrelookstore" target="_blank" rel="noopener">Telegram</a>
       </nav>
-      <span class="footer-copy">© 2025 Andrelook</span>
+      <span class="footer-copy">© 2025 Andrelook · Tallinn</span>
     </div>
   </footer>
 
   <!-- ══ MODAL ═════════════════════════════════ -->
-  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true">
     <div class="modal">
       <button class="modal-close" id="modal-close" aria-label="Закрыть">✕</button>
-
-      <p class="modal-label">Запрос информации</p>
+      <p class="modal-label">Запросить информацию</p>
       <h2 class="modal-title" id="modal-title">
         <span id="modal-product-name"></span>
       </h2>
       <p class="modal-text">
-        Выберите удобный мессенджер. Мы ответим в течение рабочего дня
-        с полной информацией о позиции, размерной сетке и условиях.
+        Напишите нам в Telegram — поможем с размером, наличием
+        и ответим на все вопросы. Самые быстрые ответы там.
       </p>
-
       <div class="modal-actions">
         <a href="#" class="modal-btn modal-btn--tg" id="modal-tg" target="_blank" rel="noopener">
           Написать в Telegram
-        </a>
-        <a href="#" class="modal-btn modal-btn--wa" id="modal-wa" target="_blank" rel="noopener">
-          Написать в WhatsApp
         </a>
       </div>
     </div>
@@ -111,7 +106,7 @@
 
   <script src="js/main.js"></script>
 
-  <!-- Читаем фильтр из URL при открытии страницы -->
+  <!-- Читаем фильтр из URL -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const params = new URLSearchParams(location.search);
@@ -119,7 +114,7 @@
       if (filter) {
         const btn = document.querySelector(`.filter-btn[data-filter="${filter}"]`);
         if (btn) {
-          document.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove('active'));
+          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
           renderProducts(filter);
         }
