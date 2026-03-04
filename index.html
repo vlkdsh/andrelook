@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Andrelook — премиальный каталог одежды. Строгий стиль, качество без компромиссов." />
-  <title>Andrelook — Премиальный каталог одежды</title>
+  <meta name="description" content="Andrelook — магазин мировых брендов одежды. Таллин и доставка по Европе. Пишите в Telegram." />
+  <title>Andrelook — Мировые бренды одежды</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="css/style.css" />
@@ -15,47 +15,45 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="logo">ANDRELOOK</a>
-
       <nav class="nav" aria-label="Основная навигация">
         <a href="index.html"   class="nav-link">Главная</a>
         <a href="catalog.html" class="nav-link">Каталог</a>
+        <a href="#how"         class="nav-link">Как купить</a>
         <a href="#contact"     class="nav-link">Контакты</a>
       </nav>
-
-      <button class="hamburger" id="hamburger" aria-label="Открыть меню" aria-expanded="false">
+      <button class="hamburger" id="hamburger" aria-label="Открыть меню">
         <span></span>
         <span></span>
       </button>
     </div>
   </header>
 
-  <!-- Mobile nav -->
-  <nav class="mobile-nav" id="mobile-nav" aria-label="Мобильная навигация">
+  <nav class="mobile-nav" id="mobile-nav">
     <a href="index.html"   class="nav-link">Главная</a>
     <a href="catalog.html" class="nav-link">Каталог</a>
+    <a href="#how"         class="nav-link">Как купить</a>
     <a href="#contact"     class="nav-link">Контакты</a>
   </nav>
 
   <main>
 
     <!-- ══ HERO ══════════════════════════════════ -->
-    <section class="hero" aria-label="Главный экран">
+    <section class="hero">
       <div class="hero-content">
-        <span class="hero-label">Коллекция 2025</span>
+        <span class="hero-label">Мировые бренды · Таллин · Европа</span>
         <h1 class="hero-title">
-          Одежда,<br>
-          которая <em>говорит</em><br>
-          без слов
+          Стиль,<br>
+          качество и <em>внимание</em><br>
+          к деталям
         </h1>
         <p class="hero-sub">
-          Премиальные материалы. Точный крой.<br>
-          Без лишнего — только суть.
+          Тщательно подобранные вещи, которые красиво сидят<br>
+          и легко преображают ваш гардероб.
         </p>
         <a href="catalog.html" class="btn-primary">
-          <span>Смотреть каталог</span>
+          <span>Смотреть коллекцию</span>
         </a>
       </div>
-
       <div class="hero-visual" aria-hidden="true">
         <div class="hero-block hero-block--large"></div>
         <div class="hero-block hero-block--small"></div>
@@ -63,33 +61,32 @@
     </section>
 
     <!-- ══ BRAND NUMBERS ═════════════════════════ -->
-    <section class="brand-numbers" aria-label="О бренде в цифрах">
+    <section class="brand-numbers">
       <div class="container">
         <div class="numbers-grid">
-          <div class="number-item">
-            <span class="number" data-target="7" data-suffix="+">7+</span>
-            <span class="number-label">Лет на рынке</span>
-          </div>
           <div class="number-item">
             <span class="number" data-target="120" data-suffix="+">120+</span>
             <span class="number-label">Позиций в каталоге</span>
           </div>
           <div class="number-item">
-            <span class="number" data-target="40" data-suffix="+">40+</span>
-            <span class="number-label">Партнёров по всему миру</span>
+            <span class="number" data-target="30" data-suffix="+">30+</span>
+            <span class="number-label">Мировых брендов</span>
+          </div>
+          <div class="number-item">
+            <span class="number" data-target="15" data-suffix="">15</span>
+            <span class="number-label">Стран доставки</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ══ CATEGORIES ════════════════════════════ -->
-    <section class="section" aria-labelledby="categories-title">
+    <section class="section">
       <div class="container">
         <div class="section-header reveal">
-          <h2 class="section-title" id="categories-title">Категории</h2>
+          <h2 class="section-title">Коллекция</h2>
           <a href="catalog.html" class="section-link">Весь каталог →</a>
         </div>
-
         <div class="categories-grid reveal">
           <a href="catalog.html?filter=suits" class="cat-card">
             <div class="cat-card__visual cat-card__visual--1"></div>
@@ -123,39 +120,84 @@
       </div>
     </section>
 
+    <!-- ══ HOW IT WORKS ═══════════════════════════ -->
+    <section class="section how-section" id="how">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Как купить</h2>
+        </div>
+        <div class="how-grid reveal">
+          <div class="how-card">
+            <span class="how-icon">📍</span>
+            <h3 class="how-card__title">Вы в Таллине</h3>
+            <p class="how-card__text">
+              Договоримся о личной встрече в удобное время.
+              Примерите вещь и увидите её вживую.
+              Если всё подходит — оплата на месте наличными или переводом.
+            </p>
+          </div>
+          <div class="how-card">
+            <span class="how-icon">📦</span>
+            <h3 class="how-card__title">Доставка по Европе</h3>
+            <p class="how-card__text">
+              Отправляем заказы после полной оплаты.
+              Стоимость доставки рассчитывается индивидуально.
+              Оплата банковским переводом.
+            </p>
+          </div>
+          <div class="how-card">
+            <span class="how-icon">🛍</span>
+            <h3 class="how-card__title">Нет в наличии?</h3>
+            <p class="how-card__text">
+              Привезём под заказ по предоплате 35%.
+              Остаток — перед отправкой или при личной встрече,
+              если вы в Таллине.
+            </p>
+          </div>
+          <div class="how-card">
+            <span class="how-icon">💬</span>
+            <h3 class="how-card__title">Помогаем с выбором</h3>
+            <p class="how-card__text">
+              Напишите нам — поможем подобрать размер и ответим
+              на все вопросы. Остаёмся на связи на каждом этапе.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ══ STATEMENT ══════════════════════════════ -->
-    <section class="section statement" aria-label="О философии бренда">
+    <section class="section statement">
       <div class="container">
         <div class="statement-inner reveal">
-          <p class="statement-label">Философия</p>
+          <p class="statement-label">Наш подход</p>
           <blockquote class="statement-quote">
-            «Мы не продаём одежду.<br>
-            Мы предлагаем способ присутствовать.»
+            «Мы тщательно подбираем вещи,<br>
+            которые красиво сидят и легко<br>
+            преображают ваш гардероб.»
           </blockquote>
           <p class="statement-text">
-            Andrelook — это каталог для тех, кто выбирает осознанно.
-            Каждая позиция проходит многоступенчатый отбор по материалу,
-            конструкции и производителю. Мы работаем напрямую и отвечаем
-            на каждый запрос лично.
+            Andrelook — магазин мировых брендов с личным подходом.
+            Большой ассортимент, помощь с размером и быстрые ответы.
+            Работаем для тех, кто ценит качество и хочет покупать
+            с удовольствием — вживую в Таллине или с доставкой по всей Европе.
           </p>
         </div>
       </div>
     </section>
 
     <!-- ══ CONTACT ════════════════════════════════ -->
-    <section class="section" id="contact" aria-labelledby="contact-title">
+    <section class="section" id="contact">
       <div class="container">
         <div class="contact-inner reveal">
-          <h2 class="contact-title" id="contact-title">Связаться с нами</h2>
+          <h2 class="contact-title">Написать нам</h2>
           <p class="contact-sub">
-            Для вопросов по каталогу, оптовым заказам и сотрудничеству
+            Самые быстрые ответы — в Telegram.<br>
+            Поможем с выбором, размером и оформлением заказа.
           </p>
           <div class="contact-links">
-            <a href="https://t.me/andrelook" class="contact-btn" target="_blank" rel="noopener">
+            <a href="https://t.me/andrelookstore" class="contact-btn" target="_blank" rel="noopener">
               Telegram
-            </a>
-            <a href="https://wa.me/79000000000" class="contact-btn" target="_blank" rel="noopener">
-              WhatsApp
             </a>
           </div>
         </div>
@@ -168,12 +210,13 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <span class="footer-logo">ANDRELOOK</span>
-      <nav class="footer-nav" aria-label="Навигация в подвале">
+      <nav class="footer-nav">
         <a href="index.html">Главная</a>
         <a href="catalog.html">Каталог</a>
-        <a href="#contact">Контакты</a>
+        <a href="#how">Как купить</a>
+        <a href="https://t.me/andrelookstore" target="_blank" rel="noopener">Telegram</a>
       </nav>
-      <span class="footer-copy">© 2025 Andrelook</span>
+      <span class="footer-copy">© 2025 Andrelook · Tallinn</span>
     </div>
   </footer>
 
