@@ -1,24 +1,131 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Каталог Andrelook — премиальная одежда. Костюмы, верхняя одежда, трикотаж, рубашки." />
   <title>Каталог — Andrelook</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<header class="header">
-  <div class="logo">ANDRELOOK</div>
-  <nav>
-    <a href="index.html">Главная</a>
+  <!-- ══ HEADER ════════════════════════════════ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">ANDRELOOK</a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="index.html"   class="nav-link">Главная</a>
+        <a href="catalog.html" class="nav-link active">Каталог</a>
+        <a href="index.html#contact" class="nav-link">Контакты</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Мобильная навигация">
+    <a href="index.html"         class="nav-link">Главная</a>
+    <a href="catalog.html"       class="nav-link">Каталог</a>
+    <a href="index.html#contact" class="nav-link">Контакты</a>
   </nav>
-</header>
 
-<section class="hero">
-  <h1>Каталог</h1>
-  <p>Скоро здесь появятся модели.</p>
-</section>
+  <main>
 
-<script src="js/main.js"></script>
+    <!-- ══ CATALOG HERO ══════════════════════════ -->
+    <div class="catalog-hero">
+      <div class="container">
+        <h1 class="catalog-title">Каталог</h1>
+        <p class="catalog-sub">Коллекция 2025</p>
+      </div>
+    </div>
+
+    <!-- ══ FILTERS ═══════════════════════════════ -->
+    <div class="filters-bar" role="navigation" aria-label="Фильтры каталога">
+      <div class="container">
+        <div class="filters" role="list">
+          <button class="filter-btn active" data-filter="all"      role="listitem">Все</button>
+          <button class="filter-btn"        data-filter="suits"    role="listitem">Костюмы</button>
+          <button class="filter-btn"        data-filter="outerwear" role="listitem">Верхняя одежда</button>
+          <button class="filter-btn"        data-filter="knitwear"  role="listitem">Трикотаж</button>
+          <button class="filter-btn"        data-filter="shirts"    role="listitem">Рубашки</button>
+          <button class="filter-btn"        data-filter="trousers"  role="listitem">Брюки</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ PRODUCTS ═══════════════════════════════ -->
+    <section class="catalog-main" aria-label="Товары каталога">
+      <div class="container">
+        <div class="products-grid" id="products-grid" role="list">
+          <!-- Заполняется через JS -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ FOOTER ════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">ANDRELOOK</span>
+      <nav class="footer-nav" aria-label="Навигация в подвале">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="index.html#contact">Контакты</a>
+      </nav>
+      <span class="footer-copy">© 2025 Andrelook</span>
+    </div>
+  </footer>
+
+  <!-- ══ MODAL ═════════════════════════════════ -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <button class="modal-close" id="modal-close" aria-label="Закрыть">✕</button>
+
+      <p class="modal-label">Запрос информации</p>
+      <h2 class="modal-title" id="modal-title">
+        <span id="modal-product-name"></span>
+      </h2>
+      <p class="modal-text">
+        Выберите удобный мессенджер. Мы ответим в течение рабочего дня
+        с полной информацией о позиции, размерной сетке и условиях.
+      </p>
+
+      <div class="modal-actions">
+        <a href="#" class="modal-btn modal-btn--tg" id="modal-tg" target="_blank" rel="noopener">
+          Написать в Telegram
+        </a>
+        <a href="#" class="modal-btn modal-btn--wa" id="modal-wa" target="_blank" rel="noopener">
+          Написать в WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+
+  <!-- Читаем фильтр из URL при открытии страницы -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(location.search);
+      const filter = params.get('filter');
+      if (filter) {
+        const btn = document.querySelector(`.filter-btn[data-filter="${filter}"]`);
+        if (btn) {
+          document.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+          renderProducts(filter);
+        }
+      }
+    });
+  </script>
+
 </body>
 </html>
