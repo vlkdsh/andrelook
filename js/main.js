@@ -346,19 +346,54 @@ function createProductCard(product) {
   card.className = 'product-card';
   card.dataset.category = product.category;
 
-  const name  = product.names[currentLang]  || product.names.ru;
-  const cat   = product.cats[currentLang]   || product.cats.ru;
+  const name = product.names[currentLang] || product.names.ru;
+  const cat  = product.cats[currentLang]  || product.cats.ru;
+  const imgs = product.images && product.images.length ? product.images : [];
+  const hasMultiple = imgs.length > 1;
 
-  const imgHtml = (product.images && product.images.length)
-    ? `<img src="${product.images[0]}" alt="${name}" loading="lazy">`
-    : `<div class="product-card__placeholder" style="background:${product.color}">
-         <span>${product.brand}</span>
-       </div>`;
+  let currentIndex = 0;
+
+  // Строим блок изображения
+  let imageHtml;
+  if (imgs.length) {
+    const dotsHtml = hasMultiple
+      ? `<div class="card-slider__dots">
+           ${imgs.map((_, i) => `<button class="card-slider__dot${i === 0 ? ' active' : ''}" data-index="${i}" aria-label="Фото ${i+1}"></button>`).join('')}
+         </div>`
+      : '';
+
+    const arrowsHtml = hasMultiple
+      ? `<button class="card-slider__btn card-slider__btn--prev" aria-label="Предыдущее фото">
+           <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+         </button>
+         <button class="card-slider__btn card-slider__btn--next" aria-label="Следующее фото">
+           <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+         </button>`
+      : '';
+
+    imageHtml = `
+      <div class="card-slider">
+        <a href="product.html?id=${product.id}" class="product-card__image-link">
+          <div class="product-card__image">
+            <img src="${imgs[0]}" alt="${name}" loading="lazy" class="card-slider__img">
+          </div>
+        </a>
+        ${arrowsHtml}
+        ${dotsHtml}
+      </div>`;
+  } else {
+    imageHtml = `
+      <a href="product.html?id=${product.id}" class="product-card__image-link">
+        <div class="product-card__image">
+          <div class="product-card__placeholder" style="background:${product.color}">
+            <span>${product.brand}</span>
+          </div>
+        </div>
+      </a>`;
+  }
 
   card.innerHTML = `
-    <a href="product.html?id=${product.id}" class="product-card__image-link">
-      <div class="product-card__image">${imgHtml}</div>
-    </a>
+    ${imageHtml}
     <div class="product-card__body">
       <span class="product-card__category">${cat}</span>
       <a href="product.html?id=${product.id}" class="product-card__name-link">
@@ -370,6 +405,26 @@ function createProductCard(product) {
         <button class="btn-inquiry"><span>${t('inquiry_btn')}</span></button>
       </div>
     </div>`;
+
+  // Логика слайдера
+  if (hasMultiple) {
+    const img   = card.querySelector('.card-slider__img');
+    const dots  = card.querySelectorAll('.card-slider__dot');
+    const prev  = card.querySelector('.card-slider__btn--prev');
+    const next  = card.querySelector('.card-slider__btn--next');
+
+    function goTo(index) {
+      currentIndex = (index + imgs.length) % imgs.length;
+      img.src = imgs[currentIndex];
+      dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+    }
+
+    prev.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); goTo(currentIndex - 1); });
+    next.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); goTo(currentIndex + 1); });
+    dots.forEach(dot => {
+      dot.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); goTo(+dot.dataset.index); });
+    });
+  }
 
   card.querySelector('.btn-inquiry').addEventListener('click', () => openModal(product));
   return card;
