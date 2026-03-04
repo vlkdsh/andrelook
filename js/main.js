@@ -163,81 +163,28 @@ const PRODUCTS = [
   // ─ ТЁПЛЫЕ КУРТКИ ─────────────────────────────
   {
     id: 1,
-    names: { en: 'Moncler Down Jacket', ru: 'Пуховик Moncler', et: 'Moncler unejope' },
+    names: {
+      en: 'Moncler Maya Down Jacket',
+      ru: 'Пуховик Moncler Maya',
+      et: 'Moncler Maya unejope',
+    },
     category: 'warm-jackets',
     cats: { en: 'Warm Jackets', ru: 'Тёплые куртки', et: 'Soojad jakid' },
     descs: {
-      en: 'Classic Moncler down jacket. Water-resistant nylon shell, white goose down fill. Iconic badge on sleeve.',
-      ru: 'Классический пуховик Moncler. Водоотталкивающий нейлон, наполнитель — белый гусиный пух. Фирменный шеврон на рукаве.',
-      et: 'Klassikaline Moncler unejope. Veekindel nailon, valge haneuled täidis. Ikoonilised õlalapp.',
+      ru: 'Пуховик Moncler Maya 2024. Обновлённый ярлык с актуальной датой. Стальная гравировка на молнии. Улучшенный пух — куртка объёмнее и теплее. Специальная ткань: цвет и блеск максимально близки к оригиналу — не слишком глянцево и не матово. Три идеально выверенные линии строчки: плечо, треугольник, горизонталь. Логотип из 100% кашемира — точные оттенки синего и красного, как в оригинале.',
+      en: 'Moncler Maya Down Jacket 2024. Updated washing label with latest date. Steel-engraved zipper. More puffy with better down fill. Custom fabric — colors and brightness perfectly match retail, not too shiny, not too matte. Three perfectly integrated lines: shoulder, triangle, horizontal. 100% cashmere cock logo with accurate navy and red tones.',
+      et: 'Moncler Maya unejope 2024. Uuendatud pesusildi kuupäev. Terasest graveeritud tõmblukk. Paksem ja soojem täidisega. Kohandatud kangas — värvid ja läige vastavad täpselt originaalile. Kolm täiuslikult integreeritud joont. 100% kaašmiir logo.',
     },
-    images: [],
+    images: [
+      'images/moncler-maya-1.png',
+      'images/moncler-maya-2.png',
+      'images/moncler-maya-3.png',
+      'images/moncler-maya-4.png',
+      'images/moncler-maya-5.png',
+      'images/moncler-maya-6.png',
+    ],
     color: '#1C1C1A',
     brand: 'Moncler',
-  },
-
-  // ─ ЖИЛЕТКИ ───────────────────────────────────
-  {
-    id: 2,
-    names: { en: 'Down Vest', ru: 'Пуховый жилет', et: 'Sulepuhk vest' },
-    category: 'vests',
-    cats: { en: 'Vests', ru: 'Жилетки', et: 'Vestid' },
-    descs: {
-      en: 'Lightweight down vest. Quilted construction, zip pockets, packable design.',
-      ru: 'Лёгкий пуховый жилет. Стёганая конструкция, карманы на молнии, компактный.',
-      et: 'Kerge sulepuhk vest. Quilitud konstruktsioon, lukuga taskud.',
-    },
-    images: [],
-    color: '#3D3028',
-    brand: 'Stone Island',
-  },
-
-  // ─ ЛЁГКИЕ КУРТКИ ─────────────────────────────
-  {
-    id: 3,
-    names: { en: 'Bomber Jacket', ru: 'Куртка-бомбер', et: 'Pommitaja jope' },
-    category: 'light-jackets',
-    cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
-    descs: {
-      en: 'Classic bomber silhouette. Lightweight shell, ribbed cuffs and hem, zip closure.',
-      ru: 'Классический силуэт бомбера. Лёгкая оболочка, рибана на манжетах и поясе, застёжка-молния.',
-      et: 'Klassikaline pommitaja siluett. Kerge kate, ribitud mansettid.',
-    },
-    images: [],
-    color: '#2B2B28',
-    brand: 'Acne Studios',
-  },
-
-  // ─ КОФТЫ ─────────────────────────────────────
-  {
-    id: 4,
-    names: { en: 'Zip Hoodie', ru: 'Худи на молнии', et: 'Lukuga kapuuts' },
-    category: 'hoodies',
-    cats: { en: 'Hoodies', ru: 'Кофты', et: 'Kampsunid' },
-    descs: {
-      en: 'Premium cotton zip hoodie. Relaxed fit, kangaroo pocket, brushed interior.',
-      ru: 'Худи на молнии из премиального хлопка. Свободный крой, карман-кенгуру, начёсанная подкладка.',
-      et: 'Premium puuvillane lukuga kapuuts. Lõdv lõige, känguru tasku.',
-    },
-    images: [],
-    color: '#5C574F',
-    brand: 'Essentials / Fear of God',
-  },
-
-  // ─ ФУТБОЛКИ ──────────────────────────────────
-  {
-    id: 5,
-    names: { en: 'Oversized Tee', ru: 'Футболка оверсайз', et: 'Oversized T-särk' },
-    category: 'tshirts',
-    cats: { en: 'T-Shirts', ru: 'Футболки', et: 'T-särgid' },
-    descs: {
-      en: '100% premium cotton. Oversized silhouette, dropped shoulders, ribbed collar.',
-      ru: '100% премиальный хлопок. Оверсайз силуэт, заниженные плечи, рибана на вороте.',
-      et: '100% premium puuvill. Oversized siluett, langetatud õlad.',
-    },
-    images: [],
-    color: '#B5A898',
-    brand: 'Stone Island / CP Company',
   },
 ];
 
