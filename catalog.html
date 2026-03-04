@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Каталог Andrelook — мировые бренды одежды. Таллин и доставка по Европе." />
+  <meta name="description" content="Каталог Andrelook — мировые бренды одежды." />
   <title>Каталог — Andrelook</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,116 +11,96 @@
 </head>
 <body>
 
-  <!-- ══ HEADER ════════════════════════════════ -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">ANDRELOOK</a>
-      <nav class="nav" aria-label="Основная навигация">
-        <a href="index.html"         class="nav-link">Главная</a>
-        <a href="catalog.html"       class="nav-link active">Каталог</a>
-        <a href="index.html#how"     class="nav-link">Как купить</a>
-        <a href="index.html#contact" class="nav-link">Контакты</a>
+      <a href="index.html">
+        <img src="images/logo.png" alt="Andrelook" class="logo-img" />
+      </a>
+      <nav class="nav">
+        <a href="index.html"         class="nav-link" data-i18n="nav_home">Главная</a>
+        <a href="catalog.html"       class="nav-link active" data-i18n="nav_catalog">Каталог</a>
+        <a href="index.html#how"     class="nav-link" data-i18n="nav_how">Как купить</a>
+        <a href="index.html#contact" class="nav-link" data-i18n="nav_contact">Контакты</a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Открыть меню">
-        <span></span>
-        <span></span>
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="et">ET</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span>
       </button>
     </div>
   </header>
 
   <nav class="mobile-nav" id="mobile-nav">
-    <a href="index.html"         class="nav-link">Главная</a>
-    <a href="catalog.html"       class="nav-link">Каталог</a>
-    <a href="index.html#how"     class="nav-link">Как купить</a>
-    <a href="index.html#contact" class="nav-link">Контакты</a>
+    <a href="index.html"         class="nav-link" data-i18n="nav_home">Главная</a>
+    <a href="catalog.html"       class="nav-link" data-i18n="nav_catalog">Каталог</a>
+    <a href="index.html#how"     class="nav-link" data-i18n="nav_how">Как купить</a>
+    <a href="index.html#contact" class="nav-link" data-i18n="nav_contact">Контакты</a>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="ru">RU</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="et">ET</button>
+    </div>
   </nav>
 
   <main>
-
-    <!-- ══ CATALOG HERO ══════════════════════════ -->
     <div class="catalog-hero">
       <div class="container">
-        <h1 class="catalog-title">Каталог</h1>
-        <p class="catalog-sub">Мировые бренды · Коллекция 2025</p>
+        <h1 class="catalog-title" data-i18n="nav_catalog">Каталог</h1>
+        <p class="catalog-sub" data-i18n="cat_season">Коллекция 2025</p>
       </div>
     </div>
 
-    <!-- ══ FILTERS ═══════════════════════════════ -->
     <div class="filters-bar">
       <div class="container">
         <div class="filters">
-          <button class="filter-btn active" data-filter="all">Все</button>
-          <button class="filter-btn" data-filter="suits">Костюмы</button>
-          <button class="filter-btn" data-filter="outerwear">Верхняя одежда</button>
-          <button class="filter-btn" data-filter="knitwear">Трикотаж</button>
-          <button class="filter-btn" data-filter="shirts">Рубашки</button>
-          <button class="filter-btn" data-filter="trousers">Брюки</button>
+          <button class="filter-btn active" data-filter="all"      data-i18n="filter_all">Все</button>
+          <button class="filter-btn"        data-filter="suits"    data-i18n="filter_suits">Костюмы</button>
+          <button class="filter-btn"        data-filter="outerwear" data-i18n="filter_outer">Верхняя одежда</button>
+          <button class="filter-btn"        data-filter="knitwear"  data-i18n="filter_knit">Трикотаж</button>
+          <button class="filter-btn"        data-filter="shirts"    data-i18n="filter_shirts">Рубашки</button>
+          <button class="filter-btn"        data-filter="trousers"  data-i18n="filter_trous">Брюки</button>
         </div>
       </div>
     </div>
 
-    <!-- ══ PRODUCTS ═══════════════════════════════ -->
     <section class="catalog-main">
       <div class="container">
-        <div class="products-grid" id="products-grid">
-          <!-- Заполняется через JS -->
-        </div>
+        <div class="products-grid" id="products-grid"></div>
       </div>
     </section>
-
   </main>
 
-  <!-- ══ FOOTER ════════════════════════════════ -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span class="footer-logo">ANDRELOOK</span>
+      <a href="index.html">
+        <img src="images/logo.png" alt="Andrelook" class="footer-logo" />
+      </a>
       <nav class="footer-nav">
-        <a href="index.html">Главная</a>
-        <a href="catalog.html">Каталог</a>
-        <a href="index.html#how">Как купить</a>
+        <a href="index.html"   data-i18n="nav_home">Главная</a>
+        <a href="catalog.html" data-i18n="nav_catalog">Каталог</a>
+        <a href="index.html#how" data-i18n="nav_how">Как купить</a>
         <a href="https://t.me/andrelookstore" target="_blank" rel="noopener">Telegram</a>
       </nav>
-      <span class="footer-copy">© 2025 Andrelook · Tallinn</span>
+      <span class="footer-copy" data-i18n="footer_copy">© 2025 Andrelook · Tallinn</span>
     </div>
   </footer>
 
-  <!-- ══ MODAL ═════════════════════════════════ -->
+  <!-- Modal -->
   <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true">
     <div class="modal">
-      <button class="modal-close" id="modal-close" aria-label="Закрыть">✕</button>
-      <p class="modal-label">Запросить информацию</p>
-      <h2 class="modal-title" id="modal-title">
-        <span id="modal-product-name"></span>
-      </h2>
-      <p class="modal-text">
-        Напишите нам в Telegram — поможем с размером, наличием
-        и ответим на все вопросы. Самые быстрые ответы там.
-      </p>
+      <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+      <p class="modal-label-el" id="modal-label-text">Запросить информацию</p>
+      <h2 class="modal-title"><span id="modal-product-name"></span></h2>
+      <p class="modal-text-el" id="modal-body-text">Напишите нам в Telegram — расскажем о наличии, размерах и всех деталях.</p>
       <div class="modal-actions">
-        <a href="#" class="modal-btn modal-btn--tg" id="modal-tg" target="_blank" rel="noopener">
-          Написать в Telegram
-        </a>
+        <a href="#" class="modal-btn modal-btn--tg" id="modal-tg" target="_blank" rel="noopener">Написать в Telegram</a>
       </div>
     </div>
   </div>
 
   <script src="js/main.js"></script>
-
-  <!-- Читаем фильтр из URL -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const params = new URLSearchParams(location.search);
-      const filter = params.get('filter');
-      if (filter) {
-        const btn = document.querySelector(`.filter-btn[data-filter="${filter}"]`);
-        if (btn) {
-          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          renderProducts(filter);
-        }
-      }
-    });
-  </script>
-
 </body>
 </html>
