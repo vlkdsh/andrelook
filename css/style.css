@@ -148,7 +148,7 @@ ul { list-style: none; }
 .mobile-nav .lang-switcher { margin-top: 1rem; }
 
 /* ══════════════════════════════════════════════
-   HERO — brand-centered, editorial
+   HERO — full-bleed photo, brand centered
    ══════════════════════════════════════════════ */
 .hero {
   padding-top: var(--header-h);
@@ -157,30 +157,48 @@ ul { list-style: none; }
   grid-template-rows: auto 1fr auto;
   position: relative;
   overflow: hidden;
-  background: var(--bg);
+  background: #0e0e0c;
 }
 
-/* Тонкая фоновая сетка */
-.hero-grid-bg {
+/* Фото фон */
+.hero-bg {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(to right, rgba(28,28,26,0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(28,28,26,0.04) 1px, transparent 1px);
-  background-size: clamp(60px, 8vw, 120px) clamp(60px, 8vw, 120px);
-  pointer-events: none;
+  background-image: url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center 30%;
   z-index: 0;
+  transform: scale(1.04);
+  animation: heroZoom 12s var(--ease) forwards;
+}
+@keyframes heroZoom {
+  from { transform: scale(1.04); }
+  to   { transform: scale(1); }
 }
 
-/* Верхняя строка — координаты */
+/* Затемнение — среднее, с градиентом снизу и сверху */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom,
+      rgba(10,10,8,0.55) 0%,
+      rgba(10,10,8,0.28) 40%,
+      rgba(10,10,8,0.38) 70%,
+      rgba(10,10,8,0.72) 100%
+    );
+  z-index: 1;
+}
+
+/* Верхняя строка */
 .hero-topbar {
   display: flex;
   align-items: center;
   gap: 0;
   padding: 1.5rem clamp(1.5rem, 4vw, 5rem);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
   position: relative;
-  z-index: 1;
+  z-index: 2;
   opacity: 0;
   animation: fadeUp 0.6s var(--ease) 0.1s forwards;
 }
@@ -189,7 +207,7 @@ ul { list-style: none; }
   font-weight: 400;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: rgba(255,255,255,0.55);
   padding: 0 2rem;
 }
 .hero-topbar-item:first-child { padding-left: 0; }
@@ -197,11 +215,11 @@ ul { list-style: none; }
 .hero-topbar-divider {
   width: 1px;
   height: 14px;
-  background: var(--border-mid);
+  background: rgba(255,255,255,0.2);
   flex-shrink: 0;
 }
 
-/* Центральный блок с именем */
+/* Центральный блок */
 .hero-center {
   display: flex;
   flex-direction: column;
@@ -209,33 +227,32 @@ ul { list-style: none; }
   justify-content: center;
   padding: clamp(3rem, 6vw, 7rem) clamp(1.5rem, 4vw, 5rem);
   position: relative;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
 }
 
 .hero-brand-wrap {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
 .hero-brand-line--top,
 .hero-brand-line--bottom {
   width: clamp(60px, 12vw, 160px);
   height: 1px;
-  background: linear-gradient(to right, transparent, var(--border-mid), transparent);
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
   opacity: 0;
-  animation: fadeIn 1s var(--ease) 0.6s forwards;
+  animation: fadeIn 1.2s var(--ease) 0.6s forwards;
 }
 
 .hero-brand-name {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.4rem;
   opacity: 0;
   animation: fadeUp 1s var(--ease) 0.3s forwards;
 }
@@ -246,27 +263,28 @@ ul { list-style: none; }
   font-weight: 300;
   font-style: italic;
   line-height: 0.85;
-  color: var(--text);
+  color: #fff;
   letter-spacing: -0.04em;
+  text-shadow: 0 4px 40px rgba(0,0,0,0.3);
 }
 
 .hero-brand-full {
   font-family: var(--font-sans);
-  font-size: clamp(1.2rem, 3.5vw, 3rem);
+  font-size: clamp(1.1rem, 3vw, 2.6rem);
   font-weight: 300;
-  letter-spacing: clamp(0.3em, 1.5vw, 0.7em);
-  color: var(--text);
+  letter-spacing: clamp(0.35em, 1.8vw, 0.75em);
+  color: rgba(255,255,255,0.9);
   text-transform: uppercase;
 }
 
 .hero-tagline {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 400;
-  letter-spacing: 0.26em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--text-light);
+  color: rgba(255,255,255,0.45);
   opacity: 0;
-  animation: fadeUp 0.8s var(--ease) 0.8s forwards;
+  animation: fadeUp 0.8s var(--ease) 0.85s forwards;
 }
 
 /* Нижняя строка */
@@ -275,25 +293,33 @@ ul { list-style: none; }
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   padding: 1.75rem clamp(1.5rem, 4vw, 5rem);
-  border-top: 1px solid var(--border);
+  border-top: 1px solid rgba(255,255,255,0.12);
   position: relative;
-  z-index: 1;
+  z-index: 2;
   opacity: 0;
-  animation: fadeUp 0.7s var(--ease) 1s forwards;
+  animation: fadeUp 0.7s var(--ease) 1.1s forwards;
 }
 .hero-footer-left  { display: flex; align-items: center; }
 .hero-footer-center { display: flex; justify-content: center; }
-.hero-footer-right {
-  display: flex;
-  justify-content: flex-end;
-}
+.hero-footer-right { display: flex; justify-content: flex-end; }
+
 .hero-footer-note {
   font-size: 0.7rem;
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--text-light);
+  color: rgba(255,255,255,0.35);
 }
+
+/* Кнопка светлая версия для тёмного фона */
+.btn-primary--light {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(8px);
+  color: #fff;
+}
+.btn-primary--light::before { background: #fff; }
+.btn-primary--light:hover { color: var(--text); }
 
 .hero-scroll-hint {
   display: flex;
@@ -303,11 +329,11 @@ ul { list-style: none; }
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--text-light);
+  color: rgba(255,255,255,0.35);
 }
 .hero-scroll-bar {
   width: 40px; height: 1px;
-  background: var(--border-mid);
+  background: rgba(255,255,255,0.2);
   position: relative;
   overflow: hidden;
 }
@@ -316,7 +342,7 @@ ul { list-style: none; }
   position: absolute;
   top: 0; left: -100%;
   width: 100%; height: 100%;
-  background: var(--green);
+  background: #fff;
   animation: slideRight 2.5s var(--ease) infinite 1.5s;
 }
 @keyframes slideRight {
