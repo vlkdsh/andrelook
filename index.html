@@ -53,65 +53,57 @@
 
     <!-- ══ HERO ══════════════════════════════════ -->
     <section class="hero">
-      <div class="hero-watermark" aria-hidden="true">A</div>
 
-      <div class="hero-top">
-        <div class="hero-eyebrow">
-          <div class="hero-eyebrow-line"></div>
-          <span data-i18n="hero_label">Мировые бренды · Таллин · Европа</span>
-        </div>
+      <!-- Декоративная сетка фона -->
+      <div class="hero-grid-bg" aria-hidden="true"></div>
 
-        <h1 class="hero-title">
-          <span class="hero-line" data-i18n-line="0">Стиль,</span>
-          <span class="hero-line" data-i18n-line="1">качество и</span>
-          <span class="hero-line" data-i18n-line="2">внимание к деталям</span>
-        </h1>
+      <!-- Верхняя строка — координаты -->
+      <div class="hero-topbar">
+        <span class="hero-topbar-item" data-i18n="hero_location">Tallinn, Estonia</span>
+        <span class="hero-topbar-divider" aria-hidden="true"></span>
+        <span class="hero-topbar-item" data-i18n="hero_delivery">Доставка по Европе</span>
+        <span class="hero-topbar-divider" aria-hidden="true"></span>
+        <span class="hero-topbar-item hero-topbar-year">Est. 2022</span>
       </div>
 
-      <div class="hero-bottom">
-        <p class="hero-sub" data-i18n="hero_sub">
-          Тщательно подобранные вещи, которые красиво сидят и легко преображают ваш гардероб.
-        </p>
-        <div class="hero-actions">
-          <a href="catalog.html" class="btn-primary">
-            <span data-i18n="hero_cta">Смотреть коллекцию</span>
-          </a>
+      <!-- Центр — имя бренда -->
+      <div class="hero-center">
+        <div class="hero-brand-wrap">
+          <div class="hero-brand-line hero-brand-line--top" aria-hidden="true"></div>
+          <h1 class="hero-brand-name">
+            <span class="hero-brand-al">AL</span>
+            <span class="hero-brand-full">ANDRELOOK</span>
+          </h1>
+          <div class="hero-brand-line hero-brand-line--bottom" aria-hidden="true"></div>
+        </div>
+
+        <p class="hero-tagline" data-i18n="hero_tagline">Мировые бренды · Личный подход</p>
+      </div>
+
+      <!-- Нижняя строка — CTA -->
+      <div class="hero-footer">
+        <div class="hero-footer-left">
           <div class="hero-scroll-hint">
             <div class="hero-scroll-bar"></div>
             <span>scroll</span>
           </div>
         </div>
+        <div class="hero-footer-center">
+          <a href="catalog.html" class="btn-primary">
+            <span data-i18n="hero_cta">Смотреть коллекцию</span>
+          </a>
+        </div>
+        <div class="hero-footer-right">
+          <span class="hero-footer-note" data-i18n="hero_note">Таллин · Европа</span>
+        </div>
       </div>
+
     </section>
 
-    <!-- ══ BRAND TICKER ═══════════════════════════ -->
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-inner">
-        <span>Moncler</span><span class="dot">·</span>
-        <span>Loro Piana</span><span class="dot">·</span>
-        <span>Valentino</span><span class="dot">·</span>
-        <span>Max Mara</span><span class="dot">·</span>
-        <span>Brunello Cucinelli</span><span class="dot">·</span>
-        <span>Celine</span><span class="dot">·</span>
-        <span>Toteme</span><span class="dot">·</span>
-        <span>Acne Studios</span><span class="dot">·</span>
-        <span>Theory</span><span class="dot">·</span>
-        <span>Arket</span><span class="dot">·</span>
-        <span>Zara Premium</span><span class="dot">·</span>
-        <span>Massimo Dutti</span><span class="dot">·</span>
-        <!-- duplicate -->
-        <span>Moncler</span><span class="dot">·</span>
-        <span>Loro Piana</span><span class="dot">·</span>
-        <span>Valentino</span><span class="dot">·</span>
-        <span>Max Mara</span><span class="dot">·</span>
-        <span>Brunello Cucinelli</span><span class="dot">·</span>
-        <span>Celine</span><span class="dot">·</span>
-        <span>Toteme</span><span class="dot">·</span>
-        <span>Acne Studios</span><span class="dot">·</span>
-        <span>Theory</span><span class="dot">·</span>
-        <span>Arket</span><span class="dot">·</span>
-        <span>Zara Premium</span><span class="dot">·</span>
-        <span>Massimo Dutti</span><span class="dot">·</span>
+    <!-- ══ TICKER ═════════════════════════════════ -->
+    <div class="ticker" aria-label="ticker">
+      <div class="ticker-inner" id="ticker-inner">
+        <!-- JS заполняет -->
       </div>
     </div>
 
@@ -135,40 +127,6 @@
       </div>
     </section>
 
-    <!-- ══ COLLECTION ════════════════════════════ -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2 class="section-title" data-i18n="col_title">Коллекция</h2>
-          <a href="catalog.html" class="section-link" data-i18n="col_all">Весь каталог →</a>
-        </div>
-
-        <div class="categories-layout reveal">
-          <a href="catalog.html?filter=outerwear" class="cat-card cat-card--large">
-            <div class="cat-card__visual cat-card__visual--1"></div>
-            <div class="cat-card__label">
-              <span class="cat-card__name" data-i18n="cat_outer">Верхняя одежда</span>
-              <span class="cat-card__count" data-i18n="cat_pos2">18 позиций</span>
-            </div>
-          </a>
-          <a href="catalog.html?filter=suits" class="cat-card cat-card--small">
-            <div class="cat-card__visual cat-card__visual--2"></div>
-            <div class="cat-card__label">
-              <span class="cat-card__name" data-i18n="cat_suits">Костюмы</span>
-              <span class="cat-card__count" data-i18n="cat_pos1">12 позиций</span>
-            </div>
-          </a>
-          <a href="catalog.html?filter=knitwear" class="cat-card cat-card--small">
-            <div class="cat-card__visual cat-card__visual--3"></div>
-            <div class="cat-card__label">
-              <span class="cat-card__name" data-i18n="cat_knit">Трикотаж</span>
-              <span class="cat-card__count" data-i18n="cat_pos3">24 позиции</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
     <!-- ══ HOW TO BUY ══════════════════════════════ -->
     <section class="section how-section" id="how">
       <div class="container">
@@ -177,22 +135,22 @@
         </div>
         <div class="how-grid reveal">
           <div class="how-card">
-            <span class="how-icon">📍</span>
+            <span class="how-num">01</span>
             <h3 class="how-card__title" data-i18n="how_1_title">Вы в Таллине</h3>
             <p class="how-card__text" data-i18n="how_1_text">Договоримся о личной встрече в удобное время. Примерите вещь и увидите её вживую. Если всё подходит — оплата на месте.</p>
           </div>
           <div class="how-card">
-            <span class="how-icon">📦</span>
+            <span class="how-num">02</span>
             <h3 class="how-card__title" data-i18n="how_2_title">Доставка по Европе</h3>
             <p class="how-card__text" data-i18n="how_2_text">Отправляем заказы после полной оплаты. Стоимость доставки рассчитывается индивидуально. Оплата банковским переводом.</p>
           </div>
           <div class="how-card">
-            <span class="how-icon">🛍</span>
+            <span class="how-num">03</span>
             <h3 class="how-card__title" data-i18n="how_3_title">Нет в наличии?</h3>
             <p class="how-card__text" data-i18n="how_3_text">Привезём под заказ по предоплате 35%. Остаток — перед отправкой или при личной встрече, если вы в Таллине.</p>
           </div>
           <div class="how-card">
-            <span class="how-icon">💬</span>
+            <span class="how-num">04</span>
             <h3 class="how-card__title" data-i18n="how_4_title">Помогаем с выбором</h3>
             <p class="how-card__text" data-i18n="how_4_text">Напишите нам — поможем подобрать размер и ответим на все вопросы. Остаёмся на связи на каждом этапе.</p>
           </div>
