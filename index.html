@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Andrelook — магазин мировых брендов одежды. Таллин и доставка по Европе. Пишите в Telegram." />
-  <title>Andrelook — Мировые бренды одежды</title>
+  <meta name="description" content="Andrelook — мировые бренды одежды. Таллин и доставка по Европе." />
+  <title>Andrelook</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="css/style.css" />
@@ -14,153 +14,193 @@
   <!-- ══ HEADER ════════════════════════════════ -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">ANDRELOOK</a>
-      <nav class="nav" aria-label="Основная навигация">
-        <a href="index.html"   class="nav-link">Главная</a>
-        <a href="catalog.html" class="nav-link">Каталог</a>
-        <a href="#how"         class="nav-link">Как купить</a>
-        <a href="#contact"     class="nav-link">Контакты</a>
+
+      <a href="index.html">
+        <img src="images/logo.png" alt="Andrelook" class="logo-img" />
+      </a>
+
+      <nav class="nav">
+        <a href="index.html"   class="nav-link" data-i18n="nav_home">Главная</a>
+        <a href="catalog.html" class="nav-link" data-i18n="nav_catalog">Каталог</a>
+        <a href="#how"         class="nav-link" data-i18n="nav_how">Как купить</a>
+        <a href="#contact"     class="nav-link" data-i18n="nav_contact">Контакты</a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Открыть меню">
-        <span></span>
-        <span></span>
+
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="et">ET</button>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span>
       </button>
     </div>
   </header>
 
+  <!-- Mobile nav -->
   <nav class="mobile-nav" id="mobile-nav">
-    <a href="index.html"   class="nav-link">Главная</a>
-    <a href="catalog.html" class="nav-link">Каталог</a>
-    <a href="#how"         class="nav-link">Как купить</a>
-    <a href="#contact"     class="nav-link">Контакты</a>
+    <a href="index.html"   class="nav-link" data-i18n="nav_home">Главная</a>
+    <a href="catalog.html" class="nav-link" data-i18n="nav_catalog">Каталог</a>
+    <a href="#how"         class="nav-link" data-i18n="nav_how">Как купить</a>
+    <a href="#contact"     class="nav-link" data-i18n="nav_contact">Контакты</a>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="ru">RU</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="et">ET</button>
+    </div>
   </nav>
 
   <main>
 
     <!-- ══ HERO ══════════════════════════════════ -->
     <section class="hero">
-      <div class="hero-content">
-        <span class="hero-label">Мировые бренды · Таллин · Европа</span>
-        <h1 class="hero-title">
-          Стиль,<br>
-          качество и <em>внимание</em><br>
-          к деталям
-        </h1>
-        <p class="hero-sub">
-          Тщательно подобранные вещи, которые красиво сидят<br>
-          и легко преображают ваш гардероб.
-        </p>
-        <a href="catalog.html" class="btn-primary">
-          <span>Смотреть коллекцию</span>
-        </a>
-      </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="hero-block hero-block--large"></div>
-        <div class="hero-block hero-block--small"></div>
-      </div>
-    </section>
+      <div class="hero-bg-text">Andrelook</div>
 
-    <!-- ══ BRAND NUMBERS ═════════════════════════ -->
-    <section class="brand-numbers">
-      <div class="container">
-        <div class="numbers-grid">
-          <div class="number-item">
-            <span class="number" data-target="120" data-suffix="+">120+</span>
-            <span class="number-label">Позиций в каталоге</span>
+      <div class="hero-inner">
+        <div class="hero-content">
+          <span class="hero-label" data-i18n="hero_label">Мировые бренды · Таллин · Европа</span>
+
+          <h1 class="hero-title">
+            <span class="hero-line">Стиль,</span>
+            <span class="hero-line"><em>качество и</em></span>
+            <span class="hero-line">внимание к деталям</span>
+          </h1>
+
+          <p class="hero-sub" data-i18n="hero_sub">
+            Тщательно подобранные вещи, которые красиво сидят и легко преображают ваш гардероб.
+          </p>
+
+          <div class="hero-cta">
+            <a href="catalog.html" class="btn-primary">
+              <span data-i18n="hero_cta">Смотреть коллекцию</span>
+            </a>
           </div>
-          <div class="number-item">
-            <span class="number" data-target="30" data-suffix="+">30+</span>
-            <span class="number-label">Мировых брендов</span>
-          </div>
-          <div class="number-item">
-            <span class="number" data-target="15" data-suffix="">15</span>
-            <span class="number-label">Стран доставки</span>
+        </div>
+
+        <div class="hero-aside">
+          <span class="hero-aside-label">Andrelook</span>
+          <div class="hero-scroll">
+            <div class="hero-scroll-line"></div>
+            <span>scroll</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══ CATEGORIES ════════════════════════════ -->
+    <!-- ══ BRAND STRIP ════════════════════════════ -->
+    <div class="brand-strip" aria-hidden="true">
+      <div class="brand-strip-inner">
+        <span>Moncler</span><span class="sep">·</span>
+        <span>Loro Piana</span><span class="sep">·</span>
+        <span>Valentino</span><span class="sep">·</span>
+        <span>Max Mara</span><span class="sep">·</span>
+        <span>Brunello Cucinelli</span><span class="sep">·</span>
+        <span>Celine</span><span class="sep">·</span>
+        <span>Toteme</span><span class="sep">·</span>
+        <span>Acne Studios</span><span class="sep">·</span>
+        <span>Theory</span><span class="sep">·</span>
+        <span>Arket</span><span class="sep">·</span>
+        <!-- duplicate for seamless loop -->
+        <span>Moncler</span><span class="sep">·</span>
+        <span>Loro Piana</span><span class="sep">·</span>
+        <span>Valentino</span><span class="sep">·</span>
+        <span>Max Mara</span><span class="sep">·</span>
+        <span>Brunello Cucinelli</span><span class="sep">·</span>
+        <span>Celine</span><span class="sep">·</span>
+        <span>Toteme</span><span class="sep">·</span>
+        <span>Acne Studios</span><span class="sep">·</span>
+        <span>Theory</span><span class="sep">·</span>
+        <span>Arket</span><span class="sep">·</span>
+      </div>
+    </div>
+
+    <!-- ══ STATS ═════════════════════════════════ -->
+    <section class="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-num" data-target="120" data-suffix="+" data-i18n="stat_1_num">120+</span>
+            <span class="stat-lbl" data-i18n="stat_1_lbl">Позиций в каталоге</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="30" data-suffix="+" data-i18n="stat_2_num">30+</span>
+            <span class="stat-lbl" data-i18n="stat_2_lbl">Мировых брендов</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="15" data-suffix="" data-i18n="stat_3_num">15</span>
+            <span class="stat-lbl" data-i18n="stat_3_lbl">Стран доставки</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ COLLECTION ════════════════════════════ -->
     <section class="section">
       <div class="container">
         <div class="section-header reveal">
-          <h2 class="section-title">Коллекция</h2>
-          <a href="catalog.html" class="section-link">Весь каталог →</a>
+          <h2 class="section-title" data-i18n="col_title">Коллекция</h2>
+          <a href="catalog.html" class="section-link" data-i18n="col_all">Весь каталог →</a>
         </div>
         <div class="categories-grid reveal">
           <a href="catalog.html?filter=suits" class="cat-card">
             <div class="cat-card__visual cat-card__visual--1"></div>
             <div class="cat-card__info">
-              <span class="cat-card__name">Костюмы</span>
-              <span class="cat-card__count">12 позиций</span>
+              <span class="cat-card__name" data-i18n="cat_suits">Костюмы</span>
+              <span class="cat-card__count" data-i18n="cat_pos1">12 позиций</span>
             </div>
           </a>
           <a href="catalog.html?filter=outerwear" class="cat-card">
             <div class="cat-card__visual cat-card__visual--2"></div>
             <div class="cat-card__info">
-              <span class="cat-card__name">Верхняя одежда</span>
-              <span class="cat-card__count">18 позиций</span>
+              <span class="cat-card__name" data-i18n="cat_outer">Верхняя одежда</span>
+              <span class="cat-card__count" data-i18n="cat_pos2">18 позиций</span>
             </div>
           </a>
           <a href="catalog.html?filter=knitwear" class="cat-card">
             <div class="cat-card__visual cat-card__visual--3"></div>
             <div class="cat-card__info">
-              <span class="cat-card__name">Трикотаж</span>
-              <span class="cat-card__count">24 позиции</span>
+              <span class="cat-card__name" data-i18n="cat_knit">Трикотаж</span>
+              <span class="cat-card__count" data-i18n="cat_pos3">24 позиции</span>
             </div>
           </a>
           <a href="catalog.html?filter=shirts" class="cat-card">
             <div class="cat-card__visual cat-card__visual--4"></div>
             <div class="cat-card__info">
-              <span class="cat-card__name">Рубашки и блузы</span>
-              <span class="cat-card__count">16 позиций</span>
+              <span class="cat-card__name" data-i18n="cat_shirts">Рубашки и блузы</span>
+              <span class="cat-card__count" data-i18n="cat_pos4">16 позиций</span>
             </div>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- ══ HOW IT WORKS ═══════════════════════════ -->
+    <!-- ══ HOW TO BUY ══════════════════════════════ -->
     <section class="section how-section" id="how">
       <div class="container">
         <div class="section-header reveal">
-          <h2 class="section-title">Как купить</h2>
+          <h2 class="section-title" data-i18n="how_title">Как купить</h2>
         </div>
         <div class="how-grid reveal">
           <div class="how-card">
             <span class="how-icon">📍</span>
-            <h3 class="how-card__title">Вы в Таллине</h3>
-            <p class="how-card__text">
-              Договоримся о личной встрече в удобное время.
-              Примерите вещь и увидите её вживую.
-              Если всё подходит — оплата на месте наличными или переводом.
-            </p>
+            <h3 class="how-card__title" data-i18n="how_1_title">Вы в Таллине</h3>
+            <p class="how-card__text" data-i18n="how_1_text">Договоримся о личной встрече в удобное время. Примерите вещь и увидите её вживую. Если всё подходит — оплата на месте.</p>
           </div>
           <div class="how-card">
             <span class="how-icon">📦</span>
-            <h3 class="how-card__title">Доставка по Европе</h3>
-            <p class="how-card__text">
-              Отправляем заказы после полной оплаты.
-              Стоимость доставки рассчитывается индивидуально.
-              Оплата банковским переводом.
-            </p>
+            <h3 class="how-card__title" data-i18n="how_2_title">Доставка по Европе</h3>
+            <p class="how-card__text" data-i18n="how_2_text">Отправляем заказы после полной оплаты. Стоимость доставки рассчитывается индивидуально. Оплата банковским переводом.</p>
           </div>
           <div class="how-card">
             <span class="how-icon">🛍</span>
-            <h3 class="how-card__title">Нет в наличии?</h3>
-            <p class="how-card__text">
-              Привезём под заказ по предоплате 35%.
-              Остаток — перед отправкой или при личной встрече,
-              если вы в Таллине.
-            </p>
+            <h3 class="how-card__title" data-i18n="how_3_title">Нет в наличии?</h3>
+            <p class="how-card__text" data-i18n="how_3_text">Привезём под заказ по предоплате 35%. Остаток — перед отправкой или при личной встрече, если вы в Таллине.</p>
           </div>
           <div class="how-card">
             <span class="how-icon">💬</span>
-            <h3 class="how-card__title">Помогаем с выбором</h3>
-            <p class="how-card__text">
-              Напишите нам — поможем подобрать размер и ответим
-              на все вопросы. Остаёмся на связи на каждом этапе.
-            </p>
+            <h3 class="how-card__title" data-i18n="how_4_title">Помогаем с выбором</h3>
+            <p class="how-card__text" data-i18n="how_4_text">Напишите нам — поможем подобрать размер и ответим на все вопросы. Остаёмся на связи на каждом этапе.</p>
           </div>
         </div>
       </div>
@@ -170,17 +210,12 @@
     <section class="section statement">
       <div class="container">
         <div class="statement-inner reveal">
-          <p class="statement-label">Наш подход</p>
-          <blockquote class="statement-quote">
-            «Мы тщательно подбираем вещи,<br>
-            которые красиво сидят и легко<br>
-            преображают ваш гардероб.»
+          <p class="statement-label" data-i18n="stmt_label">Наш подход</p>
+          <blockquote class="statement-quote" data-i18n="stmt_quote">
+            «Мы тщательно подбираем вещи, которые красиво сидят и легко преображают ваш гардероб.»
           </blockquote>
-          <p class="statement-text">
-            Andrelook — магазин мировых брендов с личным подходом.
-            Большой ассортимент, помощь с размером и быстрые ответы.
-            Работаем для тех, кто ценит качество и хочет покупать
-            с удовольствием — вживую в Таллине или с доставкой по всей Европе.
+          <p class="statement-text" data-i18n="stmt_text">
+            Andrelook — магазин мировых брендов с личным подходом. Большой ассортимент, помощь с размером и быстрые ответы.
           </p>
         </div>
       </div>
@@ -190,15 +225,10 @@
     <section class="section" id="contact">
       <div class="container">
         <div class="contact-inner reveal">
-          <h2 class="contact-title">Написать нам</h2>
-          <p class="contact-sub">
-            Самые быстрые ответы — в Telegram.<br>
-            Поможем с выбором, размером и оформлением заказа.
-          </p>
+          <h2 class="contact-title" data-i18n="contact_title">Написать нам</h2>
+          <p class="contact-sub" data-i18n="contact_sub">Самые быстрые ответы — в Telegram.</p>
           <div class="contact-links">
-            <a href="https://t.me/andrelookstore" class="contact-btn" target="_blank" rel="noopener">
-              Telegram
-            </a>
+            <a href="https://t.me/andrelookstore" class="contact-btn" target="_blank" rel="noopener" data-i18n="contact_btn">Telegram</a>
           </div>
         </div>
       </div>
@@ -209,14 +239,16 @@
   <!-- ══ FOOTER ════════════════════════════════ -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span class="footer-logo">ANDRELOOK</span>
+      <a href="index.html">
+        <img src="images/logo.png" alt="Andrelook" class="footer-logo" />
+      </a>
       <nav class="footer-nav">
-        <a href="index.html">Главная</a>
-        <a href="catalog.html">Каталог</a>
-        <a href="#how">Как купить</a>
+        <a href="index.html"   data-i18n="nav_home">Главная</a>
+        <a href="catalog.html" data-i18n="nav_catalog">Каталог</a>
+        <a href="#how"         data-i18n="nav_how">Как купить</a>
         <a href="https://t.me/andrelookstore" target="_blank" rel="noopener">Telegram</a>
       </nav>
-      <span class="footer-copy">© 2025 Andrelook · Tallinn</span>
+      <span class="footer-copy" data-i18n="footer_copy">© 2025 Andrelook · Tallinn</span>
     </div>
   </footer>
 
