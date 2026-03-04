@@ -350,81 +350,88 @@ function createProductCard(product) {
   const cat  = product.cats[currentLang]  || product.cats.ru;
   const imgs = product.images && product.images.length ? product.images : [];
   const hasMultiple = imgs.length > 1;
-
   let currentIndex = 0;
 
-  // Строим блок изображения
-  let imageHtml;
+  // Блок изображения
+  const imgWrap = document.createElement('div');
+  imgWrap.className = 'product-card__img-wrap';
+
   if (imgs.length) {
-    const dotsHtml = hasMultiple
-      ? `<div class="card-slider__dots">
-           ${imgs.map((_, i) => `<button class="card-slider__dot${i === 0 ? ' active' : ''}" data-index="${i}" aria-label="Фото ${i+1}"></button>`).join('')}
-         </div>`
-      : '';
+    const imgEl = document.createElement('img');
+    imgEl.src = imgs[0];
+    imgEl.alt = name;
+    imgEl.loading = 'lazy';
+    imgWrap.appendChild(imgEl);
 
-    const arrowsHtml = hasMultiple
-      ? `<button class="card-slider__btn card-slider__btn--prev" aria-label="Предыдущее фото">
-           <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-         </button>
-         <button class="card-slider__btn card-slider__btn--next" aria-label="Следующее фото">
-           <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
-         </button>`
-      : '';
+    if (hasMultiple) {
+      // Стрелки
+      const prev = document.createElement('button');
+      prev.className = 'card-arrow card-arrow--prev';
+      prev.setAttribute('aria-label', 'Предыдущее фото');
+      prev.innerHTML = `<svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>`;
 
-    imageHtml = `
-      <div class="card-slider">
-        <a href="product.html?id=${product.id}" class="product-card__image-link">
-          <div class="product-card__image">
-            <img src="${imgs[0]}" alt="${name}" loading="lazy" class="card-slider__img">
-          </div>
-        </a>
-        ${arrowsHtml}
-        ${dotsHtml}
-      </div>`;
+      const next = document.createElement('button');
+      next.className = 'card-arrow card-arrow--next';
+      next.setAttribute('aria-label', 'Следующее фото');
+      next.innerHTML = `<svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>`;
+
+      // Точки
+      const dotsWrap = document.createElement('div');
+      dotsWrap.className = 'card-dots';
+      imgs.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'card-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', `Фото ${i + 1}`);
+        dotsWrap.appendChild(dot);
+      });
+
+      imgWrap.appendChild(prev);
+      imgWrap.appendChild(next);
+      imgWrap.appendChild(dotsWrap);
+
+      function goTo(index) {
+        currentIndex = (index + imgs.length) % imgs.length;
+        imgEl.src = imgs[currentIndex];
+        dotsWrap.querySelectorAll('.card-dot').forEach((d, i) => {
+          d.classList.toggle('active', i === currentIndex);
+        });
+      }
+
+      prev.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); goTo(currentIndex - 1); });
+      next.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); goTo(currentIndex + 1); });
+      dotsWrap.querySelectorAll('.card-dot').forEach((dot, i) => {
+        dot.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); goTo(i); });
+      });
+    }
   } else {
-    imageHtml = `
-      <a href="product.html?id=${product.id}" class="product-card__image-link">
-        <div class="product-card__image">
-          <div class="product-card__placeholder" style="background:${product.color}">
-            <span>${product.brand}</span>
-          </div>
-        </div>
-      </a>`;
+    const ph = document.createElement('div');
+    ph.className = 'product-card__placeholder';
+    ph.style.background = product.color;
+    ph.innerHTML = `<span>${product.brand}</span>`;
+    imgWrap.appendChild(ph);
   }
 
-  card.innerHTML = `
-    ${imageHtml}
-    <div class="product-card__body">
-      <span class="product-card__category">${cat}</span>
-      <a href="product.html?id=${product.id}" class="product-card__name-link">
-        <h2 class="product-card__name">${name}</h2>
-      </a>
-      <p class="product-card__brand">${product.brand}</p>
-      <div class="product-card__footer">
-        <span class="product-card__price">${t('on_request')}</span>
-        <button class="btn-inquiry"><span>${t('inquiry_btn')}</span></button>
-      </div>
+  // Ссылка на страницу товара — оборачивает только изображение
+  const imgLink = document.createElement('a');
+  imgLink.href = `product.html?id=${product.id}`;
+  imgLink.appendChild(imgWrap);
+
+  // Тело карточки
+  const body = document.createElement('div');
+  body.className = 'product-card__body';
+  body.innerHTML = `
+    <span class="product-card__category">${cat}</span>
+    <a href="product.html?id=${product.id}" class="product-card__name-link">
+      <h2 class="product-card__name">${name}</h2>
+    </a>
+    <p class="product-card__brand">${product.brand}</p>
+    <div class="product-card__footer">
+      <span class="product-card__price">${t('on_request')}</span>
+      <button class="btn-inquiry"><span>${t('inquiry_btn')}</span></button>
     </div>`;
 
-  // Логика слайдера
-  if (hasMultiple) {
-    const img   = card.querySelector('.card-slider__img');
-    const dots  = card.querySelectorAll('.card-slider__dot');
-    const prev  = card.querySelector('.card-slider__btn--prev');
-    const next  = card.querySelector('.card-slider__btn--next');
-
-    function goTo(index) {
-      currentIndex = (index + imgs.length) % imgs.length;
-      img.src = imgs[currentIndex];
-      dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
-    }
-
-    prev.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); goTo(currentIndex - 1); });
-    next.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); goTo(currentIndex + 1); });
-    dots.forEach(dot => {
-      dot.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); goTo(+dot.dataset.index); });
-    });
-  }
+  card.appendChild(imgLink);
+  card.appendChild(body);
 
   card.querySelector('.btn-inquiry').addEventListener('click', () => openModal(product));
   return card;
