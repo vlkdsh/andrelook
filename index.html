@@ -195,17 +195,54 @@
 
   <!-- ══ FOOTER ════════════════════════════════ -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <a href="index.html">
-        <img src="images/logo.png" alt="Andrelook" class="footer-logo" />
-      </a>
-      <nav class="footer-nav">
-        <a href="index.html"   data-i18n="nav_home">Главная</a>
-        <a href="catalog.html" data-i18n="nav_catalog">Каталог</a>
-        <a href="#how"         data-i18n="nav_how">Как купить</a>
-        <a href="https://t.me/andrelookstore" target="_blank" rel="noopener">Telegram</a>
-      </nav>
-      <span class="footer-copy" data-i18n="footer_copy">© 2025 Andrelook · Tallinn</span>
+    <div class="footer-top">
+      <div class="container footer-top-inner">
+
+        <!-- Лого + слоган -->
+        <div class="footer-brand">
+          <a href="index.html">
+            <img src="images/logo.png" alt="Andrelook" class="footer-logo" />
+          </a>
+          <p class="footer-brand-text" data-i18n="hero_tagline">Мировые бренды · Личный подход</p>
+        </div>
+
+        <!-- Навигация -->
+        <div class="footer-col">
+          <span class="footer-col-title">Навигация</span>
+          <nav class="footer-nav-list">
+            <a href="index.html"   data-i18n="nav_home">Главная</a>
+            <a href="catalog.html" data-i18n="nav_catalog">Каталог</a>
+            <a href="#how"         data-i18n="nav_how">Как купить</a>
+          </nav>
+        </div>
+
+        <!-- Контакты -->
+        <div class="footer-col">
+          <span class="footer-col-title">Контакты</span>
+          <div class="footer-contacts">
+            <a href="https://t.me/andrelookstore" class="footer-contact-link" target="_blank" rel="noopener">
+              <span class="footer-contact-icon">✈</span>
+              <span>Telegram</span>
+            </a>
+            <a href="https://www.instagram.com/andrelook.store/" class="footer-contact-link" target="_blank" rel="noopener">
+              <span class="footer-contact-icon">◎</span>
+              <span>Instagram</span>
+            </a>
+            <a href="mailto:info.andrelook@gmail.com" class="footer-contact-link">
+              <span class="footer-contact-icon">@</span>
+              <span>info.andrelook@gmail.com</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span class="footer-copy" data-i18n="footer_copy">© 2025 Andrelook · Tallinn</span>
+        <span class="footer-bottom-note">Estonia · Europe</span>
+      </div>
     </div>
   </footer>
 
