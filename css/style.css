@@ -252,29 +252,20 @@ ul { list-style: none; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.4rem;
   opacity: 0;
   animation: fadeUp 1s var(--ease) 0.3s forwards;
 }
 
-.hero-brand-al {
+.hero-brand-full {
   font-family: var(--font-serif);
-  font-size: clamp(6rem, 18vw, 18rem);
+  font-size: clamp(3.5rem, 10vw, 11rem);
   font-weight: 300;
   font-style: italic;
-  line-height: 0.85;
+  letter-spacing: clamp(0.08em, 1vw, 0.18em);
   color: #fff;
-  letter-spacing: -0.04em;
-  text-shadow: 0 4px 40px rgba(0,0,0,0.3);
-}
-
-.hero-brand-full {
-  font-family: var(--font-sans);
-  font-size: clamp(1.1rem, 3vw, 2.6rem);
-  font-weight: 300;
-  letter-spacing: clamp(0.35em, 1.8vw, 0.75em);
-  color: rgba(255,255,255,0.9);
-  text-transform: uppercase;
+  text-transform: none;
+  line-height: 1;
+  text-shadow: 0 4px 60px rgba(0,0,0,0.4);
 }
 
 .hero-tagline {
@@ -456,7 +447,10 @@ ul { list-style: none; }
   line-height: 1;
   letter-spacing: -0.02em;
 }
-.stat-lbl {
+.stat-num--emoji {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  line-height: 1;
+}
   font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 0.14em;
@@ -513,23 +507,21 @@ ul { list-style: none; }
 }
 .how-card:hover { background: var(--bg-card); }
 
-.how-num {
-  font-family: var(--font-serif);
-  font-size: 0.8rem;
-  font-weight: 400;
-  letter-spacing: 0.18em;
-  color: var(--gold);
+.how-icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 0.25rem;
 }
 .how-card__title {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 400;
   line-height: 1.2;
 }
 .how-card__text {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 300;
-  line-height: 1.8;
+  line-height: 1.85;
   color: var(--text-muted);
 }
 
