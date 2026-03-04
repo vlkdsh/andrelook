@@ -798,117 +798,35 @@ ul { list-style: none; }
   flex-direction: column;
   transition: background 0.2s;
 }
-.product-card__image-link { display: block; overflow: hidden; position: relative; }
-.product-card__image {
-  aspect-ratio: 3/4;
-  overflow: hidden;
+
+/* Обёртка изображения — держит пропорции */
+.product-card__img-wrap {
   position: relative;
   width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
   display: block;
+  flex-shrink: 0;
 }
-.product-card__image img {
+.product-card__img-wrap img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
+  display: block;
   transition: transform 0.75s var(--ease);
-  display: block;
 }
-.product-card:hover .product-card__image img { transform: scale(1.06); }
-
-/* Стрелки слайдера */
-.card-slider {
-  position: relative;
-  display: block;
-  width: 100%;
-  aspect-ratio: 3/4;
-  overflow: hidden;
-}
-.card-slider .product-card__image-link {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-.card-slider .product-card__image {
-  aspect-ratio: unset;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  inset: 0;
-}
-}
-.card-slider__btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  width: 36px;
-  height: 36px;
-  background: rgba(255,255,255,0.92);
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.25s var(--ease), background 0.2s;
-  backdrop-filter: blur(4px);
-}
-.card-slider__btn:hover { background: #fff; }
-.card-slider__btn--prev { left: 10px; }
-.card-slider__btn--next { right: 10px; }
-.card-slider__btn svg {
-  width: 14px; height: 14px;
-  stroke: var(--text);
-  stroke-width: 1.5;
-  fill: none;
-}
-.product-card:hover .card-slider__btn { opacity: 1; }
-.card-slider__btn.hidden { display: none; }
-
-/* Точки-индикаторы */
-.card-slider__dots {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 5px;
-  z-index: 10;
-  opacity: 0;
-  transition: opacity 0.25s;
-}
-.product-card:hover .card-slider__dots { opacity: 1; }
-.card-slider__dot {
-  width: 5px; height: 5px;
-  background: rgba(255,255,255,0.5);
-  border-radius: 50%;
-  transition: background 0.2s, transform 0.2s;
-  cursor: pointer;
-  border: none;
-  padding: 0;
-}
-.card-slider__dot.active {
-  background: #fff;
-  transform: scale(1.3);
-}
+.product-card:hover .product-card__img-wrap img { transform: scale(1.04); }
 
 .product-card__placeholder {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  transition: transform 0.75s var(--ease);
 }
-.product-card:hover .product-card__placeholder { transform: scale(1.04); }
 .product-card__placeholder span {
   font-size: 0.65rem;
   font-weight: 400;
@@ -918,6 +836,56 @@ ul { list-style: none; }
   text-align: center;
   padding: 0 1.5rem;
 }
+
+/* Стрелки */
+.card-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 38px;
+  height: 38px;
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(4px);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.card-arrow:hover { background: #fff; }
+.card-arrow--prev { left: 10px; }
+.card-arrow--next { right: 10px; }
+.card-arrow svg {
+  width: 14px; height: 14px;
+  stroke: var(--text);
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Точки */
+.card-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+  z-index: 10;
+}
+.card-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.45);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+.card-dot.active { background: #fff; transform: scale(1.3); }
 
 .product-card__body {
   padding: 1.75rem 2rem 2.25rem;
