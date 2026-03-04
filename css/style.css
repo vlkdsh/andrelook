@@ -782,152 +782,162 @@ ul { list-style: none; }
 
 .catalog-main { padding: 5rem 0 8rem; }
 
-/* Products grid */
+/* ══════════════════════════════════════════════
+   CATALOG GRID
+   ══════════════════════════════════════════════ */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2px;
-  background: var(--border);
-  border: 1px solid var(--border);
 }
 
-/* Product card */
+/* ══════════════════════════════════════════════
+   PRODUCT CARD  — pc-* namespace
+   ══════════════════════════════════════════════ */
 .product-card {
-  background: var(--bg-card);
+  background: var(--bg);
   display: flex;
   flex-direction: column;
-  transition: background 0.2s;
+  transition: box-shadow 0.3s var(--ease);
+}
+.product-card:hover {
+  box-shadow: 0 12px 48px rgba(28,28,26,0.10);
+  z-index: 2;
+  position: relative;
 }
 
-/* Обёртка изображения — держит пропорции */
-.product-card__img-wrap {
+/* ── Фото-блок ───────────────────────────────── */
+/* padding-top trick: высота = 125% ширины (4:5) */
+.pc-thumb {
   position: relative;
   width: 100%;
-  aspect-ratio: 3/4;
+  padding-top: 125%;
+  background: #e8e4de;
   overflow: hidden;
-  display: block;
   flex-shrink: 0;
 }
-.product-card__img-wrap img {
+.pc-thumb img {
   position: absolute;
-  inset: 0;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
   display: block;
-  transition: transform 0.75s var(--ease);
+  transition: transform 0.8s var(--ease);
 }
-.product-card:hover .product-card__img-wrap img { transform: scale(1.04); }
+.product-card:hover .pc-thumb img { transform: scale(1.05); }
 
-.product-card__placeholder {
+/* прозрачная ссылка поверх фото */
+.pc-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: block;
+}
+
+/* плейсхолдер */
+.pc-placeholder {
   position: absolute;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.product-card__placeholder span {
+.pc-placeholder span {
   font-size: 0.65rem;
-  font-weight: 400;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
-  text-align: center;
-  padding: 0 1.5rem;
+  color: rgba(255,255,255,0.35);
 }
 
-/* Стрелки */
-.card-arrow {
+/* ── Стрелки ──────────────────────────────────── */
+.pc-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 10;
-  width: 38px;
-  height: 38px;
-  background: rgba(255,255,255,0.88);
-  backdrop-filter: blur(4px);
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s;
+  z-index: 6;
+  width: 40px; height: 40px;
+  background: rgba(255,255,255,0.92);
+  border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s, opacity 0.2s;
+  opacity: 0;
 }
-.card-arrow:hover { background: #fff; }
-.card-arrow--prev { left: 10px; }
-.card-arrow--next { right: 10px; }
-.card-arrow svg {
+.product-card:hover .pc-arrow { opacity: 1; }
+.pc-arrow:hover { background: #fff; }
+.pc-arrow--l { left: 10px; }
+.pc-arrow--r { right: 10px; }
+.pc-arrow svg {
   width: 14px; height: 14px;
-  stroke: var(--text);
-  stroke-width: 2;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  stroke: var(--text); stroke-width: 2;
+  fill: none; stroke-linecap: round; stroke-linejoin: round;
 }
 
-/* Точки */
-.card-dots {
+/* ── Точки ────────────────────────────────────── */
+.pc-dots {
   position: absolute;
-  bottom: 10px;
-  left: 50%;
+  bottom: 12px; left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  gap: 5px;
-  z-index: 10;
+  display: flex; gap: 5px;
+  z-index: 6;
 }
-.card-dot {
-  width: 6px; height: 6px;
+.pc-dot {
+  width: 5px; height: 5px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.45);
-  border: none;
+  background: rgba(255,255,255,0.4);
   cursor: pointer;
-  padding: 0;
   transition: background 0.2s, transform 0.2s;
 }
-.card-dot.active { background: #fff; transform: scale(1.3); }
+.pc-dot.on { background: #fff; transform: scale(1.4); }
 
-.product-card__body {
-  padding: 1.75rem 2rem 2.25rem;
+/* ── Тело ─────────────────────────────────────── */
+.pc-body {
+  padding: 1.25rem 1.5rem 1.6rem;
   display: flex;
   flex-direction: column;
   flex: 1;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
 }
-.product-card__category {
-  font-size: 0.65rem;
+.pc-meta { margin-bottom: 0.4rem; }
+.pc-cat {
+  font-size: 0.6rem;
   font-weight: 400;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 0.6rem;
 }
-.product-card__name-link:hover .product-card__name { color: var(--green); }
-.product-card__name {
+.pc-name {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 400;
-  line-height: 1.15;
-  margin-bottom: 0.5rem;
+  font-style: italic;
+  line-height: 1.2;
+  color: var(--text);
+  display: block;
+  margin-bottom: 0.3rem;
   transition: color 0.2s;
+  text-decoration: none;
 }
-.product-card__brand {
-  font-size: 0.75rem;
+.pc-name:hover { color: var(--green); }
+.pc-brand {
+  font-size: 0.7rem;
   color: var(--text-light);
   letter-spacing: 0.08em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
-
-.product-card__footer {
+.pc-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
   margin-top: auto;
   border-top: 1px solid var(--border);
 }
-.product-card__price {
+.pc-price {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 300;
   font-style: italic;
   color: var(--text-muted);
@@ -936,10 +946,10 @@ ul { list-style: none; }
 .btn-inquiry {
   display: inline-flex;
   align-items: center;
-  padding: 0.7rem 1.5rem;
+  padding: 0.6rem 1.25rem;
   background: var(--text);
   color: #fff;
-  font-size: 0.7rem;
+  font-size: 0.67rem;
   font-weight: 400;
   letter-spacing: 0.16em;
   text-transform: uppercase;
