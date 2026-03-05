@@ -369,6 +369,40 @@ const PRODUCTS = [
     color: '#1A1A1A',
     brand: 'Moncler',
   },
+  {
+    id: 12,
+    names: {
+      en: 'Parajumpers Pharrell Hooded Bomber',
+      ru: 'Бомбер с капюшоном Parajumpers Pharrell',
+      et: 'Parajumpers Pharrell kapuutsiga bomber',
+    },
+    category: 'warm-jackets',
+    cats: { en: 'Warm Jackets', ru: 'Тёплые куртки', et: 'Soojad jakid' },
+    descs: { ru: '', en: '', et: '' },
+    images: [
+      'images/parajumpers-pharrell-1.jpg',
+      'images/parajumpers-pharrell-2.jpg',
+    ],
+    color: '#1A1A1A',
+    brand: 'Parajumpers',
+  },
+  {
+    id: 13,
+    names: {
+      en: 'Moncler Après Ski Knit Sleeves Puffer Jacket',
+      ru: 'Пуховик Moncler Après Ski с трикотажными рукавами',
+      et: 'Moncler Après Ski trikoovarrukatega unejope',
+    },
+    category: 'light-jackets',
+    cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
+    descs: { ru: '', en: '', et: '' },
+    images: [
+      'images/moncler-apres-ski-1.jpg',
+      'images/moncler-apres-ski-2.jpg',
+    ],
+    color: '#1A1A1A',
+    brand: 'Moncler',
+  },
 ];
 
 /* ── Language ────────────────────────────────── */
