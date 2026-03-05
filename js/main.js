@@ -224,6 +224,24 @@ const PRODUCTS = [
     color: '#1A1A1A',
     brand: 'Moncler',
   },
+  {
+    id: 4,
+    names: {
+      en: 'Moncler Bormes Down Vest',
+      ru: 'Пуховый жилет Moncler Bormes',
+      et: 'Moncler Bormes sulepuhk vest',
+    },
+    category: 'vests',
+    cats: { en: 'Vests', ru: 'Жилетки', et: 'Vestid' },
+    descs: { ru: '', en: '', et: '' },
+    images: [
+      'images/moncler-bormes-1.jpg',
+      'images/moncler-bormes-2.jpg',
+      'images/moncler-bormes-3.jpg',
+    ],
+    color: '#1A1A1A',
+    brand: 'Moncler',
+  },
 ];
 
 /* ── Language ────────────────────────────────── */
