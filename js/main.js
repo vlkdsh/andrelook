@@ -310,6 +310,27 @@ const PRODUCTS = [
     color: '#1A1A1A',
     brand: 'Moncler',
   },
+  {
+    id: 9,
+    names: {
+      en: 'Moncler Cardigan Wool',
+      ru: 'Кардиган Moncler Wool',
+      et: 'Moncler Cardigan Wool',
+    },
+    category: 'light-jackets',
+    cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
+    descs: {
+      en: 'This Cardigan is bit small, need to go 1–2 size up.',
+      ru: 'Кардиган маломерит — рекомендуется брать на 1–2 размера больше.',
+      et: 'See kardigan on väikesevõitu — soovitame võtta 1–2 numbrit suurema.',
+    },
+    images: [
+      'images/moncler-cardigan-1.jpg',
+      'images/moncler-cardigan-2.jpg',
+    ],
+    color: '#1A1A1A',
+    brand: 'Moncler',
+  },
 ];
 
 /* ── Language ────────────────────────────────── */
