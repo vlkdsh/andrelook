@@ -242,6 +242,40 @@ const PRODUCTS = [
     color: '#1A1A1A',
     brand: 'Moncler',
   },
+  {
+    id: 5,
+    names: {
+      en: 'Parajumpers Jeordie Down Vest',
+      ru: 'Пуховый жилет Parajumpers Jeordie',
+      et: 'Parajumpers Jeordie sulepuhk vest',
+    },
+    category: 'vests',
+    cats: { en: 'Vests', ru: 'Жилетки', et: 'Vestid' },
+    descs: { ru: '', en: '', et: '' },
+    images: [
+      'images/parajumpers-jeordie-1.jpg',
+      'images/parajumpers-jeordie-2.jpg',
+    ],
+    color: '#1C2333',
+    brand: 'Parajumpers',
+  },
+  {
+    id: 6,
+    names: {
+      en: 'Moncler Tibb Logo-Patch Padded Gilet',
+      ru: 'Стёганый жилет Moncler Tibb',
+      et: 'Moncler Tibb logoga täidisega vest',
+    },
+    category: 'vests',
+    cats: { en: 'Vests', ru: 'Жилетки', et: 'Vestid' },
+    descs: { ru: '', en: '', et: '' },
+    images: [
+      'images/moncler-tibb-1.jpg',
+      'images/moncler-tibb-2.jpg',
+    ],
+    color: '#1A1A1A',
+    brand: 'Moncler',
+  },
 ];
 
 /* ── Language ────────────────────────────────── */
