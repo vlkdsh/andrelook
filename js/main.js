@@ -376,8 +376,8 @@ const PRODUCTS = [
       ru: 'Бомбер с капюшоном Parajumpers Pharrell',
       et: 'Parajumpers Pharrell kapuutsiga bomber',
     },
-    category: 'warm-jackets',
-    cats: { en: 'Warm Jackets', ru: 'Тёплые куртки', et: 'Soojad jakid' },
+    category: 'light-jackets',
+    cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
     descs: { ru: '', en: '', et: '' },
     images: [
       'images/parajumpers-pharrell-1.jpg',
