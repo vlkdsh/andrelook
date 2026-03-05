@@ -342,27 +342,27 @@ function initModal() {
 
 /* ── Product Card ───────────────────────────── */
 function createProductCard(product) {
+  const lang = currentLang;
+  const name = product.names[lang] || product.names.ru;
+  const cat  = product.cats[lang]  || product.cats.ru;
+  const imgs = product.images || [];
+  const href = `product.html?id=${product.id}`;
+
   const card = document.createElement('article');
   card.className = 'product-card';
   card.dataset.category = product.category;
 
-  const name = product.names[currentLang] || product.names.ru;
-  const cat  = product.cats[currentLang]  || product.cats.ru;
-  const imgs = product.images && product.images.length ? product.images : [];
-
-  /* ── Фото-блок ── */
+  /* Фото */
   const thumb = document.createElement('div');
   thumb.className = 'pc-thumb';
 
   if (imgs.length) {
-    const imgEl = document.createElement('img');
-    imgEl.src = imgs[0];
-    imgEl.alt = name;
-    imgEl.setAttribute('fetchpriority', 'high');
-    imgEl.decoding = 'sync';
-    imgEl.width  = 600;
-    imgEl.height = 750;
-    thumb.appendChild(imgEl);
+    const img = new Image();
+    img.src = imgs[0];
+    img.alt = name;
+    img.width = 600;
+    img.height = 750;
+    thumb.appendChild(img);
   } else {
     const ph = document.createElement('div');
     ph.className = 'pc-placeholder';
@@ -372,16 +372,16 @@ function createProductCard(product) {
   }
 
   const cover = document.createElement('a');
-  cover.href = `product.html?id=${product.id}`;
+  cover.href = href;
   cover.className = 'pc-cover';
   thumb.appendChild(cover);
 
-  /* ── Тело карточки ── */
+  /* Тело */
   const body = document.createElement('div');
   body.className = 'pc-body';
   body.innerHTML = `
-    <div class="pc-meta"><span class="pc-cat">${cat}</span></div>
-    <a href="product.html?id=${product.id}" class="pc-name">${name}</a>
+    <span class="pc-cat">${cat}</span>
+    <a href="${href}" class="pc-name">${name}</a>
     <p class="pc-brand">${product.brand}</p>
     <div class="pc-footer">
       <span class="pc-price">${t('on_request')}</span>
