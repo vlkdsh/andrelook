@@ -1178,14 +1178,15 @@ ul { list-style: none; }
 }
 
 .review-card {
-  flex: 0 0 calc(20% - 1.2rem);
+  flex: 0 0 calc(33.333% - 1rem);
   background: var(--bg-card);
   border: 1px solid var(--border);
-  padding: 2.2rem 1.8rem 2rem;
+  padding: 1.6rem 1.8rem 1.4rem;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
-  min-height: 260px;
+  gap: 0.9rem;
+  min-height: 0;
+  max-height: 180px;
   border-radius: 0;
   transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
@@ -1196,7 +1197,7 @@ ul { list-style: none; }
 
 .reviews-section .section-kicker {
   font-family: var(--font-serif);
-  font-size: 2.8rem;
+  font-size: 1.8rem;
   font-style: italic;
   letter-spacing: 0.04em;
   color: var(--green);
@@ -1219,13 +1220,17 @@ ul { list-style: none; }
 }
 
 .review-text {
-  font-family: var(--font-body, sans-serif);
-  font-size: 0.95rem;
-  font-style: normal;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-style: italic;
   font-weight: 600;
-  line-height: 1.65;
+  line-height: 1.6;
   color: #1a1a1a;
   flex: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .review-author {
@@ -1275,14 +1280,11 @@ ul { list-style: none; }
 .rev-dot.on { background: var(--text); transform: scale(1.4); }
 
 /* Адаптив */
-@media (max-width: 1100px) {
-  .review-card { flex: 0 0 calc(33.333% - 1rem); }
+@media (max-width: 900px) {
+  .review-card { flex: 0 0 calc(50% - 0.75rem); max-height: none; }
 }
-@media (max-width: 700px) {
-  .review-card { flex: 0 0 calc(50% - 0.75rem); }
-}
-@media (max-width: 480px) {
-  .review-card { flex: 0 0 100%; }
+@media (max-width: 560px) {
+  .review-card { flex: 0 0 100%; max-height: none; }
 }
 
 /* Statement text — serif italic */
