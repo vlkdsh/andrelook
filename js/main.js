@@ -362,7 +362,10 @@ function createProductCard(product) {
     imgA.className = 'pc-img pc-img--a pc-img--active';
     imgA.src = imgs[0];
     imgA.alt = name;
-    imgA.loading = 'eager';
+    imgA.setAttribute('fetchpriority', 'high');
+    imgA.decoding = 'sync';
+    imgA.width  = 600;
+    imgA.height = 750;
 
     const imgB = document.createElement('img');
     imgB.className = 'pc-img pc-img--b';
@@ -576,9 +579,23 @@ document.addEventListener('DOMContentLoaded', () => {
   initReveal();
   initModal();
   initFilters();
-  renderProducts();
   animateNumbers();
 
   if (document.getElementById('product-detail')) initProductPage();
-  if (document.getElementById('products-grid'))  initCatalogURLFilter();
+
+  if (document.getElementById('products-grid')) {
+    const urlFilter = new URLSearchParams(location.search).get('filter');
+    const activeFilter = urlFilter || 'all';
+    if (urlFilter) {
+      const btn = document.querySelector(`.filter-btn[data-filter="${urlFilter}"]`);
+      if (btn) {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
+    }
+    renderProducts(activeFilter);
+    // Показываем сетку только после рендера — убираем мигание
+    const grid = document.getElementById('products-grid');
+    if (grid) grid.classList.add('ready');
+  }
 });
