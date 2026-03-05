@@ -789,6 +789,7 @@ ul { list-style: none; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2px;
+  min-height: 400px;
 }
 
 /* ══════════════════════════════════════════════
@@ -824,9 +825,17 @@ ul { list-style: none; }
   object-fit: cover;
   object-position: center top;
   display: block;
-  transition: transform 0.8s var(--ease);
+  transition: transform 0.8s var(--ease), opacity 0.35s ease;
 }
 .product-card:hover .pc-thumb img { transform: scale(1.05); }
+
+/* Два слоя для crossfade — без мигания */
+.pc-img {
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.8s var(--ease);
+}
+.pc-img--active { opacity: 1; }
+.pc-img:not(.pc-img--active) { opacity: 0; pointer-events: none; }
 
 /* прозрачная ссылка поверх фото */
 .pc-cover {
