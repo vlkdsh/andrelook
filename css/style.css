@@ -830,80 +830,10 @@ ul { list-style: none; }
   object-fit: cover;
   object-position: center top;
   display: block;
-  transition: transform 0.8s var(--ease), opacity 0.35s ease;
+  transition: transform 0.8s var(--ease);
 }
 .product-card:hover .pc-thumb img { transform: scale(1.05); }
 
-/* Два слоя для crossfade — без мигания */
-.pc-img {
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.8s var(--ease);
-}
-.pc-img--active { opacity: 1; }
-.pc-img:not(.pc-img--active) { opacity: 0; pointer-events: none; }
-
-/* прозрачная ссылка поверх фото */
-.pc-cover {
-  position: absolute;
-  inset: 0;
-  z-index: 4;
-  display: block;
-}
-
-/* плейсхолдер */
-.pc-placeholder {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.pc-placeholder span {
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
-}
-
-/* ── Стрелки ──────────────────────────────────── */
-.pc-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 6;
-  width: 40px; height: 40px;
-  background: rgba(255,255,255,0.92);
-  border: none; cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  transition: background 0.2s, opacity 0.2s;
-  opacity: 0;
-}
-.product-card:hover .pc-arrow { opacity: 1; }
-.pc-arrow:hover { background: #fff; }
-.pc-arrow--l { left: 10px; }
-.pc-arrow--r { right: 10px; }
-.pc-arrow svg {
-  width: 14px; height: 14px;
-  stroke: var(--text); stroke-width: 2;
-  fill: none; stroke-linecap: round; stroke-linejoin: round;
-}
-
-/* ── Точки ────────────────────────────────────── */
-.pc-dots {
-  position: absolute;
-  bottom: 12px; left: 50%;
-  transform: translateX(-50%);
-  display: flex; gap: 5px;
-  z-index: 6;
-}
-.pc-dot {
-  width: 5px; height: 5px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.4);
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-}
-.pc-dot.on { background: #fff; transform: scale(1.4); }
 
 /* ── Тело ─────────────────────────────────────── */
 .pc-body {
