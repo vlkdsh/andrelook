@@ -276,6 +276,40 @@ const PRODUCTS = [
     color: '#1A1A1A',
     brand: 'Moncler',
   },
+  {
+    id: 7,
+    names: {
+      en: 'Moncler Galion Hooded Jacket',
+      ru: 'Куртка с капюшоном Moncler Galion',
+      et: 'Moncler Galion kapuutsiga jope',
+    },
+    category: 'light-jackets',
+    cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
+    descs: { ru: '', en: '', et: '' },
+    images: [
+      'images/moncler-galion-1.jpg',
+      'images/moncler-galion-2.jpg',
+    ],
+    color: '#1A1A1A',
+    brand: 'Moncler',
+  },
+  {
+    id: 8,
+    names: {
+      en: 'Moncler Etiache Rain Jacket',
+      ru: 'Ветровка Moncler Etiache',
+      et: 'Moncler Etiache vihmajope',
+    },
+    category: 'light-jackets',
+    cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
+    descs: { ru: '', en: '', et: '' },
+    images: [
+      'images/moncler-etiache-1.jpg',
+      'images/moncler-etiache-2.jpg',
+    ],
+    color: '#1A1A1A',
+    brand: 'Moncler',
+  },
 ];
 
 /* ── Language ────────────────────────────────── */
