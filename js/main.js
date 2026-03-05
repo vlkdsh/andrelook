@@ -49,7 +49,7 @@ const TICKER_PHRASES = {
 /* ── Translations ────────────────────────────── */
 const I18N = {
   en: {
-    nav_home:'Home', nav_catalog:'Catalog', nav_how:'How to buy', nav_contact:'Contact',
+    nav_home:'Home', nav_catalog:'Catalog', nav_how:'How to buy', nav_contact:'Contact', nav_reviews:'Reviews',
     hero_location:'Tallinn, Estonia',
     hero_delivery:'Delivery across Europe',
     hero_tagline:'World brands · Personal approach',
@@ -86,28 +86,28 @@ const I18N = {
     footer_copy:'© 2025 Andrelook',
   },
   ru: {
-    nav_home:'Главная', nav_catalog:'Каталог', nav_how:'Как купить', nav_contact:'Контакты',
-    hero_location:'Таллин, Эстония',
+    nav_home:'Главная', nav_catalog:'Каталог', nav_how:'Как купить', nav_contact:'Контакты', nav_reviews:'Отзывы',
+    hero_location:'Таллинн, Эстония',
     hero_delivery:'Доставка по Европе',
     hero_tagline:'Мировые бренды · Личный подход',
     hero_cta:'Смотреть коллекцию',
-    hero_note:'Таллин · Европа',
+    hero_note:'Таллинн · Европа',
     stat_1_lbl:'Позиций в каталоге', stat_2_lbl:'Довольных клиентов', stat_3_lbl:'Года на рынке',
     col_title:'Коллекция', col_all:'Весь каталог →',
     cat_suits:'Костюмы', cat_outer:'Верхняя одежда', cat_knit:'Трикотаж', cat_shirts:'Рубашки и блузы',
     cat_pos1:'12 позиций', cat_pos2:'18 позиций', cat_pos3:'24 позиции', cat_pos4:'16 позиций',
     how_title:'Как купить', reviews_kicker:'Отзывы', reviews_title:'Что говорят покупатели',
-    how_1_title:'Вы в Таллине',
+    how_1_title:'Вы в Таллинне',
     how_1_text:'Договоримся о личной встрече в удобное время. Примерите вещь и увидите её вживую. Если всё подходит — оплата на месте наличными или переводом.',
     how_2_title:'Доставка по Европе',
     how_2_text:'Отправляем заказы после полной оплаты. Стоимость доставки рассчитывается индивидуально. Оплата банковским переводом.',
     how_3_title:'Нет в наличии?',
-    how_3_text:'Привезём под заказ по предоплате 35%. Остаток — перед отправкой или при личной встрече, если вы в Таллине.',
+    how_3_text:'Привезём под заказ по предоплате 35%. Остаток — перед отправкой или при личной встрече, если вы в Таллинне.',
     how_4_title:'Помогаем с выбором',
     how_4_text:'Напишите нам — поможем подобрать размер и ответим на все вопросы. Остаёмся на связи на каждом этапе.',
     stmt_label:'Наш подход',
     stmt_quote:'«Мы тщательно подбираем вещи, которые красиво сидят и легко преображают ваш гардероб.»',
-    stmt_text:'Andrelook — магазин мировых брендов с личным подходом. Большой ассортимент, помощь с размером и быстрые ответы. Работаем для тех, кто ценит качество — вживую в Таллине или с доставкой по Европе.',
+    stmt_text:'Andrelook — магазин мировых брендов с личным подходом. Большой ассортимент, помощь с размером и быстрые ответы. Работаем для тех, кто ценит качество — вживую в Таллинне или с доставкой по Европе.',
     contact_title:'Написать нам', contact_sub:'Самые быстрые ответы — в Telegram.\nПоможем с выбором, размером и оформлением заказа.',
     contact_btn:'Telegram',
     filter_all:'Все', filter_warm:'Тёплые куртки', filter_vests:'Жилетки',
@@ -118,11 +118,11 @@ const I18N = {
     modal_text:'Напишите нам в Telegram — расскажем о наличии, размерах и всех деталях.',
     modal_tg:'Написать в Telegram',
     back_catalog:'← Назад в каталог',
-    prod_avail:'Наличие: по запросу', prod_delivery:'Доставка по Европе', prod_meeting:'Личная встреча в Таллине',
+    prod_avail:'Наличие: по запросу', prod_delivery:'Доставка по Европе', prod_meeting:'Личная встреча в Таллинне',
     footer_copy:'© 2025 Andrelook',
   },
   et: {
-    nav_home:'Avaleht', nav_catalog:'Kataloog', nav_how:'Kuidas osta', nav_contact:'Kontakt',
+    nav_home:'Avaleht', nav_catalog:'Kataloog', nav_how:'Kuidas osta', nav_contact:'Kontakt', nav_reviews:'Arvustused',
     hero_location:'Tallinn, Eesti',
     hero_delivery:'Tarne üle Euroopa',
     hero_tagline:'Maailma brändid · Isiklik lähenemine',
@@ -821,9 +821,10 @@ function initReviews() {
 
   // Сколько карточек видно за раз
   function perView() {
-    if (window.innerWidth <= 560) return 1;
-    if (window.innerWidth <= 900) return 2;
-    return 3;
+    if (window.innerWidth <= 480) return 1;
+    if (window.innerWidth <= 700) return 2;
+    if (window.innerWidth <= 1100) return 3;
+    return 5;
   }
 
   let idx = 0;
