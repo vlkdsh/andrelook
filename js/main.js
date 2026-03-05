@@ -403,6 +403,25 @@ const PRODUCTS = [
     color: '#1A1A1A',
     brand: 'Moncler',
   },
+  {
+    id: 14,
+    names: {
+      en: 'Moncler Retro Knit Wool Cardigan',
+      ru: 'Кардиган Moncler Retro Knit из шерсти',
+      et: 'Moncler Retro Knit villane kardigan',
+    },
+    category: 'light-jackets',
+    cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
+    descs: { ru: '', en: '', et: '' },
+    images: [
+      'images/moncler-retro-knit-1.jpg',
+      'images/moncler-retro-knit-2.jpg',
+      'images/moncler-retro-knit-3.jpg',
+      'images/moncler-retro-knit-4.jpg',
+    ],
+    color: '#1A1A1A',
+    brand: 'Moncler',
+  },
 ];
 
 /* ── Language ────────────────────────────────── */
