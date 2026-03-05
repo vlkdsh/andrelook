@@ -422,6 +422,44 @@ const PRODUCTS = [
     color: '#1A1A1A',
     brand: 'Moncler',
   },
+  {
+    id: 15,
+    names: {
+      en: 'Parajumpers Jayden Hybrid Cardigan',
+      ru: 'Гибридный кардиган Parajumpers Jayden',
+      et: 'Parajumpers Jayden hübriid kardigan',
+    },
+    category: 'light-jackets',
+    cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
+    descs: {
+      en: 'Air cotton + fleece fabric + nylon material.',
+      ru: 'Материал: воздушный хлопок + флис + нейлон.',
+      et: 'Materjal: õhupuuvill + fliis + nailon.',
+    },
+    images: [
+      'images/parajumpers-jayden-1.jpg',
+      'images/parajumpers-jayden-2.jpg',
+    ],
+    color: '#2C3E50',
+    brand: 'Parajumpers',
+  },
+  {
+    id: 16,
+    names: {
+      en: 'Moncler Hooded Wool Cardigan',
+      ru: 'Шерстяной кардиган Moncler с капюшоном',
+      et: 'Moncler kapuutsiga villane kardigan',
+    },
+    category: 'light-jackets',
+    cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
+    descs: { ru: '', en: '', et: '' },
+    images: [
+      'images/moncler-hooded-wool-1.jpg',
+      'images/moncler-hooded-wool-2.jpg',
+    ],
+    color: '#1A1A1A',
+    brand: 'Moncler',
+  },
 ];
 
 /* ── Language ────────────────────────────────── */
