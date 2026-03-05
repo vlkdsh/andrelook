@@ -203,6 +203,27 @@ const PRODUCTS = [
     color: '#1C2333',
     brand: 'Parajumpers',
   },
+  {
+    id: 3,
+    names: {
+      en: 'Moncler Vezere Down Jacket',
+      ru: 'Пуховик Moncler Vezere',
+      et: 'Moncler Vezere unejope',
+    },
+    category: 'warm-jackets',
+    cats: { en: 'Warm Jackets', ru: 'Тёплые куртки', et: 'Soojad jakid' },
+    descs: {
+      en: 'The fabric is its biggest feature. It has both the softness of cotton and the smoothness of silk — very soft and comfortable, just like a baby\'s skin. Light and weightless when worn, completely different from ordinary nylon. In the entire Chinese fabric production base, only 2 factories can produce it. The cost of fabric is 2.5× that of other ordinary fabrics.',
+      ru: 'Главная особенность — ткань. Она сочетает мягкость хлопка и гладкость шёлка — невероятно нежная на ощупь, как кожа ребёнка. Лёгкая и невесомая в носке, совершенно не похожа на обычный нейлон. Во всей производственной базе Китая только 2 фабрики умеют её делать — наш поставщик одна из них. Стоимость ткани в 2.5 раза выше обычной.',
+      et: 'Peamine eripära on kangas. Sellel on nii puuvilla pehmus kui siidi siledus — väga pehme ja mugav, nagu lapse nahk. Kerge ja kaaluta, täiesti erinev tavalisest nailonist. Kogu Hiina tootmisbaasis suudab seda toota vaid 2 tehast. Kanga maksumus on 2.5× kõrgem tavalisest.',
+    },
+    images: [
+      'images/moncler-vezere-1.jpg',
+      'images/moncler-vezere-2.jpg',
+    ],
+    color: '#1A1A1A',
+    brand: 'Moncler',
+  },
 ];
 
 /* ── Language ────────────────────────────────── */
