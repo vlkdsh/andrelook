@@ -357,15 +357,23 @@ function createProductCard(product) {
   thumb.className = 'pc-thumb';
 
   if (imgs.length) {
-    const imgEl = document.createElement('img');
-    imgEl.src   = imgs[0];
-    imgEl.alt   = name;
-    imgEl.loading = 'lazy';
-    thumb.appendChild(imgEl);
+    // Два слоя для crossfade — без мигания
+    const imgA = document.createElement('img');
+    imgA.className = 'pc-img pc-img--a pc-img--active';
+    imgA.src = imgs[0];
+    imgA.alt = name;
+    imgA.loading = 'eager';
+
+    const imgB = document.createElement('img');
+    imgB.className = 'pc-img pc-img--b';
+    imgB.alt = name;
+
+    thumb.appendChild(imgA);
+    thumb.appendChild(imgB);
 
     // прозрачная ссылка поверх фото
     const cover = document.createElement('a');
-    cover.href      = `product.html?id=${product.id}`;
+    cover.href = `product.html?id=${product.id}`;
     cover.className = 'pc-cover';
     thumb.appendChild(cover);
 
@@ -390,11 +398,26 @@ function createProductCard(product) {
       thumb.appendChild(next);
       thumb.appendChild(dots);
 
+      // Предзагрузка всех изображений
+      imgs.forEach(src => { const pre = new Image(); pre.src = src; });
+
       function goTo(n) {
         idx = (n + imgs.length) % imgs.length;
-        imgEl.src = imgs[idx];
+        const active = thumb.querySelector('.pc-img--active');
+        const inactive = thumb.querySelector('.pc-img:not(.pc-img--active)');
+        inactive.src = imgs[idx];
+        inactive.onload = () => {
+          active.classList.remove('pc-img--active');
+          inactive.classList.add('pc-img--active');
+        };
+        // если уже закешировано — onload может не сработать
+        if (inactive.complete) {
+          active.classList.remove('pc-img--active');
+          inactive.classList.add('pc-img--active');
+        }
         dots.querySelectorAll('.pc-dot').forEach((d, i) => d.classList.toggle('on', i === idx));
       }
+
       prev.onclick = e => { e.preventDefault(); e.stopPropagation(); goTo(idx - 1); };
       next.onclick = e => { e.preventDefault(); e.stopPropagation(); goTo(idx + 1); };
       dots.querySelectorAll('.pc-dot').forEach((d, i) =>
