@@ -349,103 +349,38 @@ function createProductCard(product) {
   const name = product.names[currentLang] || product.names.ru;
   const cat  = product.cats[currentLang]  || product.cats.ru;
   const imgs = product.images && product.images.length ? product.images : [];
-  const hasMultiple = imgs.length > 1;
-  let idx = 0;
 
   /* ── Фото-блок ── */
   const thumb = document.createElement('div');
   thumb.className = 'pc-thumb';
 
   if (imgs.length) {
-    // Два слоя для crossfade — без мигания
-    const imgA = document.createElement('img');
-    imgA.className = 'pc-img pc-img--a pc-img--active';
-    imgA.src = imgs[0];
-    imgA.alt = name;
-    imgA.setAttribute('fetchpriority', 'high');
-    imgA.decoding = 'sync';
-    imgA.width  = 600;
-    imgA.height = 750;
-
-    const imgB = document.createElement('img');
-    imgB.className = 'pc-img pc-img--b';
-    imgB.alt = name;
-
-    thumb.appendChild(imgA);
-    thumb.appendChild(imgB);
-
-    // прозрачная ссылка поверх фото
-    const cover = document.createElement('a');
-    cover.href = `product.html?id=${product.id}`;
-    cover.className = 'pc-cover';
-    thumb.appendChild(cover);
-
-    if (hasMultiple) {
-      const prev = document.createElement('button');
-      prev.className = 'pc-arrow pc-arrow--l';
-      prev.innerHTML = `<svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>`;
-
-      const next = document.createElement('button');
-      next.className = 'pc-arrow pc-arrow--r';
-      next.innerHTML = `<svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>`;
-
-      const dots = document.createElement('div');
-      dots.className = 'pc-dots';
-      imgs.forEach((_, i) => {
-        const d = document.createElement('span');
-        d.className = 'pc-dot' + (i === 0 ? ' on' : '');
-        dots.appendChild(d);
-      });
-
-      thumb.appendChild(prev);
-      thumb.appendChild(next);
-      thumb.appendChild(dots);
-
-      // Предзагрузка всех изображений
-      imgs.forEach(src => { const pre = new Image(); pre.src = src; });
-
-      function goTo(n) {
-        idx = (n + imgs.length) % imgs.length;
-        const active = thumb.querySelector('.pc-img--active');
-        const inactive = thumb.querySelector('.pc-img:not(.pc-img--active)');
-        inactive.src = imgs[idx];
-        inactive.onload = () => {
-          active.classList.remove('pc-img--active');
-          inactive.classList.add('pc-img--active');
-        };
-        // если уже закешировано — onload может не сработать
-        if (inactive.complete) {
-          active.classList.remove('pc-img--active');
-          inactive.classList.add('pc-img--active');
-        }
-        dots.querySelectorAll('.pc-dot').forEach((d, i) => d.classList.toggle('on', i === idx));
-      }
-
-      prev.onclick = e => { e.preventDefault(); e.stopPropagation(); goTo(idx - 1); };
-      next.onclick = e => { e.preventDefault(); e.stopPropagation(); goTo(idx + 1); };
-      dots.querySelectorAll('.pc-dot').forEach((d, i) =>
-        d.addEventListener('click', e => { e.stopPropagation(); goTo(i); })
-      );
-    }
+    const imgEl = document.createElement('img');
+    imgEl.src = imgs[0];
+    imgEl.alt = name;
+    imgEl.setAttribute('fetchpriority', 'high');
+    imgEl.decoding = 'sync';
+    imgEl.width  = 600;
+    imgEl.height = 750;
+    thumb.appendChild(imgEl);
   } else {
     const ph = document.createElement('div');
     ph.className = 'pc-placeholder';
     ph.style.background = product.color;
     ph.innerHTML = `<span>${product.brand}</span>`;
-    const cover = document.createElement('a');
-    cover.href = `product.html?id=${product.id}`;
-    cover.className = 'pc-cover';
     thumb.appendChild(ph);
-    thumb.appendChild(cover);
   }
+
+  const cover = document.createElement('a');
+  cover.href = `product.html?id=${product.id}`;
+  cover.className = 'pc-cover';
+  thumb.appendChild(cover);
 
   /* ── Тело карточки ── */
   const body = document.createElement('div');
   body.className = 'pc-body';
   body.innerHTML = `
-    <div class="pc-meta">
-      <span class="pc-cat">${cat}</span>
-    </div>
+    <div class="pc-meta"><span class="pc-cat">${cat}</span></div>
     <a href="product.html?id=${product.id}" class="pc-name">${name}</a>
     <p class="pc-brand">${product.brand}</p>
     <div class="pc-footer">
@@ -455,7 +390,6 @@ function createProductCard(product) {
 
   card.appendChild(thumb);
   card.appendChild(body);
-
   body.querySelector('.btn-inquiry').addEventListener('click', () => openModal(product));
   return card;
 }
