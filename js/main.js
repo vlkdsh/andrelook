@@ -60,6 +60,7 @@ const I18N = {
     cat_suits:'Suits', cat_outer:'Outerwear', cat_knit:'Knitwear', cat_shirts:'Shirts & Blouses',
     cat_pos1:'12 items', cat_pos2:'18 items', cat_pos3:'24 items', cat_pos4:'16 items',
     how_title:'How to buy',
+    reviews_kicker:'Reviews', reviews_title:'What customers say',
     how_1_title:'You\'re in Tallinn',
     how_1_text:'We\'ll arrange a personal meeting at a convenient time. Try on the item in person. If it fits — pay on the spot, cash or transfer.',
     how_2_title:'Delivery across Europe',
@@ -95,7 +96,7 @@ const I18N = {
     col_title:'Коллекция', col_all:'Весь каталог →',
     cat_suits:'Костюмы', cat_outer:'Верхняя одежда', cat_knit:'Трикотаж', cat_shirts:'Рубашки и блузы',
     cat_pos1:'12 позиций', cat_pos2:'18 позиций', cat_pos3:'24 позиции', cat_pos4:'16 позиций',
-    how_title:'Как купить',
+    how_title:'Как купить', reviews_kicker:'Отзывы', reviews_title:'Что говорят покупатели',
     how_1_title:'Вы в Таллине',
     how_1_text:'Договоримся о личной встрече в удобное время. Примерите вещь и увидите её вживую. Если всё подходит — оплата на месте наличными или переводом.',
     how_2_title:'Доставка по Европе',
@@ -131,7 +132,7 @@ const I18N = {
     col_title:'Kollektsioon', col_all:'Kogu kataloog →',
     cat_suits:'Ülikonnad', cat_outer:'Pealisrõivad', cat_knit:'Kudumid', cat_shirts:'Särgid & Pluusid',
     cat_pos1:'12 toodet', cat_pos2:'18 toodet', cat_pos3:'24 toodet', cat_pos4:'16 toodet',
-    how_title:'Kuidas osta',
+    how_title:'Kuidas osta', reviews_kicker:'Arvustused', reviews_title:'Mida kliendid ütlevad',
     how_1_title:'Oled Tallinnas',
     how_1_text:'Lepime kokku isikliku kohtumise sobival ajal. Saad toodet proovida elavalt. Kui sobib — maksa kohapeal.',
     how_2_title:'Tarne üle Euroopa',
@@ -788,6 +789,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initModal();
   initFilters();
   animateNumbers();
+  initReviews();
 
   if (document.getElementById('product-detail')) initProductPage();
 
@@ -807,3 +809,49 @@ document.addEventListener('DOMContentLoaded', () => {
     if (grid) grid.classList.add('ready');
   }
 });
+
+/* ── Reviews Slider ─────────────────────────── */
+function initReviews() {
+  const track = document.getElementById('reviews-track');
+  const dotsEl = document.getElementById('rev-dots');
+  if (!track) return;
+
+  const cards = Array.from(track.children);
+  const total = cards.length;
+
+  // Сколько карточек видно за раз
+  function perView() {
+    if (window.innerWidth <= 560) return 1;
+    if (window.innerWidth <= 900) return 2;
+    return 3;
+  }
+
+  let idx = 0;
+
+  // Создаём точки
+  function buildDots() {
+    dotsEl.innerHTML = '';
+    const pages = Math.ceil(total / perView());
+    for (let i = 0; i < pages; i++) {
+      const d = document.createElement('span');
+      d.className = 'rev-dot' + (i === 0 ? ' on' : '');
+      d.onclick = () => goTo(i);
+      dotsEl.appendChild(d);
+    }
+  }
+
+  function goTo(page) {
+    const pv = perView();
+    const pages = Math.ceil(total / pv);
+    idx = (page + pages) % pages;
+    const cardW = cards[0].offsetWidth + 24; // width + gap
+    track.style.transform = `translateX(-${idx * pv * cardW}px)`;
+    dotsEl.querySelectorAll('.rev-dot').forEach((d, i) => d.classList.toggle('on', i === idx));
+  }
+
+  document.getElementById('rev-prev').onclick = () => goTo(idx - 1);
+  document.getElementById('rev-next').onclick = () => goTo(idx + 1);
+
+  buildDots();
+  window.addEventListener('resize', () => { idx = 0; buildDots(); goTo(0); });
+}
