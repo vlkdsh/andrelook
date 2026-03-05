@@ -331,6 +331,44 @@ const PRODUCTS = [
     color: '#1A1A1A',
     brand: 'Moncler',
   },
+  {
+    id: 10,
+    names: {
+      en: 'Moncler Gui Gilet',
+      ru: 'Жилет Moncler Gui',
+      et: 'Moncler Gui vest',
+    },
+    category: 'vests',
+    cats: { en: 'Vests', ru: 'Жилетки', et: 'Vestid' },
+    descs: { ru: '', en: '', et: '' },
+    images: [
+      'images/moncler-gui-1.jpg',
+      'images/moncler-gui-2.jpg',
+    ],
+    color: '#1A1A1A',
+    brand: 'Moncler',
+  },
+  {
+    id: 11,
+    names: {
+      en: 'Moncler Detachable Hood Cardigan',
+      ru: 'Кардиган Moncler со съёмным капюшоном',
+      et: 'Moncler eemaldatava kapuutsiga kardigan',
+    },
+    category: 'light-jackets',
+    cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
+    descs: {
+      en: 'This Cardigan is bit small, need to go 1–2 size up.',
+      ru: 'Кардиган маломерит — рекомендуется брать на 1–2 размера больше.',
+      et: 'See kardigan on väikesevõitu — soovitame võtta 1–2 numbrit suurema.',
+    },
+    images: [
+      'images/moncler-hood-cardigan-1.jpg',
+      'images/moncler-hood-cardigan-2.jpg',
+    ],
+    color: '#1A1A1A',
+    brand: 'Moncler',
+  },
 ];
 
 /* ── Language ────────────────────────────────── */
