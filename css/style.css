@@ -1194,10 +1194,11 @@ ul { list-style: none; }
 
 .reviews-section .section-kicker {
   font-family: var(--font-serif);
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-style: italic;
-  letter-spacing: 0.28em;
-  color: var(--gold);
+  letter-spacing: 0.18em;
+  color: var(--green);
+  font-weight: 500;
 }
 .reviews-section .section-title {
   font-family: var(--font-serif);
@@ -1283,9 +1284,11 @@ ul { list-style: none; }
 /* Statement text — serif italic */
 .statement-text--serif {
   font-family: var(--font-serif);
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
   font-style: italic;
   font-weight: 300;
   line-height: 1.8;
-  color: var(--text);
+  color: var(--text) !important;
+  display: block !important;
+  opacity: 1 !important;
 }
