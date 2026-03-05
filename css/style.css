@@ -1181,12 +1181,10 @@ ul { list-style: none; }
   flex: 0 0 calc(33.333% - 1rem);
   background: var(--bg-card);
   border: 1px solid var(--border);
-  padding: 1.6rem 1.8rem 1.4rem;
+  padding: 1.8rem 2rem 1.6rem;
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
-  min-height: 0;
-  max-height: 180px;
   border-radius: 0;
   transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
@@ -1221,16 +1219,12 @@ ul { list-style: none; }
 
 .review-text {
   font-family: var(--font-serif);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-style: italic;
   font-weight: 600;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #1a1a1a;
   flex: 1;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
 }
 
 .review-author {
