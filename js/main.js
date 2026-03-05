@@ -186,6 +186,23 @@ const PRODUCTS = [
     color: '#1C1C1A',
     brand: 'Moncler',
   },
+  {
+    id: 2,
+    names: {
+      en: 'Parajumpers Tyrik Hooded Puffer Jacket',
+      ru: 'Parajumpers Tyrik пуховик с капюшоном',
+      et: 'Parajumpers Tyrik kapuutsiga unejope',
+    },
+    category: 'warm-jackets',
+    cats: { en: 'Warm Jackets', ru: 'Тёплые куртки', et: 'Soojad jakid' },
+    descs: { ru: '', en: '', et: '' },
+    images: [
+      'images/parajumpers-tyrik-1.png',
+      'images/parajumpers-tyrik-2.png',
+    ],
+    color: '#1C2333',
+    brand: 'Parajumpers',
+  },
 ];
 
 /* ── Language ────────────────────────────────── */
