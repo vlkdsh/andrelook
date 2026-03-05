@@ -821,10 +821,9 @@ function initReviews() {
 
   // Сколько карточек видно за раз
   function perView() {
-    if (window.innerWidth <= 480) return 1;
-    if (window.innerWidth <= 700) return 2;
-    if (window.innerWidth <= 1100) return 3;
-    return 5;
+    if (window.innerWidth <= 560) return 1;
+    if (window.innerWidth <= 900) return 2;
+    return 3;
   }
 
   let idx = 0;
