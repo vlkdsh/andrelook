@@ -171,11 +171,28 @@ const PRODUCTS = [
     },
     category: 'warm-jackets',
     cats: { en: 'Warm Jackets', ru: 'Тёплые куртки', et: 'Soojad jakid' },
-    descs: {
-      ru: 'Пуховик Moncler Maya 2024. Обновлённый ярлык с актуальной датой. Стальная гравировка на молнии. Улучшенный пух — куртка объёмнее и теплее. Специальная ткань: цвет и блеск максимально близки к оригиналу — не слишком глянцево и не матово. Три идеально выверенные линии строчки: плечо, треугольник, горизонталь. Логотип из 100% кашемира — точные оттенки синего и красного, как в оригинале.',
-      en: 'Moncler Maya Down Jacket 2024. Updated washing label with latest date. Steel-engraved zipper. More puffy with better down fill. Custom fabric — colors and brightness perfectly match retail, not too shiny, not too matte. Three perfectly integrated lines: shoulder, triangle, horizontal. 100% cashmere cock logo with accurate navy and red tones.',
-      et: 'Moncler Maya unejope 2024. Uuendatud pesusildi kuupäev. Terasest graveeritud tõmblukk. Paksem ja soojem täidisega. Kohandatud kangas — värvid ja läige vastavad täpselt originaalile. Kolm täiuslikult integreeritud joont. 100% kaašmiir logo.',
-    },
+    descs: { ru: 'Культовая пуховая куртка Moncler Maya, сочетающая премиальное качество, тепло и современный городской стиль. Модель создана для холодной погоды и повседневного комфорта.
+• натуральный гусиный пух — отлично сохраняет тепло
+• прочный и лёгкий глянцевый материал
+• аккуратные фирменные швы и высокая износостойкость
+• удобные карманы и надёжная молния
+• культовый логотип Moncler
+Куртка отлично подходит для повседневного стиля и городских образов.
+Унисекс модель', en: 'Iconic Moncler Maya down jacket combining premium quality, warmth and modern urban style. Designed for cold weather and everyday comfort.
+• natural goose down — excellent heat retention
+• durable and lightweight glossy shell
+• precise branded stitching and high durability
+• practical pockets and reliable zip
+• iconic Moncler logo
+Perfect for everyday style and city looks.
+Unisex model', et: 'Ikoonilne Moncler Maya sulejope, mis ühendab premium kvaliteeti, soojust ja kaasaegset linnalikku stiili. Loodud külma ilma ja igapäevase mugavuse jaoks.
+• looduslik hanesuled — suurepärane soojuse säilitamine
+• vastupidav ja kerge läikiv materjal
+• täpsed firmamärgised õmblused
+• praktilised taskud ja usaldusväärne tõmblukk
+• ikooniline Moncler logo
+Sobib igapäevaseks stiiliks ja linnavaatamiseks.
+Unisex mudel' },
     images: [
       'images/moncler-maya-1.jpg',
       'images/moncler-maya-2.jpg',
@@ -205,7 +222,28 @@ const PRODUCTS = [
     },
     category: 'warm-jackets',
     cats: { en: 'Warm Jackets', ru: 'Тёплые куртки', et: 'Soojad jakid' },
-    descs: { ru: '', en: '', et: '' },
+    descs: { ru: 'Тёплая зимняя куртка Parajumpers, созданная для холодной погоды и повседневного комфорта. Модель сочетает функциональность, премиальные материалы и современный городской стиль.
+• тёплый и качественный пуховый наполнитель
+• прочный и износостойкий внешний материал
+• удобный капюшон для дополнительной защиты от ветра
+• практичные карманы на молнии
+• фирменные элементы и логотип Parajumpers
+Идеально подходит для холодной зимней погоды и ежедневного ношения.
+Унисекс модель', en: 'Warm winter jacket by Parajumpers, designed for cold weather and everyday comfort. Combines functionality, premium materials and modern urban style.
+• warm and high-quality down fill
+• durable and wear-resistant outer material
+• comfortable hood for extra wind protection
+• practical zip pockets
+• signature Parajumpers elements and logo
+Perfect for cold winter weather and daily wear.
+Unisex model', et: 'Soe talvejope Parajumpers, loodud külma ilma ja igapäevase mugavuse jaoks. Ühendab funktsionaalsuse, premium materjalid ja kaasaegse linnastiili.
+• soe ja kvaliteetne suletäidis
+• vastupidav välismaterjal
+• mugav kapuuts lisatuulekaitseks
+• praktilised tõmblukuga taskud
+• Parajumpers logo ja detailid
+Sobib ideaalselt külmaks talveilmaks ja igapäevaseks kandmiseks.
+Unisex mudel' },
     images: [
       'images/parajumpers-tyrik-1.jpg',
       'images/parajumpers-tyrik-2.jpg',
@@ -225,11 +263,28 @@ const PRODUCTS = [
     },
     category: 'warm-jackets',
     cats: { en: 'Warm Jackets', ru: 'Тёплые куртки', et: 'Soojad jakid' },
-    descs: {
-      en: 'The fabric is its biggest feature. It has both the softness of cotton and the smoothness of silk — very soft and comfortable, just like a baby\'s skin. Light and weightless when worn, completely different from ordinary nylon. In the entire Chinese fabric production base, only 2 factories can produce it. The cost of fabric is 2.5× that of other ordinary fabrics.',
-      ru: 'Главная особенность — ткань. Она сочетает мягкость хлопка и гладкость шёлка — невероятно нежная на ощупь, как кожа ребёнка. Лёгкая и невесомая в носке, совершенно не похожа на обычный нейлон. Во всей производственной базе Китая только 2 фабрики умеют её делать — наш поставщик одна из них. Стоимость ткани в 2.5 раза выше обычной.',
-      et: 'Peamine eripära on kangas. Sellel on nii puuvilla pehmus kui siidi siledus — väga pehme ja mugav, nagu lapse nahk. Kerge ja kaaluta, täiesti erinev tavalisest nailonist. Kogu Hiina tootmisbaasis suudab seda toota vaid 2 tehast. Kanga maksumus on 2.5× kõrgem tavalisest.',
-    },
+    descs: { ru: 'Премиальная пуховая куртка Moncler Vezere, сочетающая тепло, комфорт и современный минималистичный стиль. Отлично подходит для холодной погоды и повседневных городских образов.
+• натуральный гусиный пух — лёгкий и очень тёплый
+• прочный и качественный внешний материал
+• аккуратные фирменные швы
+• удобные карманы и надёжная фурнитура
+• фирменный логотип Moncler на рукаве
+Куртка идеально подходит для повседневного ношения в холодное время года.
+Унисекс модель', en: 'Premium Moncler Vezere down jacket combining warmth, comfort and modern minimalist style. Perfect for cold weather and everyday city looks.
+• natural goose down — light and very warm
+• durable and high-quality outer shell
+• precise branded stitching
+• practical pockets and reliable hardware
+• Moncler logo on sleeve
+Ideal for everyday wear in cold weather.
+Unisex model', et: 'Premium Moncler Vezere sulejope, mis ühendab soojuse, mugavuse ja kaasaegse minimalistliku stiili.
+• looduslik hanesuled — kerge ja väga soe
+• vastupidav välismaterjal
+• täpsed õmblused
+• praktilised taskud
+• Moncler logo varrukal
+Sobib igapäevaseks kandmiseks külmal aastaajal.
+Unisex mudel' },
     images: [
       'images/moncler-vezere-1.jpg',
       'images/moncler-vezere-2.jpg',
@@ -249,7 +304,22 @@ const PRODUCTS = [
     },
     category: 'vests',
     cats: { en: 'Vests', ru: 'Жилетки', et: 'Vestid' },
-    descs: { ru: '', en: '', et: '' },
+    descs: { ru: 'Стильная пуховая жилетка Moncler, созданная для комфорта в прохладную погоду и современного городского стиля. Лёгкая, тёплая и практичная модель для повседневных образов.
+• лёгкий и тёплый пуховый наполнитель
+• фирменный логотип Moncler
+• удобные карманы на молнии
+• современный минималистичный силуэт
+Унисекс модель', en: 'Stylish Moncler down vest designed for comfort in cool weather and modern urban style. Light, warm and practical for everyday looks.
+• light and warm down fill
+• Moncler signature logo
+• practical zip pockets
+• modern minimalist silhouette
+Unisex model', et: 'Stiilne Moncler sulevest, loodud mugavuseks jahedas ilmas ja kaasaegseks linnastiiliks.
+• kerge ja soe suletäidis
+• Moncler logo
+• praktilised tõmblukuga taskud
+• kaasaegne minimalistlik siluett
+Unisex mudel' },
     images: [
       'images/moncler-bormes-1.jpg',
       'images/moncler-bormes-2.jpg',
@@ -359,11 +429,7 @@ const PRODUCTS = [
     },
     category: 'light-jackets',
     cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
-    descs: {
-      en: 'This Cardigan is bit small, need to go 1–2 size up.',
-      ru: 'Кардиган маломерит — рекомендуется брать на 1–2 размера больше.',
-      et: 'See kardigan on väikesevõitu — soovitame võtta 1–2 numbrit suurema.',
-    },
+    descs: { ru: '', en: '', et: '' },
     images: [
       'images/moncler-cardigan-1.jpg',
       'images/moncler-cardigan-2.jpg',
@@ -405,11 +471,7 @@ const PRODUCTS = [
     },
     category: 'light-jackets',
     cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
-    descs: {
-      en: 'This Cardigan is bit small, need to go 1–2 size up.',
-      ru: 'Кардиган маломерит — рекомендуется брать на 1–2 размера больше.',
-      et: 'See kardigan on väikesevõitu — soovitame võtta 1–2 numbrit suurema.',
-    },
+    descs: { ru: '', en: '', et: '' },
     images: [
       'images/moncler-hood-cardigan-1.jpg',
       'images/moncler-hood-cardigan-2.jpg',
@@ -493,11 +555,7 @@ const PRODUCTS = [
     },
     category: 'light-jackets',
     cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
-    descs: {
-      en: 'Air cotton + fleece fabric + nylon material.',
-      ru: 'Материал: воздушный хлопок + флис + нейлон.',
-      et: 'Materjal: õhupuuvill + fliis + nailon.',
-    },
+    descs: { ru: '', en: '', et: '' },
     images: [
       'images/parajumpers-jayden-1.jpg',
       'images/parajumpers-jayden-2.jpg',
@@ -1026,7 +1084,7 @@ function renderProductPage() {
       <p class="product-detail__brand">${p.brand}</p>
       ${colorsHtml}
       ${sizesHtml}
-      <p class="product-detail__desc">${desc}</p>
+      <div class="product-detail__desc">${desc.replace(/\n/g, '<br>')}</div>
       <ul class="product-detail__meta">
         <li>${t('prod_avail')}</li>
         <li>${t('prod_delivery')}</li>
