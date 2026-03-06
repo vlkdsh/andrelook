@@ -791,10 +791,7 @@ ul { list-style: none; }
   grid-template-columns: repeat(3, 1fr);
   gap: 2px;
   min-height: 400px;
-  opacity: 0;
-  transition: opacity 0.25s ease;
 }
-.products-grid.ready { opacity: 1; }
 
 /* Карточка */
 .product-card {
