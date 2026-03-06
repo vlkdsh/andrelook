@@ -994,10 +994,29 @@ function renderProductPage() {
 
   const infoEl = document.getElementById('product-info');
   if (infoEl) {
+    // Build colors HTML
+    const colors = p.colors || [];
+    let colorsHtml = '';
+    if (colors.length) {
+      const colorsLabel = currentLang === 'ru' ? 'Доступные цвета' : currentLang === 'et' ? 'Saadaolevad värvid' : 'Available colours';
+      const dots = colors.map(c => {
+        const border = (c.hex === '#F5F5F5' || c.hex === '#FFFFFF') ? 'border:1px solid #ccc;' : '';
+        return `<div class="pd-color-item">
+          <span class="pd-color-dot" style="background:${c.hex};${border}"></span>
+          <span class="pd-color-name">${c.name[currentLang] || c.name.ru}</span>
+        </div>`;
+      }).join('');
+      colorsHtml = `<div class="pd-colors">
+        <p class="pd-colors-label">${colorsLabel}</p>
+        <div class="pd-colors-list">${dots}</div>
+      </div>`;
+    }
+
     infoEl.innerHTML = `
       <p class="product-detail__cat">${cat}</p>
       <h1 class="product-detail__name">${name}</h1>
       <p class="product-detail__brand">${p.brand}</p>
+      ${colorsHtml}
       <p class="product-detail__desc">${desc}</p>
       <ul class="product-detail__meta">
         <li>${t('prod_avail')}</li>
