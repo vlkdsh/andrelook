@@ -171,28 +171,7 @@ const PRODUCTS = [
     },
     category: 'warm-jackets',
     cats: { en: 'Warm Jackets', ru: 'Тёплые куртки', et: 'Soojad jakid' },
-    descs: { ru: 'Культовая пуховая куртка Moncler Maya, сочетающая премиальное качество, тепло и современный городской стиль. Модель создана для холодной погоды и повседневного комфорта.
-• натуральный гусиный пух — отлично сохраняет тепло
-• прочный и лёгкий глянцевый материал
-• аккуратные фирменные швы и высокая износостойкость
-• удобные карманы и надёжная молния
-• культовый логотип Moncler
-Куртка отлично подходит для повседневного стиля и городских образов.
-Унисекс модель', en: 'Iconic Moncler Maya down jacket combining premium quality, warmth and modern urban style. Designed for cold weather and everyday comfort.
-• natural goose down — excellent heat retention
-• durable and lightweight glossy shell
-• precise branded stitching and high durability
-• practical pockets and reliable zip
-• iconic Moncler logo
-Perfect for everyday style and city looks.
-Unisex model', et: 'Ikoonilne Moncler Maya sulejope, mis ühendab premium kvaliteeti, soojust ja kaasaegset linnalikku stiili. Loodud külma ilma ja igapäevase mugavuse jaoks.
-• looduslik hanesuled — suurepärane soojuse säilitamine
-• vastupidav ja kerge läikiv materjal
-• täpsed firmamärgised õmblused
-• praktilised taskud ja usaldusväärne tõmblukk
-• ikooniline Moncler logo
-Sobib igapäevaseks stiiliks ja linnavaatamiseks.
-Unisex mudel' },
+    descs: { ru: 'Культовая пуховая куртка Moncler Maya, сочетающая премиальное качество, тепло и современный городской стиль. Модель создана для холодной погоды и повседневного комфорта.\n• натуральный гусиный пух — отлично сохраняет тепло\n• прочный и лёгкий глянцевый материал\n• аккуратные фирменные швы и высокая износостойкость\n• удобные карманы и надёжная молния\n• культовый логотип Moncler\nКуртка отлично подходит для повседневного стиля и городских образов.\nУнисекс модель', en: 'Iconic Moncler Maya down jacket combining premium quality, warmth and modern urban style. Designed for cold weather and everyday comfort.\n• natural goose down — excellent heat retention\n• durable and lightweight glossy shell\n• precise branded stitching and high durability\n• practical pockets and reliable zip\n• iconic Moncler logo\nPerfect for everyday style and city looks.\nUnisex model', et: 'Ikoonilne Moncler Maya sulejope, mis ühendab premium kvaliteeti, soojust ja kaasaegset linnalikku stiili. Loodud külma ilma ja igapäevase mugavuse jaoks.\n• looduslik hanesuled — suurepärane soojuse säilitamine\n• vastupidav ja kerge läikiv materjal\n• täpsed firmamärgised õmblused\n• praktilised taskud ja usaldusväärne tõmblukk\n• ikooniline Moncler logo\nSobib igapäevaseks stiiliks ja linnavaatamiseks.\nUnisex mudel' },
     images: [
       'images/moncler-maya-1.jpg',
       'images/moncler-maya-2.jpg',
@@ -222,28 +201,7 @@ Unisex mudel' },
     },
     category: 'warm-jackets',
     cats: { en: 'Warm Jackets', ru: 'Тёплые куртки', et: 'Soojad jakid' },
-    descs: { ru: 'Тёплая зимняя куртка Parajumpers, созданная для холодной погоды и повседневного комфорта. Модель сочетает функциональность, премиальные материалы и современный городской стиль.
-• тёплый и качественный пуховый наполнитель
-• прочный и износостойкий внешний материал
-• удобный капюшон для дополнительной защиты от ветра
-• практичные карманы на молнии
-• фирменные элементы и логотип Parajumpers
-Идеально подходит для холодной зимней погоды и ежедневного ношения.
-Унисекс модель', en: 'Warm winter jacket by Parajumpers, designed for cold weather and everyday comfort. Combines functionality, premium materials and modern urban style.
-• warm and high-quality down fill
-• durable and wear-resistant outer material
-• comfortable hood for extra wind protection
-• practical zip pockets
-• signature Parajumpers elements and logo
-Perfect for cold winter weather and daily wear.
-Unisex model', et: 'Soe talvejope Parajumpers, loodud külma ilma ja igapäevase mugavuse jaoks. Ühendab funktsionaalsuse, premium materjalid ja kaasaegse linnastiili.
-• soe ja kvaliteetne suletäidis
-• vastupidav välismaterjal
-• mugav kapuuts lisatuulekaitseks
-• praktilised tõmblukuga taskud
-• Parajumpers logo ja detailid
-Sobib ideaalselt külmaks talveilmaks ja igapäevaseks kandmiseks.
-Unisex mudel' },
+    descs: { ru: 'Тёплая зимняя куртка Parajumpers, созданная для холодной погоды и повседневного комфорта. Модель сочетает функциональность, премиальные материалы и современный городской стиль.\n• тёплый и качественный пуховый наполнитель\n• прочный и износостойкий внешний материал\n• удобный капюшон для дополнительной защиты от ветра\n• практичные карманы на молнии\n• фирменные элементы и логотип Parajumpers\nИдеально подходит для холодной зимней погоды и ежедневного ношения.\nУнисекс модель', en: 'Warm winter jacket by Parajumpers, designed for cold weather and everyday comfort. Combines functionality, premium materials and modern urban style.\n• warm and high-quality down fill\n• durable and wear-resistant outer material\n• comfortable hood for extra wind protection\n• practical zip pockets\n• signature Parajumpers elements and logo\nPerfect for cold winter weather and daily wear.\nUnisex model', et: 'Soe talvejope Parajumpers, loodud külma ilma ja igapäevase mugavuse jaoks. Ühendab funktsionaalsuse, premium materjalid ja kaasaegse linnastiili.\n• soe ja kvaliteetne suletäidis\n• vastupidav välismaterjal\n• mugav kapuuts lisatuulekaitseks\n• praktilised tõmblukuga taskud\n• Parajumpers logo ja detailid\nSobib ideaalselt külmaks talveilmaks ja igapäevaseks kandmiseks.\nUnisex mudel' },
     images: [
       'images/parajumpers-tyrik-1.jpg',
       'images/parajumpers-tyrik-2.jpg',
@@ -263,28 +221,7 @@ Unisex mudel' },
     },
     category: 'warm-jackets',
     cats: { en: 'Warm Jackets', ru: 'Тёплые куртки', et: 'Soojad jakid' },
-    descs: { ru: 'Премиальная пуховая куртка Moncler Vezere, сочетающая тепло, комфорт и современный минималистичный стиль. Отлично подходит для холодной погоды и повседневных городских образов.
-• натуральный гусиный пух — лёгкий и очень тёплый
-• прочный и качественный внешний материал
-• аккуратные фирменные швы
-• удобные карманы и надёжная фурнитура
-• фирменный логотип Moncler на рукаве
-Куртка идеально подходит для повседневного ношения в холодное время года.
-Унисекс модель', en: 'Premium Moncler Vezere down jacket combining warmth, comfort and modern minimalist style. Perfect for cold weather and everyday city looks.
-• natural goose down — light and very warm
-• durable and high-quality outer shell
-• precise branded stitching
-• practical pockets and reliable hardware
-• Moncler logo on sleeve
-Ideal for everyday wear in cold weather.
-Unisex model', et: 'Premium Moncler Vezere sulejope, mis ühendab soojuse, mugavuse ja kaasaegse minimalistliku stiili.
-• looduslik hanesuled — kerge ja väga soe
-• vastupidav välismaterjal
-• täpsed õmblused
-• praktilised taskud
-• Moncler logo varrukal
-Sobib igapäevaseks kandmiseks külmal aastaajal.
-Unisex mudel' },
+    descs: { ru: 'Премиальная пуховая куртка Moncler Vezere, сочетающая тепло, комфорт и современный минималистичный стиль. Отлично подходит для холодной погоды и повседневных городских образов.\n• натуральный гусиный пух — лёгкий и очень тёплый\n• прочный и качественный внешний материал\n• аккуратные фирменные швы\n• удобные карманы и надёжная фурнитура\n• фирменный логотип Moncler на рукаве\nКуртка идеально подходит для повседневного ношения в холодное время года.\nУнисекс модель', en: 'Premium Moncler Vezere down jacket combining warmth, comfort and modern minimalist style. Perfect for cold weather and everyday city looks.\n• natural goose down — light and very warm\n• durable and high-quality outer shell\n• precise branded stitching\n• practical pockets and reliable hardware\n• Moncler logo on sleeve\nIdeal for everyday wear in cold weather.\nUnisex model', et: 'Premium Moncler Vezere sulejope, mis ühendab soojuse, mugavuse ja kaasaegse minimalistliku stiili.\n• looduslik hanesuled — kerge ja väga soe\n• vastupidav välismaterjal\n• täpsed õmblused\n• praktilised taskud\n• Moncler logo varrukal\nSobib igapäevaseks kandmiseks külmal aastaajal.\nUnisex mudel' },
     images: [
       'images/moncler-vezere-1.jpg',
       'images/moncler-vezere-2.jpg',
@@ -304,22 +241,7 @@ Unisex mudel' },
     },
     category: 'vests',
     cats: { en: 'Vests', ru: 'Жилетки', et: 'Vestid' },
-    descs: { ru: 'Стильная пуховая жилетка Moncler, созданная для комфорта в прохладную погоду и современного городского стиля. Лёгкая, тёплая и практичная модель для повседневных образов.
-• лёгкий и тёплый пуховый наполнитель
-• фирменный логотип Moncler
-• удобные карманы на молнии
-• современный минималистичный силуэт
-Унисекс модель', en: 'Stylish Moncler down vest designed for comfort in cool weather and modern urban style. Light, warm and practical for everyday looks.
-• light and warm down fill
-• Moncler signature logo
-• practical zip pockets
-• modern minimalist silhouette
-Unisex model', et: 'Stiilne Moncler sulevest, loodud mugavuseks jahedas ilmas ja kaasaegseks linnastiiliks.
-• kerge ja soe suletäidis
-• Moncler logo
-• praktilised tõmblukuga taskud
-• kaasaegne minimalistlik siluett
-Unisex mudel' },
+    descs: { ru: 'Стильная пуховая жилетка Moncler, созданная для комфорта в прохладную погоду и современного городского стиля. Лёгкая, тёплая и практичная модель для повседневных образов.\n• лёгкий и тёплый пуховый наполнитель\n• фирменный логотип Moncler\n• удобные карманы на молнии\n• современный минималистичный силуэт\nУнисекс модель', en: 'Stylish Moncler down vest designed for comfort in cool weather and modern urban style. Light, warm and practical for everyday looks.\n• light and warm down fill\n• Moncler signature logo\n• practical zip pockets\n• modern minimalist silhouette\nUnisex model', et: 'Stiilne Moncler sulevest, loodud mugavuseks jahedas ilmas ja kaasaegseks linnastiiliks.\n• kerge ja soe suletäidis\n• Moncler logo\n• praktilised tõmblukuga taskud\n• kaasaegne minimalistlik siluett\nUnisex mudel' },
     images: [
       'images/moncler-bormes-1.jpg',
       'images/moncler-bormes-2.jpg',
