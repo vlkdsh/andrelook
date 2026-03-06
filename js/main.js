@@ -186,6 +186,7 @@ const PRODUCTS = [
     ],
     color: '#1C1C1A',
     brand: 'Moncler',
+    colors: [],
   },
   {
     id: 2,
@@ -203,6 +204,7 @@ const PRODUCTS = [
     ],
     color: '#1C2333',
     brand: 'Parajumpers',
+    colors: [],
   },
   {
     id: 3,
@@ -224,6 +226,7 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
+    colors: [],
   },
   {
     id: 4,
@@ -242,6 +245,7 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
+    colors: [],
   },
   {
     id: 5,
@@ -259,6 +263,7 @@ const PRODUCTS = [
     ],
     color: '#1C2333',
     brand: 'Parajumpers',
+    colors: [],
   },
   {
     id: 6,
@@ -276,6 +281,7 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
+    colors: [],
   },
   {
     id: 7,
@@ -293,6 +299,7 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
+    colors: [],
   },
   {
     id: 8,
@@ -310,6 +317,7 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
+    colors: [],
   },
   {
     id: 9,
@@ -331,6 +339,7 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
+    colors: [],
   },
   {
     id: 10,
@@ -348,6 +357,7 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
+    colors: [],
   },
   {
     id: 11,
@@ -369,6 +379,7 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
+    colors: [],
   },
   {
     id: 12,
@@ -386,6 +397,7 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Parajumpers',
+    colors: [],
   },
   {
     id: 13,
@@ -403,6 +415,7 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
+    colors: [],
   },
   {
     id: 14,
@@ -422,6 +435,7 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
+    colors: [],
   },
   {
     id: 15,
@@ -443,6 +457,7 @@ const PRODUCTS = [
     ],
     color: '#2C3E50',
     brand: 'Parajumpers',
+    colors: [],
   },
   {
     id: 16,
@@ -460,6 +475,7 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
+    colors: [],
   },
   {
     id: 17,
@@ -477,6 +493,7 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
+    colors: [],
   },
   {
     id: 18,
@@ -494,6 +511,7 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
+    colors: [],
   },
   {
     id: 19,
@@ -511,6 +529,7 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
+    colors: [],
   },
   {
     id: 20,
@@ -528,6 +547,7 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
+    colors: [],
   },
   {
     id: 21,
@@ -545,6 +565,7 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
+    colors: [],
   },
   {
     id: 22,
@@ -562,6 +583,7 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
+    colors: [],
   },
   {
     id: 23,
@@ -579,6 +601,7 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
+    colors: [],
   },
 ];
 
@@ -709,6 +732,7 @@ function openModal(product) {
   const tgBtn    = document.getElementById('modal-tg');
   const labelEl  = document.getElementById('modal-label-text');
   const textEl   = document.getElementById('modal-body-text');
+  const colorsEl = document.getElementById('modal-colors');
   if (!overlay) return;
   const name = product.names[currentLang] || product.names.ru;
   nameEl.textContent = name;
@@ -716,6 +740,36 @@ function openModal(product) {
   tgBtn.textContent  = t('modal_tg');
   if (labelEl) labelEl.textContent = t('modal_label');
   if (textEl)  textEl.textContent  = t('modal_text');
+
+  // Render colors
+  if (colorsEl) {
+    colorsEl.innerHTML = '';
+    const colors = product.colors || [];
+    if (colors.length) {
+      const label = document.createElement('p');
+      label.className = 'modal-colors-label';
+      label.textContent = currentLang === 'ru' ? 'Доступные цвета' : currentLang === 'et' ? 'Saadaolevad värvid' : 'Available colours';
+      colorsEl.appendChild(label);
+      const list = document.createElement('div');
+      list.className = 'modal-colors-list';
+      colors.forEach(c => {
+        const item = document.createElement('div');
+        item.className = 'modal-color-item';
+        const dot = document.createElement('span');
+        dot.className = 'modal-color-dot';
+        dot.style.background = c.hex;
+        if (c.hex === '#FFFFFF' || c.hex === '#F5F5F5') dot.style.border = '1px solid #ccc';
+        const txt = document.createElement('span');
+        txt.className = 'modal-color-name';
+        txt.textContent = c.name[currentLang] || c.name.ru;
+        item.appendChild(dot);
+        item.appendChild(txt);
+        list.appendChild(item);
+      });
+      colorsEl.appendChild(list);
+    }
+  }
+
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
