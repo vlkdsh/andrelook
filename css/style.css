@@ -1294,7 +1294,7 @@ ul { list-style: none; }
 /* ══════════════════════════════════════════════
    MODAL COLORS
    ══════════════════════════════════════════════ */
-.modal-colors { margin-top: 1.2rem; }
+.modal-colors { margin-top: 0.8rem; margin-bottom: 1.2rem; }
 
 .modal-colors-label {
   font-size: 0.68rem;
