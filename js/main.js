@@ -1012,11 +1012,20 @@ function renderProductPage() {
       </div>`;
     }
 
+    // Build sizes HTML
+    const sizes = ['S', 'M', 'L', 'XL', 'XXL'];
+    const sizesLabel = currentLang === 'ru' ? 'Размеры' : currentLang === 'et' ? 'Suurused' : 'Sizes';
+    const sizesHtml = `<div class="pd-sizes">
+      <p class="pd-sizes-label">${sizesLabel}</p>
+      <div class="pd-sizes-list">${sizes.map(s => `<span class="pd-size">${s}</span>`).join('')}</div>
+    </div>`;
+
     infoEl.innerHTML = `
       <p class="product-detail__cat">${cat}</p>
       <h1 class="product-detail__name">${name}</h1>
       <p class="product-detail__brand">${p.brand}</p>
       ${colorsHtml}
+      ${sizesHtml}
       <p class="product-detail__desc">${desc}</p>
       <ul class="product-detail__meta">
         <li>${t('prod_avail')}</li>
