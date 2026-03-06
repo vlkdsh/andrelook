@@ -186,7 +186,15 @@ const PRODUCTS = [
     ],
     color: '#1C1C1A',
     brand: 'Moncler',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+      { hex: '#1B2A4A', name: { ru: 'Тёмно-синий', en: 'Navy', et: 'Tumesinine' } },
+      { hex: '#F5F5F5', name: { ru: 'Белый', en: 'White', et: 'Valge' } },
+      { hex: '#7ABFDB', name: { ru: 'Голубой', en: 'Sky Blue', et: 'Taevassinine' } },
+      { hex: '#9A9A9A', name: { ru: 'Серый', en: 'Grey', et: 'Hall' } },
+      { hex: '#5C6B3A', name: { ru: 'Хаки', en: 'Khaki', et: 'Khaki' } },
+      { hex: '#E85B1A', name: { ru: 'Ярко-оранжевый', en: 'Bright Orange', et: 'Erkoranž' } },
+    ],
   },
   {
     id: 2,
@@ -204,7 +212,9 @@ const PRODUCTS = [
     ],
     color: '#1C2333',
     brand: 'Parajumpers',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+    ],
   },
   {
     id: 3,
@@ -226,7 +236,9 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+    ],
   },
   {
     id: 4,
@@ -245,7 +257,11 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+      { hex: '#1B2A4A', name: { ru: 'Тёмно-синий', en: 'Navy', et: 'Tumesinine' } },
+      { hex: '#F5F5F5', name: { ru: 'Белый', en: 'White', et: 'Valge' } },
+    ],
   },
   {
     id: 5,
@@ -263,7 +279,9 @@ const PRODUCTS = [
     ],
     color: '#1C2333',
     brand: 'Parajumpers',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+    ],
   },
   {
     id: 6,
@@ -281,7 +299,11 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+      { hex: '#1B2A4A', name: { ru: 'Тёмно-синий', en: 'Navy', et: 'Tumesinine' } },
+      { hex: '#5C6B3A', name: { ru: 'Хаки', en: 'Khaki', et: 'Khaki' } },
+    ],
   },
   {
     id: 7,
@@ -299,7 +321,13 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+      { hex: '#1B2A4A', name: { ru: 'Тёмно-синий', en: 'Navy', et: 'Tumesinine' } },
+      { hex: '#F5F5F5', name: { ru: 'Белый', en: 'White', et: 'Valge' } },
+      { hex: '#7ABFDB', name: { ru: 'Голубой', en: 'Sky Blue', et: 'Taevassinine' } },
+      { hex: '#5C6B3A', name: { ru: 'Хаки', en: 'Khaki', et: 'Khaki' } },
+    ],
   },
   {
     id: 8,
@@ -317,7 +345,10 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+      { hex: '#9A9A9A', name: { ru: 'Серый', en: 'Grey', et: 'Hall' } },
+    ],
   },
   {
     id: 9,
@@ -339,7 +370,10 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+      { hex: '#1B2A4A', name: { ru: 'Тёмно-синий', en: 'Navy', et: 'Tumesinine' } },
+    ],
   },
   {
     id: 10,
@@ -357,7 +391,10 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+      { hex: '#1B2A4A', name: { ru: 'Тёмно-синий', en: 'Navy', et: 'Tumesinine' } },
+    ],
   },
   {
     id: 11,
@@ -379,7 +416,10 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+      { hex: '#1B2A4A', name: { ru: 'Тёмно-синий', en: 'Navy', et: 'Tumesinine' } },
+    ],
   },
   {
     id: 12,
@@ -397,7 +437,9 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Parajumpers',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+    ],
   },
   {
     id: 13,
@@ -415,7 +457,9 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+    ],
   },
   {
     id: 14,
@@ -435,7 +479,10 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+      { hex: '#1B2A4A', name: { ru: 'Тёмно-синий', en: 'Navy', et: 'Tumesinine' } },
+    ],
   },
   {
     id: 15,
@@ -457,7 +504,10 @@ const PRODUCTS = [
     ],
     color: '#2C3E50',
     brand: 'Parajumpers',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+      { hex: '#C8D8E4', name: { ru: 'Льдистый', en: 'Ghiaccio', et: 'Jääsinine' } },
+    ],
   },
   {
     id: 16,
@@ -475,7 +525,11 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+      { hex: '#1B2A4A', name: { ru: 'Тёмно-синий', en: 'Navy', et: 'Tumesinine' } },
+      { hex: '#5C6B3A', name: { ru: 'Хаки', en: 'Khaki', et: 'Khaki' } },
+    ],
   },
   {
     id: 17,
@@ -493,7 +547,11 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+      { hex: '#9A9A9A', name: { ru: 'Серый', en: 'Grey', et: 'Hall' } },
+      { hex: '#F5F5F5', name: { ru: 'Белый', en: 'White', et: 'Valge' } },
+    ],
   },
   {
     id: 18,
@@ -511,7 +569,10 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+      { hex: '#1B2A4A', name: { ru: 'Тёмно-синий', en: 'Navy', et: 'Tumesinine' } },
+    ],
   },
   {
     id: 19,
@@ -529,7 +590,10 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+      { hex: '#F5F5F5', name: { ru: 'Белый', en: 'White', et: 'Valge' } },
+    ],
   },
   {
     id: 20,
@@ -547,7 +611,11 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+      { hex: '#9A9A9A', name: { ru: 'Серый', en: 'Grey', et: 'Hall' } },
+      { hex: '#F5F5F5', name: { ru: 'Белый', en: 'White', et: 'Valge' } },
+    ],
   },
   {
     id: 21,
@@ -565,7 +633,13 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+      { hex: '#1B2A4A', name: { ru: 'Тёмно-синий', en: 'Navy', et: 'Tumesinine' } },
+      { hex: '#5C6B3A', name: { ru: 'Хаки', en: 'Khaki', et: 'Khaki' } },
+      { hex: '#9A9A9A', name: { ru: 'Серый', en: 'Grey', et: 'Hall' } },
+      { hex: '#F5F5F5', name: { ru: 'Белый', en: 'White', et: 'Valge' } },
+    ],
   },
   {
     id: 22,
@@ -583,7 +657,11 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+      { hex: '#1B2A4A', name: { ru: 'Тёмно-синий', en: 'Navy', et: 'Tumesinine' } },
+      { hex: '#F5F5F5', name: { ru: 'Белый', en: 'White', et: 'Valge' } },
+    ],
   },
   {
     id: 23,
@@ -601,7 +679,13 @@ const PRODUCTS = [
     ],
     color: '#1A1A1A',
     brand: 'Moncler',
-    colors: [],
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+      { hex: '#1B2A4A', name: { ru: 'Тёмно-синий', en: 'Navy', et: 'Tumesinine' } },
+      { hex: '#2B5FBF', name: { ru: 'Синий', en: 'Blue', et: 'Sinine' } },
+      { hex: '#C0242B', name: { ru: 'Красный', en: 'Red', et: 'Punane' } },
+      { hex: '#E8651A', name: { ru: 'Оранжевый', en: 'Orange', et: 'Oranž' } },
+    ],
   },
 ];
 
