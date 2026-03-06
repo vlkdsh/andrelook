@@ -814,7 +814,6 @@ function openModal(product) {
   const overlay  = document.getElementById('modal-overlay');
   const nameEl   = document.getElementById('modal-product-name');
   const tgBtn    = document.getElementById('modal-tg');
-  const labelEl  = document.getElementById('modal-label-text');
   const textEl   = document.getElementById('modal-body-text');
   const colorsEl = document.getElementById('modal-colors');
   if (!overlay) return;
@@ -822,8 +821,7 @@ function openModal(product) {
   nameEl.textContent = name;
   tgBtn.href         = buildTgLink(name);
   tgBtn.textContent  = t('modal_tg');
-  if (labelEl) labelEl.textContent = t('modal_label');
-  if (textEl)  textEl.textContent  = t('modal_text');
+  if (textEl) textEl.textContent = t('modal_text');
 
   // Render colors
   if (colorsEl) {
