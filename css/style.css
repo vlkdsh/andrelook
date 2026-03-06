@@ -1456,3 +1456,38 @@ ul { list-style: none; }
   color: var(--text);
   letter-spacing: 0.03em;
 }
+
+/* ══════════════════════════════════════════════
+   PRODUCT PAGE SIZES
+   ══════════════════════════════════════════════ */
+.pd-sizes { margin: 0 0 1.4rem; }
+
+.pd-sizes-label {
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+}
+
+.pd-sizes-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pd-size {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  background: transparent;
+  transition: border-color 0.2s, background 0.2s;
+}
