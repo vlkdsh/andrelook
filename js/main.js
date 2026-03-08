@@ -954,6 +954,7 @@ function initProductPage() {
 /* ── Init ───────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   initHeader();
+  initMobileLang();
   applyTranslations();
   renderTicker();
   initReveal();
@@ -1022,4 +1023,29 @@ function initReviews() {
 
   buildDots();
   window.addEventListener('resize', () => { idx = 0; buildDots(); goTo(0); });
+}
+
+/* ── Mobile Lang Dropdown ───────────────────── */
+function initMobileLang() {
+  const btn = document.getElementById('mobile-lang-toggle');
+  const dropdown = document.getElementById('mobile-lang-dropdown');
+  if (!btn || !dropdown) return;
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdown.classList.toggle('open');
+  });
+
+  document.addEventListener('click', () => {
+    dropdown.classList.remove('open');
+  });
+
+  dropdown.querySelectorAll('.lang-btn').forEach((langBtn) => {
+    langBtn.addEventListener('click', () => {
+      setLang(langBtn.dataset.lang);
+      dropdown.classList.remove('open');
+      // update label
+      if (btn.querySelector('span')) btn.querySelector('span').textContent = langBtn.dataset.lang.toUpperCase();
+    });
+  });
 }
