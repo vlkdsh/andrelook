@@ -148,6 +148,69 @@ ul { list-style: none; }
 .mobile-nav .lang-switcher { margin-top: 1rem; }
 
 /* ══════════════════════════════════════════════
+   MOBILE LANG SWITCHER
+   ══════════════════════════════════════════════ */
+.mobile-lang-wrap {
+  display: none;
+  position: relative;
+}
+
+.mobile-lang-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--border-mid);
+  background: none;
+  cursor: pointer;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+}
+.mobile-lang-btn:hover { background: var(--bg-warm); color: var(--text); }
+
+.mobile-lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(28,28,26,0.1);
+  z-index: 150;
+  min-width: 72px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity 0.2s var(--ease), transform 0.2s var(--ease);
+}
+.mobile-lang-dropdown.open {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+.mobile-lang-dropdown .lang-btn {
+  display: block;
+  width: 100%;
+  padding: 0.65rem 1rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: center;
+  border-right: none;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s, color 0.2s;
+}
+.mobile-lang-dropdown .lang-btn:last-child { border-bottom: none; }
+.mobile-lang-dropdown .lang-btn:hover { background: var(--bg-warm); color: var(--text); }
+.mobile-lang-dropdown .lang-btn.active { color: var(--text); font-weight: 600; background: var(--green-light); }
+
+/* ══════════════════════════════════════════════
    HERO — full-bleed photo, brand centered
    ══════════════════════════════════════════════ */
 .hero {
@@ -451,6 +514,7 @@ ul { list-style: none; }
   font-size: clamp(3rem, 5vw, 4.5rem);
   line-height: 1;
 }
+.stat-lbl {
   font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 0.14em;
@@ -609,7 +673,6 @@ ul { list-style: none; }
 .footer-logo {
   height: 56px;
   width: auto;
-  /* логотип тёмный — инвертируем для тёмного фона */
   filter: invert(1) brightness(2);
   opacity: 0.9;
   transition: opacity 0.2s;
@@ -1132,6 +1195,7 @@ ul { list-style: none; }
   .nav { display: none; }
   .hamburger { display: flex; }
   .lang-switcher { display: none; }
+  .mobile-lang-wrap { display: block; }
 
   .hero-topbar { gap: 0; }
   .hero-topbar-item { padding: 0 1rem; font-size: 0.62rem; }
@@ -1488,9 +1552,6 @@ ul { list-style: none; }
   background: transparent;
   transition: border-color 0.2s, background 0.2s;
 }
-
-
-
 
 /* ══════════════════════════════════════════════
    CONTACT SECTION
