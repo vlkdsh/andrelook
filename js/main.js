@@ -861,7 +861,16 @@ function renderProductPage() {
   const desc = p.descs[currentLang] || p.descs.ru;
   const imgs = p.images && p.images.length ? p.images : [];
 
-  document.title = `${name} — Andrelook`;
+  document.title = `${name} | Moncler Tallinn — Andrelook`;
+
+  // Dynamic meta description
+  let metaDesc = document.querySelector('meta[name="description"]');
+  if (!metaDesc) { metaDesc = document.createElement('meta'); metaDesc.name = 'description'; document.head.appendChild(metaDesc); }
+  metaDesc.content = currentLang === 'ru'
+    ? `Купить ${name} в Таллинне или с доставкой по Европе. Пишите в Telegram.`
+    : currentLang === 'et'
+    ? `Osta ${name} Tallinnas või tarniga üle Euroopa. Kirjuta Telegramis.`
+    : `Buy ${name} in Tallinn or delivery across Europe. Write us on Telegram.`;
 
   document.querySelectorAll('[data-i18n="back_catalog"]').forEach(el => el.textContent = t('back_catalog'));
 
