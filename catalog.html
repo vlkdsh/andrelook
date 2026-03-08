@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Купить Moncler & Parajumpers в Таллинне или с доставкой по Европе. Пишите в Telegram." />
-  <title>Moncler & Parajumpers | Moncler Tallinn — Andrelook</title>
+  <meta name="description" content="Большой выбор Moncler и Parajumpers: куртки, жилетки, худи, футболки. Таллинн — личная встреча, Европа — доставка." />
+  <title>Каталог Moncler & Parajumpers | Куртки, жилетки, худи — Andrelook Tallinn</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="css/style.css" />
+  <meta name="keywords" content="Moncler, Parajumpers, купить Moncler Таллинн, Parajumpers Estonia, брендовые куртки, Moncler Tallinn, buy Moncler Estonia" />
+  <meta property="og:title" content="Каталог Moncler & Parajumpers | Куртки, жилетки, худи — Andrelook Tallinn" />
+  <meta property="og:description" content="Большой выбор Moncler и Parajumpers: куртки, жилетки, худи, футболки. Таллинн — личная встреча, Европа — доставка." />
+  <meta property="og:type" content="website" />
   <meta name="robots" content="index, follow" />
 </head>
 <body>
@@ -55,18 +59,31 @@
   </nav>
 
   <main>
-    <section class="product-detail-page">
+    <div class="catalog-hero">
+      <div class="catalog-hero-bg" aria-hidden="true">Catalog</div>
       <div class="container">
-        <a href="catalog.html" class="product-back" data-i18n="back_catalog">← Назад в каталог</a>
-        <div id="product-detail">
-          <div class="product-detail-grid">
-            <div class="product-gallery">
-              <div class="product-main-img" id="product-main-img"></div>
-              <div class="product-thumbs" id="product-thumbs"></div>
-            </div>
-            <div class="product-info" id="product-info"></div>
-          </div>
+        <h1 class="catalog-title" data-i18n="nav_catalog">Каталог</h1>
+        <p class="catalog-sub" data-i18n="cat_season">Коллекция 2025</p>
+      </div>
+    </div>
+
+    <div class="filters-bar">
+      <div class="container">
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all"           data-i18n="filter_all">Все</button>
+          <button class="filter-btn"        data-filter="warm-jackets"  data-i18n="filter_warm">Тёплые куртки</button>
+          <button class="filter-btn"        data-filter="vests"         data-i18n="filter_vests">Жилетки</button>
+          <button class="filter-btn"        data-filter="light-jackets" data-i18n="filter_light">Лёгкие куртки</button>
+          <button class="filter-btn"        data-filter="hoodies"       data-i18n="filter_hoodies">Кофты</button>
+          <button class="filter-btn"        data-filter="t-shirts"      data-i18n="filter_tshirts">Футболки</button>
+          <button class="filter-btn"        data-filter="bottoms"       data-i18n="filter_bottoms">Низ</button>
         </div>
+      </div>
+    </div>
+
+    <section class="catalog-main">
+      <div class="container">
+        <div class="products-grid" id="products-grid"></div>
       </div>
     </section>
   </main>
