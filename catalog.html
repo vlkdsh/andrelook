@@ -32,6 +32,19 @@
         <button class="lang-btn" data-lang="en">EN</button>
         <button class="lang-btn" data-lang="et">ET</button>
       </div>
+
+      <!-- Mobile: lang dropdown -->
+      <div class="mobile-lang-wrap">
+        <button class="mobile-lang-btn" id="mobile-lang-toggle" aria-label="Language">
+          <span>RU</span>
+        </button>
+        <div class="mobile-lang-dropdown" id="mobile-lang-dropdown">
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="et">ET</button>
+        </div>
+      </div>
+
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span>
       </button>
@@ -43,11 +56,6 @@
     <a href="catalog.html"       class="nav-link" data-i18n="nav_catalog">Каталог</a>
     <a href="index.html#how"     class="nav-link" data-i18n="nav_how">Как купить</a>
     <a href="index.html#contact" class="nav-link" data-i18n="nav_contact">Контакты</a>
-    <div class="lang-switcher">
-      <button class="lang-btn" data-lang="ru">RU</button>
-      <button class="lang-btn" data-lang="en">EN</button>
-      <button class="lang-btn" data-lang="et">ET</button>
-    </div>
   </nav>
 
   <main>
@@ -134,7 +142,7 @@
         <a href="#" class="modal-btn modal-btn--tg" id="modal-tg" target="_blank" rel="noopener">
           <span>Telegram</span>
         </a>
-        <a href="mailto:info.andrelook@gmail.com"mailto:info.andrelook@gmail.com" class="modal-btn modal-btn--email">
+        <a href="mailto:info.andrelook@gmail.com" class="modal-btn modal-btn--email">
           <span>Email</span>
         </a>
       </div>
