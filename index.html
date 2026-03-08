@@ -16,7 +16,6 @@
 </head>
 <body>
 
-  <!-- ══ HEADER ════════════════════════════════ -->
   <header class="site-header" id="site-header">
     <div class="container header-inner">
       <a href="index.html">
@@ -37,6 +36,18 @@
         <button class="lang-btn" data-lang="et">ET</button>
       </div>
 
+      <!-- Mobile: lang dropdown -->
+      <div class="mobile-lang-wrap">
+        <button class="mobile-lang-btn" id="mobile-lang-toggle" aria-label="Language">
+          <span>RU</span>
+        </button>
+        <div class="mobile-lang-dropdown" id="mobile-lang-dropdown">
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="et">ET</button>
+        </div>
+      </div>
+
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span>
       </button>
@@ -49,24 +60,14 @@
     <a href="#how"         class="nav-link" data-i18n="nav_how">Как купить</a>
     <a href="#reviews"     class="nav-link" data-i18n="nav_reviews">Отзывы</a>
     <a href="#contact"     class="nav-link" data-i18n="nav_contact">Контакты</a>
-    <div class="lang-switcher">
-      <button class="lang-btn" data-lang="ru">RU</button>
-      <button class="lang-btn" data-lang="en">EN</button>
-      <button class="lang-btn" data-lang="et">ET</button>
-    </div>
   </nav>
 
   <main>
 
-    <!-- ══ HERO ══════════════════════════════════ -->
     <section class="hero">
-
-      <!-- Фото фон -->
       <div class="hero-bg" aria-hidden="true"></div>
-      <!-- Затемнение поверх фото -->
       <div class="hero-overlay" aria-hidden="true"></div>
 
-      <!-- Верхняя строка — координаты -->
       <div class="hero-topbar">
         <span class="hero-topbar-item" data-i18n="hero_location">Tallinn, Estonia</span>
         <span class="hero-topbar-divider" aria-hidden="true"></span>
@@ -75,7 +76,6 @@
         <span class="hero-topbar-item hero-topbar-year">Est. 2025</span>
       </div>
 
-      <!-- Центр — имя бренда -->
       <div class="hero-center">
         <div class="hero-brand-wrap">
           <div class="hero-brand-line hero-brand-line--top" aria-hidden="true"></div>
@@ -87,7 +87,6 @@
         <p class="hero-tagline" data-i18n="hero_tagline">Мировые бренды · Личный подход</p>
       </div>
 
-      <!-- Нижняя строка — CTA -->
       <div class="hero-footer">
         <div class="hero-footer-left">
           <div class="hero-scroll-hint">
@@ -104,17 +103,12 @@
           <span class="hero-footer-note" data-i18n="hero_note">Таллинн · Европа</span>
         </div>
       </div>
-
     </section>
 
-    <!-- ══ TICKER ═════════════════════════════════ -->
     <div class="ticker" aria-label="ticker">
-      <div class="ticker-inner" id="ticker-inner">
-        <!-- JS заполняет -->
-      </div>
+      <div class="ticker-inner" id="ticker-inner"></div>
     </div>
 
-    <!-- ══ STATS ══════════════════════════════════ -->
     <section class="stats-bar">
       <div class="container">
         <div class="stats-grid">
@@ -134,7 +128,6 @@
       </div>
     </section>
 
-    <!-- ══ HOW TO BUY ══════════════════════════════ -->
     <section class="section how-section" id="how">
       <div class="container">
         <div class="section-header reveal">
@@ -144,28 +137,27 @@
           <div class="how-card">
             <span class="how-icon">📍</span>
             <h3 class="how-card__title" data-i18n="how_1_title">Вы в Таллинне</h3>
-            <p class="how-card__text" data-i18n="how_1_text">Договоримся о личной встрече в удобное время. Примерите вещь и увидите её вживую. Если всё подходит — оплата на месте.</p>
+            <p class="how-card__text" data-i18n="how_1_text">Договоримся о личной встрече в удобное время.</p>
           </div>
           <div class="how-card">
             <span class="how-icon">🚚</span>
             <h3 class="how-card__title" data-i18n="how_2_title">Доставка по Европе</h3>
-            <p class="how-card__text" data-i18n="how_2_text">Отправляем заказы после полной оплаты. Стоимость доставки рассчитывается индивидуально. Оплата банковским переводом.</p>
+            <p class="how-card__text" data-i18n="how_2_text">Отправляем заказы после полной оплаты.</p>
           </div>
           <div class="how-card">
             <span class="how-icon">✨</span>
             <h3 class="how-card__title" data-i18n="how_3_title">Нет в наличии?</h3>
-            <p class="how-card__text" data-i18n="how_3_text">Привезём под заказ по предоплате 35%. Остаток — перед отправкой или при личной встрече, если вы в Таллинне.</p>
+            <p class="how-card__text" data-i18n="how_3_text">Привезём под заказ по предоплате 35%.</p>
           </div>
           <div class="how-card">
             <span class="how-icon">💬</span>
             <h3 class="how-card__title" data-i18n="how_4_title">Помогаем с выбором</h3>
-            <p class="how-card__text" data-i18n="how_4_text">Напишите нам — поможем подобрать размер и ответим на все вопросы. Остаёмся на связи на каждом этапе.</p>
+            <p class="how-card__text" data-i18n="how_4_text">Напишите нам — поможем подобрать размер.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══ REVIEWS ═════════════════════════════════ -->
     <section class="section reviews-section" id="reviews">
       <div class="container">
         <div class="section-header reveal">
@@ -219,7 +211,6 @@
               <p class="review-text">"Первый раз покупал через такой формат — немного волновался. Но всё прошло супер: встретились лично в Таллинне, куртка именно как на фото. Никакого обмана. Буду рекомендовать всем знакомым."</p>
               <div class="review-author"><span class="review-name">Sergei M.</span></div>
             </div>
-
           </div>
           <div class="reviews-nav">
             <button class="rev-arrow rev-arrow--l" id="rev-prev" aria-label="Назад">
@@ -234,7 +225,6 @@
       </div>
     </section>
 
-    <!-- ══ STATEMENT ══════════════════════════════ -->
     <section class="section statement">
       <div class="container">
         <div class="statement-inner reveal">
@@ -246,13 +236,12 @@
             «Мы тщательно подбираем вещи, которые красиво сидят и легко преображают ваш гардероб.»
           </blockquote>
           <p class="statement-text statement-text--serif" data-i18n="stmt_text">
-            Andrelook — магазин мировых брендов с личным подходом. Большой ассортимент, помощь с размером и быстрые ответы. Работаем для тех, кто ценит качество — вживую в Таллинне или с доставкой по всей Европе.
+            Andrelook — магазин мировых брендов с личным подходом.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- ══ CONTACT ════════════════════════════════ -->
     <section class="section contact-section" id="contact">
       <div class="container">
         <div class="contact-inner reveal">
@@ -282,20 +271,15 @@
 
   </main>
 
-  <!-- ══ FOOTER ════════════════════════════════ -->
   <footer class="site-footer">
     <div class="footer-top">
       <div class="container footer-top-inner">
-
-        <!-- Лого + слоган -->
         <div class="footer-brand">
           <a href="index.html">
             <img src="images/logo.png" alt="Andrelook" class="footer-logo" />
           </a>
           <p class="footer-brand-text" data-i18n="hero_tagline">Мировые бренды · Личный подход</p>
         </div>
-
-        <!-- Навигация -->
         <div class="footer-col">
           <span class="footer-col-title">Навигация</span>
           <nav class="footer-nav-list">
@@ -305,8 +289,6 @@
             <a href="#reviews"     data-i18n="nav_reviews">Отзывы</a>
           </nav>
         </div>
-
-        <!-- Контакты -->
         <div class="footer-col">
           <span class="footer-col-title">Контакты</span>
           <div class="footer-contacts">
@@ -324,10 +306,8 @@
             </a>
           </div>
         </div>
-
       </div>
     </div>
-
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
         <span class="footer-copy" data-i18n="footer_copy">© 2025 Andrelook · Таллинн</span>
