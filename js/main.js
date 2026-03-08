@@ -161,25 +161,17 @@ const I18N = {
 
 /* ── Products ────────────────────────────────── */
 const PRODUCTS = [
-  // ─ ТЁПЛЫЕ КУРТКИ ─────────────────────────────
   {
     id: 1,
-    names: {
-      en: 'Moncler Maya Down Jacket',
-      ru: 'Moncler Maya Down Jacket',
-      et: 'Moncler Maya Down Jacket',
-    },
+    names: { en: 'Moncler Maya Down Jacket', ru: 'Moncler Maya Down Jacket', et: 'Moncler Maya Down Jacket' },
     category: 'warm-jackets',
     cats: { en: 'Warm Jackets', ru: 'Тёплые куртки', et: 'Soojad jakid' },
-    descs: { ru: 'Культовая пуховая куртка Moncler Maya, сочетающая премиальное качество, тепло и современный городской стиль. Модель создана для холодной погоды и повседневного комфорта.\n• натуральный гусиный пух — отлично сохраняет тепло\n• прочный и лёгкий глянцевый материал\n• аккуратные фирменные швы и высокая износостойкость\n• удобные карманы и надёжная молния\n• культовый логотип Moncler\nКуртка отлично подходит для повседневного стиля и городских образов.\nУнисекс модель', en: 'Iconic Moncler Maya down jacket combining premium quality, warmth and modern urban style. Designed for cold weather and everyday comfort.\n• natural goose down — excellent heat retention\n• durable and lightweight glossy shell\n• precise branded stitching and high durability\n• practical pockets and reliable zip\n• iconic Moncler logo\nPerfect for everyday style and city looks.\nUnisex model', et: 'Ikoonilne Moncler Maya sulejope, mis ühendab premium kvaliteeti, soojust ja kaasaegset linnalikku stiili. Loodud külma ilma ja igapäevase mugavuse jaoks.\n• looduslik hanesuled — suurepärane soojuse säilitamine\n• vastupidav ja kerge läikiv materjal\n• täpsed firmamärgised õmblused\n• praktilised taskud ja usaldusväärne tõmblukk\n• ikooniline Moncler logo\nSobib igapäevaseks stiiliks ja linnavaatamiseks.\nUnisex mudel' },
-    images: [
-      'images/moncler-maya-1.jpg',
-      'images/moncler-maya-2.jpg',
-      'images/moncler-maya-3.jpg',
-      'images/moncler-maya-4.jpg',
-      'images/moncler-maya-5.jpg',
-      'images/moncler-maya-6.jpg',
-    ],
+    descs: {
+      ru: 'Культовая пуховая куртка Moncler Maya, сочетающая премиальное качество, тепло и современный городской стиль. Модель создана для холодной погоды и повседневного комфорта.\n• натуральный гусиный пух — отлично сохраняет тепло\n• прочный и лёгкий глянцевый материал\n• аккуратные фирменные швы и высокая износостойкость\n• удобные карманы и надёжная молния\n• культовый логотип Moncler\nКуртка отлично подходит для повседневного стиля и городских образов.\nУнисекс модель',
+      en: 'Iconic Moncler Maya down jacket combining premium quality, warmth and modern urban style. Designed for cold weather and everyday comfort.\n• natural goose down — excellent heat retention\n• durable and lightweight glossy shell\n• precise branded stitching and high durability\n• practical pockets and reliable zip\n• iconic Moncler logo\nPerfect for everyday style and city looks.\nUnisex model',
+      et: 'Ikoonilne Moncler Maya sulejope, mis ühendab premium kvaliteeti, soojust ja kaasaegset linnalikku stiili.\n• looduslik hanesuled — suurepärane soojuse säilitamine\n• vastupidav ja kerge läikiv materjal\n• täpsed firmamärgised õmblused\n• praktilised taskud ja usaldusväärne tõmblukk\n• ikooniline Moncler logo\nSobib igapäevaseks stiiliks ja linnavaatamiseks.\nUnisex mudel',
+    },
+    images: ['images/moncler-maya-1.jpg','images/moncler-maya-2.jpg','images/moncler-maya-3.jpg','images/moncler-maya-4.jpg','images/moncler-maya-5.jpg','images/moncler-maya-6.jpg'],
     color: '#1C1C1A',
     brand: 'Moncler',
     colors: [
@@ -194,18 +186,15 @@ const PRODUCTS = [
   },
   {
     id: 2,
-    names: {
-      en: 'Parajumpers Tyrik Hooded Puffer Jacket',
-      ru: 'Parajumpers Tyrik Hooded Puffer Jacket',
-      et: 'Parajumpers Tyrik Hooded Puffer Jacket',
-    },
+    names: { en: 'Parajumpers Tyrik Hooded Puffer Jacket', ru: 'Parajumpers Tyrik Hooded Puffer Jacket', et: 'Parajumpers Tyrik Hooded Puffer Jacket' },
     category: 'warm-jackets',
     cats: { en: 'Warm Jackets', ru: 'Тёплые куртки', et: 'Soojad jakid' },
-    descs: { ru: 'Тёплая зимняя куртка Parajumpers, созданная для холодной погоды и повседневного комфорта. Модель сочетает функциональность, премиальные материалы и современный городской стиль.\n• тёплый и качественный пуховый наполнитель\n• прочный и износостойкий внешний материал\n• удобный капюшон для дополнительной защиты от ветра\n• практичные карманы на молнии\n• фирменные элементы и логотип Parajumpers\nИдеально подходит для холодной зимней погоды и ежедневного ношения.\nУнисекс модель', en: 'Warm winter jacket by Parajumpers, designed for cold weather and everyday comfort. Combines functionality, premium materials and modern urban style.\n• warm and high-quality down fill\n• durable and wear-resistant outer material\n• comfortable hood for extra wind protection\n• practical zip pockets\n• signature Parajumpers elements and logo\nPerfect for cold winter weather and daily wear.\nUnisex model', et: 'Soe talvejope Parajumpers, loodud külma ilma ja igapäevase mugavuse jaoks. Ühendab funktsionaalsuse, premium materjalid ja kaasaegse linnastiili.\n• soe ja kvaliteetne suletäidis\n• vastupidav välismaterjal\n• mugav kapuuts lisatuulekaitseks\n• praktilised tõmblukuga taskud\n• Parajumpers logo ja detailid\nSobib ideaalselt külmaks talveilmaks ja igapäevaseks kandmiseks.\nUnisex mudel' },
-    images: [
-      'images/parajumpers-tyrik-1.jpg',
-      'images/parajumpers-tyrik-2.jpg',
-    ],
+    descs: {
+      ru: 'Тёплая зимняя куртка Parajumpers, созданная для холодной погоды и повседневного комфорта. Модель сочетает функциональность, премиальные материалы и современный городской стиль.\n• тёплый и качественный пуховый наполнитель\n• прочный и износостойкий внешний материал\n• удобный капюшон для дополнительной защиты от ветра\n• практичные карманы на молнии\n• фирменные элементы и логотип Parajumpers\nИдеально подходит для холодной зимней погоды и ежедневного ношения.\nУнисекс модель',
+      en: 'Warm winter jacket by Parajumpers, designed for cold weather and everyday comfort.\n• warm and high-quality down fill\n• durable and wear-resistant outer material\n• comfortable hood for extra wind protection\n• practical zip pockets\n• signature Parajumpers elements and logo\nPerfect for cold winter weather and daily wear.\nUnisex model',
+      et: 'Soe talvejope Parajumpers, loodud külma ilma ja igapäevase mugavuse jaoks.\n• soe ja kvaliteetne suletäidis\n• vastupidav välismaterjal\n• mugav kapuuts lisatuulekaitseks\n• praktilised tõmblukuga taskud\n• Parajumpers logo ja detailid\nSobib ideaalselt külmaks talveilmaks ja igapäevaseks kandmiseks.\nUnisex mudel',
+    },
+    images: ['images/parajumpers-tyrik-1.jpg','images/parajumpers-tyrik-2.jpg'],
     color: '#1C2333',
     brand: 'Parajumpers',
     colors: [
@@ -214,18 +203,15 @@ const PRODUCTS = [
   },
   {
     id: 3,
-    names: {
-      en: 'Moncler Vezere Down Jacket',
-      ru: 'Moncler Vezere Down Jacket',
-      et: 'Moncler Vezere Down Jacket',
-    },
+    names: { en: 'Moncler Vezere Down Jacket', ru: 'Moncler Vezere Down Jacket', et: 'Moncler Vezere Down Jacket' },
     category: 'warm-jackets',
     cats: { en: 'Warm Jackets', ru: 'Тёплые куртки', et: 'Soojad jakid' },
-    descs: { ru: 'Премиальная пуховая куртка Moncler Vezere, сочетающая тепло, комфорт и современный минималистичный стиль. Отлично подходит для холодной погоды и повседневных городских образов.\n• натуральный гусиный пух — лёгкий и очень тёплый\n• прочный и качественный внешний материал\n• аккуратные фирменные швы\n• удобные карманы и надёжная фурнитура\n• фирменный логотип Moncler на рукаве\nКуртка идеально подходит для повседневного ношения в холодное время года.\nУнисекс модель', en: 'Premium Moncler Vezere down jacket combining warmth, comfort and modern minimalist style. Perfect for cold weather and everyday city looks.\n• natural goose down — light and very warm\n• durable and high-quality outer shell\n• precise branded stitching\n• practical pockets and reliable hardware\n• Moncler logo on sleeve\nIdeal for everyday wear in cold weather.\nUnisex model', et: 'Premium Moncler Vezere sulejope, mis ühendab soojuse, mugavuse ja kaasaegse minimalistliku stiili.\n• looduslik hanesuled — kerge ja väga soe\n• vastupidav välismaterjal\n• täpsed õmblused\n• praktilised taskud\n• Moncler logo varrukal\nSobib igapäevaseks kandmiseks külmal aastaajal.\nUnisex mudel' },
-    images: [
-      'images/moncler-vezere-1.jpg',
-      'images/moncler-vezere-2.jpg',
-    ],
+    descs: {
+      ru: 'Премиальная пуховая куртка Moncler Vezere, сочетающая тепло, комфорт и современный минималистичный стиль.\n• натуральный гусиный пух — лёгкий и очень тёплый\n• прочный и качественный внешний материал\n• аккуратные фирменные швы\n• удобные карманы и надёжная фурнитура\n• фирменный логотип Moncler на рукаве\nКуртка идеально подходит для повседневного ношения в холодное время года.\nУнисекс модель',
+      en: 'Premium Moncler Vezere down jacket combining warmth, comfort and modern minimalist style.\n• natural goose down — light and very warm\n• durable and high-quality outer shell\n• precise branded stitching\n• practical pockets and reliable hardware\n• Moncler logo on sleeve\nIdeal for everyday wear in cold weather.\nUnisex model',
+      et: 'Premium Moncler Vezere sulejope, mis ühendab soojuse, mugavuse ja kaasaegse minimalistliku stiili.\n• looduslik hanesuled — kerge ja väga soe\n• vastupidav välismaterjal\n• täpsed õmblused\n• praktilised taskud\n• Moncler logo varrukal\nSobib igapäevaseks kandmiseks külmal aastaajal.\nUnisex mudel',
+    },
+    images: ['images/moncler-vezere-1.jpg','images/moncler-vezere-2.jpg'],
     color: '#1A1A1A',
     brand: 'Moncler',
     colors: [
@@ -234,19 +220,15 @@ const PRODUCTS = [
   },
   {
     id: 4,
-    names: {
-      en: 'Moncler Bormes Down Vest',
-      ru: 'Moncler Bormes Down Vest',
-      et: 'Moncler Bormes Down Vest',
-    },
+    names: { en: 'Moncler Bormes Down Vest', ru: 'Moncler Bormes Down Vest', et: 'Moncler Bormes Down Vest' },
     category: 'vests',
     cats: { en: 'Vests', ru: 'Жилетки', et: 'Vestid' },
-    descs: { ru: 'Стильная пуховая жилетка Moncler, созданная для комфорта в прохладную погоду и современного городского стиля. Лёгкая, тёплая и практичная модель для повседневных образов.\n• лёгкий и тёплый пуховый наполнитель\n• фирменный логотип Moncler\n• удобные карманы на молнии\n• современный минималистичный силуэт\nУнисекс модель', en: 'Stylish Moncler down vest designed for comfort in cool weather and modern urban style. Light, warm and practical for everyday looks.\n• light and warm down fill\n• Moncler signature logo\n• practical zip pockets\n• modern minimalist silhouette\nUnisex model', et: 'Stiilne Moncler sulevest, loodud mugavuseks jahedas ilmas ja kaasaegseks linnastiiliks.\n• kerge ja soe suletäidis\n• Moncler logo\n• praktilised tõmblukuga taskud\n• kaasaegne minimalistlik siluett\nUnisex mudel' },
-    images: [
-      'images/moncler-bormes-1.jpg',
-      'images/moncler-bormes-2.jpg',
-      'images/moncler-bormes-3.jpg',
-    ],
+    descs: {
+      ru: 'Стильная пуховая жилетка Moncler для комфорта в прохладную погоду.\n• лёгкий и тёплый пуховый наполнитель\n• фирменный логотип Moncler\n• удобные карманы на молнии\n• современный минималистичный силуэт\nУнисекс модель',
+      en: 'Stylish Moncler down vest for comfort in cool weather.\n• light and warm down fill\n• Moncler signature logo\n• practical zip pockets\n• modern minimalist silhouette\nUnisex model',
+      et: 'Stiilne Moncler sulevest mugavuseks jahedas ilmas.\n• kerge ja soe suletäidis\n• Moncler logo\n• praktilised tõmblukuga taskud\n• kaasaegne minimalistlik siluett\nUnisex mudel',
+    },
+    images: ['images/moncler-bormes-1.jpg','images/moncler-bormes-2.jpg','images/moncler-bormes-3.jpg'],
     color: '#1A1A1A',
     brand: 'Moncler',
     colors: [
@@ -257,18 +239,15 @@ const PRODUCTS = [
   },
   {
     id: 5,
-    names: {
-      en: 'Parajumpers Jeordie Down Vest',
-      ru: 'Parajumpers Jeordie Down Vest',
-      et: 'Parajumpers Jeordie Down Vest',
-    },
+    names: { en: 'Parajumpers Jeordie Down Vest', ru: 'Parajumpers Jeordie Down Vest', et: 'Parajumpers Jeordie Down Vest' },
     category: 'vests',
     cats: { en: 'Vests', ru: 'Жилетки', et: 'Vestid' },
-    descs: { ru: 'Функциональная пуховая жилетка Parajumpers, созданная для комфорта в прохладную погоду и современного городского стиля. Лёгкая, тёплая и практичная модель для повседневных образов.\n• качественный тёплый пуховый наполнитель\n• прочный и лёгкий внешний материал\n• аккуратные фирменные швы\n• удобные карманы на молнии\n• узнаваемый стиль Parajumpers\nОтлично подходит для многослойных образов - поверх худи или свитера.\nУнисекс модель', en: 'Functional Parajumpers down vest designed for comfort in cool weather and modern urban style. Light, warm and practical for everyday looks.\n• high-quality warm down fill\n• durable and lightweight outer shell\n• precise branded stitching\n• practical zip pockets\n• signature Parajumpers style\nGreat for layered looks over a hoodie or sweater.\nUnisex model', et: 'Funktsionaalne Parajumpers sulevest, loodud mugavuseks jahedas ilmas ja kaasaegseks linnastiiliks.\n• kvaliteetne soe suletäidis\n• vastupidav ja kerge välismaterjal\n• täpsed õmblused\n• praktilised tõmblukuga taskud\n• Parajumpers stiil\nSobib kihistatud väljanägemisteks peale hoodied või kampsuni.\nUnisex mudel' },
-    images: [
-      'images/parajumpers-jeordie-1.jpg',
-      'images/parajumpers-jeordie-2.jpg',
-    ],
+    descs: {
+      ru: 'Функциональная пуховая жилетка Parajumpers для комфорта в прохладную погоду.\n• качественный тёплый пуховый наполнитель\n• прочный и лёгкий внешний материал\n• аккуратные фирменные швы\n• удобные карманы на молнии\n• узнаваемый стиль Parajumpers\nОтлично подходит для многослойных образов поверх худи или свитера.\nУнисекс модель',
+      en: 'Functional Parajumpers down vest for comfort in cool weather.\n• high-quality warm down fill\n• durable and lightweight outer shell\n• precise branded stitching\n• practical zip pockets\n• signature Parajumpers style\nGreat for layered looks over a hoodie or sweater.\nUnisex model',
+      et: 'Funktsionaalne Parajumpers sulevest mugavuseks jahedas ilmas.\n• kvaliteetne soe suletäidis\n• vastupidav ja kerge välismaterjal\n• täpsed õmblused\n• praktilised tõmblukuga taskud\n• Parajumpers stiil\nSobib kihistatud väljanägemisteks peale hoodied või kampsuni.\nUnisex mudel',
+    },
+    images: ['images/parajumpers-jeordie-1.jpg','images/parajumpers-jeordie-2.jpg'],
     color: '#1C2333',
     brand: 'Parajumpers',
     colors: [
@@ -277,18 +256,15 @@ const PRODUCTS = [
   },
   {
     id: 6,
-    names: {
-      en: 'Moncler Tibb Logo-Patch Padded Gilet',
-      ru: 'Moncler Tibb Logo-Patch Padded Gilet',
-      et: 'Moncler Tibb Logo-Patch Padded Gilet',
-    },
+    names: { en: 'Moncler Tibb Logo-Patch Padded Gilet', ru: 'Moncler Tibb Logo-Patch Padded Gilet', et: 'Moncler Tibb Logo-Patch Padded Gilet' },
     category: 'vests',
     cats: { en: 'Vests', ru: 'Жилетки', et: 'Vestid' },
-    descs: { ru: 'Классическая пуховая жилетка Moncler, сочетающая лёгкость, тепло и современный городской стиль. Практичная модель для повседневных образов и прохладной погоды.\n• качественный тёплый пуховый наполнитель\n• лёгкий и прочный внешний материал\n• аккуратные фирменные швы\n• удобные карманы на молнии\n• культовый логотип Moncler\nОтлично подходит для многослойных образов — поверх худи или свитера.\nУнисекс модель', en: 'Classic Moncler down vest combining lightness, warmth and modern urban style. Practical for everyday looks and cool weather.\n• high-quality warm down fill\n• light and durable outer shell\n• precise branded stitching\n• practical zip pockets\n• iconic Moncler logo\nPerfect for layered looks over a hoodie or sweater.\nUnisex model', et: 'Klassikaline Moncler sulevest, mis ühendab kerguse, soojuse ja kaasaegse linnastiili.\n• kvaliteetne soe suletäidis\n• kerge ja vastupidav välismaterjal\n• täpsed õmblused\n• praktilised tõmblukuga taskud\n• ikooniline Moncler logo\nSobib kihistatud väljanägemisteks.\nUnisex mudel' },
-    images: [
-      'images/moncler-tibb-1.jpg',
-      'images/moncler-tibb-2.jpg',
-    ],
+    descs: {
+      ru: 'Классическая пуховая жилетка Moncler — лёгкость, тепло и современный городской стиль.\n• качественный тёплый пуховый наполнитель\n• лёгкий и прочный внешний материал\n• аккуратные фирменные швы\n• удобные карманы на молнии\n• культовый логотип Moncler\nОтлично подходит для многослойных образов — поверх худи или свитера.\nУнисекс модель',
+      en: 'Classic Moncler down vest — lightness, warmth and modern urban style.\n• high-quality warm down fill\n• light and durable outer shell\n• precise branded stitching\n• practical zip pockets\n• iconic Moncler logo\nPerfect for layered looks over a hoodie or sweater.\nUnisex model',
+      et: 'Klassikaline Moncler sulevest — kergus, soojus ja kaasaegne linnastiil.\n• kvaliteetne soe suletäidis\n• kerge ja vastupidav välismaterjal\n• täpsed õmblused\n• praktilised tõmblukuga taskud\n• ikooniline Moncler logo\nSobib kihistatud väljanägemisteks.\nUnisex mudel',
+    },
+    images: ['images/moncler-tibb-1.jpg','images/moncler-tibb-2.jpg'],
     color: '#1A1A1A',
     brand: 'Moncler',
     colors: [
@@ -299,63 +275,53 @@ const PRODUCTS = [
   },
   {
     id: 7,
-    names: {
-      en: 'Moncler Galion Hooded Jacket',
-      ru: 'Moncler Galion Hooded Jacket',
-      et: 'Moncler Galion Hooded Jacket',
-    },
+    names: { en: 'Moncler Galion Hooded Jacket', ru: 'Moncler Galion Hooded Jacket', et: 'Moncler Galion Hooded Jacket' },
     category: 'light-jackets',
     cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
-    descs: { ru: 'Лёгкая пуховая жилетка Moncler, идеально подходящая для повседневного городского стиля и прохладной погоды. Тонкая, комфортная и практичная модель, которая отлично подходит для многослойных образов.\n• лёгкий и качественный пуховый наполнитель\n• прочный и лёгкий внешний материал\n• аккуратные фирменные швы\n• удобные карманы на молнии\n• культовый логотип Moncler\nЖилетка отлично сочетается с худи, свитерами и лёгкими куртками.\nУнисекс модель', en: 'Lightweight Moncler down vest ideal for everyday urban style and cool weather. Slim, comfortable and practical for layered looks.\n• light and high-quality down fill\n• durable and lightweight outer shell\n• precise branded stitching\n• practical zip pockets\n• iconic Moncler logo\nPairs perfectly with hoodies, sweaters and light jackets.\nUnisex model', et: 'Kerge Moncler sulevest, mis sobib ideaalselt igapäevaseks linnastiiliks ja jahedaks ilmaks.\n• kerge ja kvaliteetne suletäidis\n• vastupidav välismaterjal\n• täpsed õmblused\n• praktilised tõmblukuga taskud\n• ikooniline Moncler logo\nSobib hoodiedega, kampsunitega ja kergete jopedega.\nUnisex mudel' },
-    images: [
-      'images/moncler-galion-1.jpg',
-      'images/moncler-galion-2.jpg',
-    ],
-    color: '#1A1A1A',
-    brand: 'Moncler',
-    colors: [
-      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
-      { hex: '#1B2A4A', name: { ru: 'Тёмно-синий', en: 'Navy', et: 'Tumesinine' } },
-      { hex: '#F5F5F5', name: { ru: 'Белый', en: 'White', et: 'Valge' } },
-      { hex: '#7ABFDB', name: { ru: 'Голубой', en: 'Sky Blue', et: 'Taevassinine' } },
-      { hex: '#5C6B3A', name: { ru: 'Хаки', en: 'Khaki', et: 'Khaki' } },
-    ],
-  },
-  {
-    id: 8,
-    names: {
-      en: 'Moncler Etiache Rain Jacket',
-      ru: 'Moncler Etiache Rain Jacket',
-      et: 'Moncler Etiache Rain Jacket',
+    descs: {
+      ru: 'Лёгкая пуховая куртка Moncler с капюшоном — для повседневного городского стиля и прохладной погоды.\n• лёгкий и качественный пуховый наполнитель\n• прочный и лёгкий внешний материал\n• аккуратные фирменные швы\n• удобные карманы на молнии\n• культовый логотип Moncler\nОтлично сочетается с худи, свитерами и повседневными образами.\nУнисекс модель',
+      en: 'Lightweight Moncler hooded jacket for everyday urban style and cool weather.\n• light and high-quality down fill\n• durable and lightweight outer shell\n• precise branded stitching\n• practical zip pockets\n• iconic Moncler logo\nPairs perfectly with hoodies, sweaters and everyday outfits.\nUnisex model',
+      et: 'Kerge Moncler kapuutsiga jope igapäevaseks linnastiiliks ja jahedaks ilmaks.\n• kerge ja kvaliteetne suletäidis\n• vastupidav välismaterjal\n• täpsed õmblused\n• praktilised tõmblukuga taskud\n• ikooniline Moncler logo\nSobib hoodiedega, kampsunitega ja igapäevaste riietega.\nUnisex mudel',
     },
-    category: 'light-jackets',
-    cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
-    descs: { ru: 'Лёгкая куртка Moncler, созданная для комфорта в прохладную погоду и межсезонье. Практичная модель, сочетающая современный городской стиль и функциональность.\n• лёгкое и тёплое наполнение\n• прочный и лёгкий внешний материал\n• удобный капюшон для защиты от ветра\n• практичные карманы на молнии\n• фирменный логотип Moncler\nИдеально подходит для повседневных образов весной и осенью.\nУнисекс модель', en: 'Lightweight Moncler jacket designed for comfort in cool weather and between seasons. Practical model combining modern urban style and functionality.\n• light and warm fill\n• durable and lightweight outer shell\n• comfortable hood for wind protection\n• practical zip pockets\n• Moncler logo\nPerfect for everyday looks in spring and autumn.\nUnisex model', et: 'Kerge Moncler jope, loodud mugavuseks jahedas ilmas ja hooaegade vahetusel.\n• kerge ja soe täidis\n• vastupidav välismaterjal\n• mugav kapuuts tuulekaitseks\n• praktilised tõmblukuga taskud\n• Moncler logo\nSobib igapäevaseks kandmiseks kevadel ja sügisel.\nUnisex mudel' },
-    images: [
-      'images/moncler-etiache-1.jpg',
-      'images/moncler-etiache-2.jpg',
-    ],
+    images: ['images/moncler-galion-1.jpg','images/moncler-galion-2.jpg'],
     color: '#1A1A1A',
     brand: 'Moncler',
+    // ИСПРАВЛЕНО: Black, Grey
     colors: [
       { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
       { hex: '#9A9A9A', name: { ru: 'Серый', en: 'Grey', et: 'Hall' } },
     ],
   },
   {
-    id: 9,
-    names: {
-      en: 'Moncler Cardigan Wool',
-      ru: 'Moncler Cardigan Wool',
-      et: 'Moncler Cardigan Wool',
-    },
+    id: 8,
+    names: { en: 'Moncler Etiache Rain Jacket', ru: 'Moncler Etiache Rain Jacket', et: 'Moncler Etiache Rain Jacket' },
     category: 'light-jackets',
     cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
-    descs: { ru: 'Лёгкая ветровка Moncler, созданная для комфорта в тёплую и ветреную погоду. Практичная модель, сочетающая минималистичный дизайн и функциональность для повседневного городского стиля.\n• лёгкий и прочный материал\n• защита от ветра и лёгкой влаги\n• удобный капюшон с регулировкой\n• практичные карманы\n• фирменный логотип Moncler\nИдеально подходит для весенней и летней погоды.\nУнисекс модель', en: 'Lightweight Moncler windbreaker designed for comfort in warm and windy weather. Practical model combining minimalist design and functionality.\n• lightweight and durable material\n• wind and light moisture protection\n• adjustable hood\n• practical pockets\n• Moncler logo\nPerfect for spring and summer weather.\nUnisex model', et: 'Kerge Moncler tuulejope, loodud mugavuseks soojal ja tuulisel ilmal.\n• kerge ja vastupidav materjal\n• tuule- ja niiskuskaitse\n• reguleeritav kapuuts\n• praktilised taskud\n• Moncler logo\nSobib kevadiseks ja suvisteks ilmadeks.\nUnisex mudel' },
-    images: [
-      'images/moncler-cardigan-1.jpg',
-      'images/moncler-cardigan-2.jpg',
+    descs: {
+      ru: 'Лёгкая ветровка Moncler, созданная для комфорта в тёплую и ветреную погоду. Практичная модель, сочетающая минималистичный дизайн и функциональность для повседневного городского стиля.\n• лёгкий и прочный материал\n• защита от ветра и лёгкой влаги\n• удобный капюшон с регулировкой\n• практичные карманы\n• фирменный логотип Moncler\nИдеально подходит для весенней и летней погоды.\nУнисекс модель',
+      en: 'Lightweight Moncler windbreaker designed for comfort in warm and windy weather. A practical model combining minimalist design and functionality for everyday urban style.\n• lightweight and durable material\n• wind and light moisture protection\n• adjustable hood\n• practical pockets\n• Moncler logo\nPerfect for spring and summer weather.\nUnisex model',
+      et: 'Kerge Moncler tuulejope, loodud mugavuseks soojal ja tuulisel ilmal. Praktiline mudel, mis ühendab minimalistliku disaini ja funktsionaalsuse igapäevaseks linnastiiliks.\n• kerge ja vastupidav materjal\n• tuule- ja kerge niiskuskaitse\n• reguleeritav kapuuts\n• praktilised taskud\n• Moncler logo\nSobib ideaalselt kevadiseks ja suvisteks ilmadeks.\nUnisex mudel',
+    },
+    images: ['images/moncler-etiache-1.jpg','images/moncler-etiache-2.jpg'],
+    color: '#1A1A1A',
+    brand: 'Moncler',
+    // ИСПРАВЛЕНО: Black, Navy
+    colors: [
+      { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
+      { hex: '#1B2A4A', name: { ru: 'Тёмно-синий', en: 'Navy', et: 'Tumesinine' } },
     ],
+  },
+  {
+    id: 9,
+    names: { en: 'Moncler Cardigan Wool', ru: 'Moncler Cardigan Wool', et: 'Moncler Cardigan Wool' },
+    category: 'light-jackets',
+    cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
+    descs: {
+      ru: 'Стильный Moncler кардиган-куртка, сочетающий комфорт вязаного трикотажа и тепло лёгкого утеплённого переда. Идеальный вариант для межсезонья и повседневного городского образа.\n• комбинированный дизайн: трикотаж + лёгкий утеплённый перед\n• мягкий и комфортный материал\n• удобные карманы на молнии\n• фирменный логотип Moncler\n• стильный и универсальный силуэт\nОтлично подходит для весны, осени и прохладных вечеров.\nУнисекс модель',
+      en: 'Stylish Moncler cardigan-jacket combining the comfort of knit fabric and the warmth of a lightly padded front. The perfect option for between seasons and everyday urban style.\n• combined design: knit + lightly padded front\n• soft and comfortable material\n• practical zip pockets\n• Moncler logo\n• stylish and versatile silhouette\nPerfect for spring, autumn and cool evenings.\nUnisex model',
+      et: 'Stiilne Moncler kardigan-jope, mis ühendab kootud kanga mugavuse ja kerge soojustatud esiosa soojuse. Ideaalne valik hooaegade vahetuseks ja igapäevaseks linnastiiliks.\n• kombineeritud disain: kudumine + kerge soojustatud esiosa\n• pehme ja mugav materjal\n• praktilised tõmblukuga taskud\n• Moncler logo\n• stiilne ja mitmekülgne siluett\nSobib suurepäraselt kevadeks, sügiseks ja jahedateks õhtuteks.\nUnisex mudel',
+    },
+    images: ['images/moncler-cardigan-1.jpg','images/moncler-cardigan-2.jpg'],
     color: '#1A1A1A',
     brand: 'Moncler',
     colors: [
@@ -365,39 +331,37 @@ const PRODUCTS = [
   },
   {
     id: 10,
-    names: {
-      en: 'Moncler Gui Gilet',
-      ru: 'Moncler Gui Gilet',
-      et: 'Moncler Gui Gilet',
-    },
+    names: { en: 'Moncler Gui Gilet', ru: 'Moncler Gui Gilet', et: 'Moncler Gui Gilet' },
     category: 'vests',
     cats: { en: 'Vests', ru: 'Жилетки', et: 'Vestid' },
-    descs: { ru: 'Стильный Moncler кардиган-куртка, сочетающий комфорт вязаного трикотажа и тепло лёгкого утеплённого переда. Идеальный вариант для межсезонья и повседневного городского образа.\n• комбинированный дизайн: трикотаж + лёгкий утеплённый перед\n• мягкий и комфортный материал\n• удобные карманы на молнии\n• фирменный логотип Moncler\n• стильный и универсальный силуэт\nОтлично подходит для весны, осени и прохладных вечеров.\nУнисекс модель', en: 'Stylish Moncler cardigan-jacket combining the comfort of knit fabric and warmth of a lightly padded front. Perfect for between seasons and everyday urban looks.\n• combined design: knit + lightly padded front\n• soft and comfortable material\n• practical zip pockets\n• Moncler logo\n• stylish and versatile silhouette\nPerfect for spring, autumn and cool evenings.\nUnisex model', et: 'Stiilne Moncler kardigan-jope, mis ühendab kootud kanga mugavuse ja kerge soojustatud esiosa soojuse.\n• kombineeritud disain: kudumine + kerge soojustus\n• pehme ja mugav materjal\n• praktilised tõmblukuga taskud\n• Moncler logo\nSobib kevadeks, sügiseks ja jahedateks õhtuteks.\nUnisex mudel' },
-    images: [
-      'images/moncler-gui-1.jpg',
-      'images/moncler-gui-2.jpg',
-    ],
+    descs: {
+      ru: 'Лёгкая пуховая жилетка Moncler, идеально подходящая для повседневного городского стиля и прохладной погоды. Тонкая, комфортная и практичная модель, которая отлично подходит для многослойных образов.\n• лёгкий и качественный пуховый наполнитель\n• прочный и лёгкий внешний материал\n• аккуратные фирменные швы\n• удобные карманы на молнии\n• культовый логотип Moncler\nЖилетка отлично сочетается с худи, свитерами и лёгкими куртками.\nУнисекс модель',
+      en: 'Lightweight Moncler down vest, perfect for everyday urban style and cool weather. A slim, comfortable and practical model ideal for layered looks.\n• light and high-quality down fill\n• durable and lightweight outer shell\n• precise branded stitching\n• practical zip pockets\n• iconic Moncler logo\nPairs perfectly with hoodies, sweaters and light jackets.\nUnisex model',
+      et: 'Kerge Moncler sulevest, mis sobib ideaalselt igapäevaseks linnastiiliks ja jahedaks ilmaks. Õhuke, mugav ja praktiline mudel kihistatud väljanägemisteks.\n• kerge ja kvaliteetne suletäidis\n• vastupidav ja kerge välismaterjal\n• täpsed firmamärgised õmblused\n• praktilised tõmblukuga taskud\n• ikooniline Moncler logo\nSobib suurepäraselt hoodiedega, kampsunitega ja kergete jopedega.\nUnisex mudel',
+    },
+    images: ['images/moncler-gui-1.jpg','images/moncler-gui-2.jpg'],
     color: '#1A1A1A',
     brand: 'Moncler',
+    // ИСПРАВЛЕНО: Black, Navy, White, Sky Blue, Khaki
     colors: [
       { hex: '#1A1A1A', name: { ru: 'Чёрный', en: 'Black', et: 'Must' } },
       { hex: '#1B2A4A', name: { ru: 'Тёмно-синий', en: 'Navy', et: 'Tumesinine' } },
+      { hex: '#F5F5F5', name: { ru: 'Белый', en: 'White', et: 'Valge' } },
+      { hex: '#7ABFDB', name: { ru: 'Голубой', en: 'Sky Blue', et: 'Taevassinine' } },
+      { hex: '#5C6B3A', name: { ru: 'Хаки', en: 'Khaki', et: 'Khaki' } },
     ],
   },
   {
     id: 11,
-    names: {
-      en: 'Moncler Detachable Hood Cardigan',
-      ru: 'Moncler Detachable Hood Cardigan',
-      et: 'Moncler Detachable Hood Cardigan',
-    },
+    names: { en: 'Moncler Detachable Hood Cardigan', ru: 'Moncler Detachable Hood Cardigan', et: 'Moncler Detachable Hood Cardigan' },
     category: 'light-jackets',
     cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
-    descs: { ru: 'Стильная Moncler кофта-куртка с капюшоном, сочетающая комфорт трикотажа и тепло лёгкого утеплённого жилета. Универсальная модель для повседневного городского стиля.\n• комбинированный дизайн: трикотаж + утеплённая передняя часть\n• мягкий и комфортный материал\n• удобный капюшон\n• карманы на молнии\n• фирменный логотип Moncler\nОтличный вариант для весны, осени и прохладных дней.\nУнисекс модель', en: 'Stylish Moncler hooded cardigan combining knit comfort and warmth of a lightly padded vest. Versatile for everyday urban style.\n• combined design: knit + padded front\n• soft and comfortable material\n• detachable hood\n• zip pockets\n• Moncler logo\nGreat for spring, autumn and cool days.\nUnisex model', et: 'Stiilne Moncler kapuutsiga kardigan, mis ühendab kudumise mugavuse ja kerge soojustatud vesti soojuse.\n• kombineeritud disain: kudumine + soojustatud esiosa\n• pehme materjal\n• eemaldatav kapuuts\n• tõmblukuga taskud\n• Moncler logo\nSobib kevadeks, sügiseks ja jahedateks päevadeks.\nUnisex mudel' },
-    images: [
-      'images/moncler-hood-cardigan-1.jpg',
-      'images/moncler-hood-cardigan-2.jpg',
-    ],
+    descs: {
+      ru: 'Стильная кофта-куртка Moncler с капюшоном — комфорт трикотажа и тепло лёгкого утеплённого жилета.\n• комбинированный дизайн: трикотаж + утеплённая передняя часть\n• мягкий и комфортный материал\n• удобный капюшон\n• карманы на молнии\n• фирменный логотип Moncler\nОтличный вариант для весны, осени и прохладных дней.\nУнисекс модель',
+      en: 'Stylish Moncler hooded cardigan combining knit comfort and warmth of a lightly padded vest.\n• combined design: knit + padded front\n• soft and comfortable material\n• detachable hood\n• zip pockets\n• Moncler logo\nGreat for spring, autumn and cool days.\nUnisex model',
+      et: 'Stiilne Moncler kapuutsiga kardigan, mis ühendab kudumise mugavuse ja kerge soojustatud vesti soojuse.\n• kombineeritud disain: kudumine + soojustatud esiosa\n• pehme materjal\n• eemaldatav kapuuts\n• tõmblukuga taskud\n• Moncler logo\nSobib kevadeks, sügiseks ja jahedateks päevadeks.\nUnisex mudel',
+    },
+    images: ['images/moncler-hood-cardigan-1.jpg','images/moncler-hood-cardigan-2.jpg'],
     color: '#1A1A1A',
     brand: 'Moncler',
     colors: [
@@ -407,18 +371,15 @@ const PRODUCTS = [
   },
   {
     id: 12,
-    names: {
-      en: 'Parajumpers Pharrell Hooded Bomber',
-      ru: 'Parajumpers Pharrell Hooded Bomber',
-      et: 'Parajumpers Pharrell Hooded Bomber',
-    },
+    names: { en: 'Parajumpers Pharrell Hooded Bomber', ru: 'Parajumpers Pharrell Hooded Bomber', et: 'Parajumpers Pharrell Hooded Bomber' },
     category: 'light-jackets',
     cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
-    descs: { ru: 'Лёгкая пуховая куртка Parajumpers с капюшоном, созданная для комфорта в прохладную и межсезонную погоду. Практичная модель, сочетающая функциональность и современный городской стиль.\n• качественное тёплое пуховое наполнение\n• лёгкий и прочный внешний материал\n• удобный капюшон для защиты от ветра\n• практичные карманы на молнии\n• фирменные элементы Parajumpers\nОтлично подходит для повседневных образов весной и осенью.\nУнисекс модель', en: 'Lightweight Parajumpers hooded down jacket designed for comfort in cool and between-season weather. Practical model combining functionality and modern urban style.\n• high-quality warm down fill\n• light and durable outer shell\n• comfortable hood for wind protection\n• practical zip pockets\n• Parajumpers signature details\nPerfect for everyday looks in spring and autumn.\nUnisex model', et: 'Kerge Parajumpers kapuutsiga sulejope, loodud mugavuseks jahedal ja hooaegade vahetusel.\n• kvaliteetne soe suletäidis\n• kerge ja vastupidav välismaterjal\n• mugav kapuuts tuulekaitseks\n• praktilised tõmblukuga taskud\n• Parajumpers detailid\nSobib igapäevaseks kandmiseks kevadel ja sügisel.\nUnisex mudel' },
-    images: [
-      'images/parajumpers-pharrell-1.jpg',
-      'images/parajumpers-pharrell-2.jpg',
-    ],
+    descs: {
+      ru: 'Лёгкая пуховая куртка Parajumpers с капюшоном для комфорта в прохладную и межсезонную погоду.\n• качественное тёплое пуховое наполнение\n• лёгкий и прочный внешний материал\n• удобный капюшон для защиты от ветра\n• практичные карманы на молнии\n• фирменные элементы Parajumpers\nОтлично подходит для повседневных образов весной и осенью.\nУнисекс модель',
+      en: 'Lightweight Parajumpers hooded down jacket for comfort in cool and between-season weather.\n• high-quality warm down fill\n• light and durable outer shell\n• comfortable hood for wind protection\n• practical zip pockets\n• Parajumpers signature details\nPerfect for everyday looks in spring and autumn.\nUnisex model',
+      et: 'Kerge Parajumpers kapuutsiga sulejope mugavuseks jahedal ja hooaegade vahetusel.\n• kvaliteetne soe suletäidis\n• kerge ja vastupidav välismaterjal\n• mugav kapuuts tuulekaitseks\n• praktilised tõmblukuga taskud\n• Parajumpers detailid\nSobib igapäevaseks kandmiseks kevadel ja sügisel.\nUnisex mudel',
+    },
+    images: ['images/parajumpers-pharrell-1.jpg','images/parajumpers-pharrell-2.jpg'],
     color: '#1A1A1A',
     brand: 'Parajumpers',
     colors: [
@@ -427,18 +388,15 @@ const PRODUCTS = [
   },
   {
     id: 13,
-    names: {
-      en: 'Moncler Après Ski Knit Sleeves Puffer Jacket',
-      ru: 'Moncler Après Ski Knit Sleeves Puffer Jacket',
-      et: 'Moncler Après Ski Knit Sleeves Puffer Jacket',
-    },
+    names: { en: 'Moncler Après Ski Knit Sleeves Puffer Jacket', ru: 'Moncler Après Ski Knit Sleeves Puffer Jacket', et: 'Moncler Après Ski Knit Sleeves Puffer Jacket' },
     category: 'light-jackets',
     cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
-    descs: { ru: 'Лёгкая Moncler лыжная куртка, созданная в спортивном alpine-стиле. Модель сочетает тепло, лёгкость и функциональность, идеально подходя для активного отдыха и повседневной носки.\n• лёгкий утеплённый материал\n• спортивный горнолыжный дизайн\n• удобный капюшон для защиты от ветра\n• функциональные карманы на молнии\n• фирменный логотип Moncler\nПодходит как для активного отдыха, так и для стильного городского образа.\nУнисекс модель', en: 'Lightweight Moncler ski jacket in a sporty alpine style. Combines warmth, lightness and functionality for active outdoor use and everyday wear.\n• lightweight padded material\n• sporty ski design\n• comfortable hood for wind protection\n• functional zip pockets\n• Moncler logo\nSuitable for active outdoor activities and stylish city looks.\nUnisex model', et: 'Kerge Moncler suusajope sportlikus alpine stiilis. Ühendab soojuse, kerguse ja funktsionaalsuse.\n• kerge soojustatud materjal\n• sportilik suusadisain\n• mugav kapuuts tuulekaitseks\n• funktsionaalsed tõmblukuga taskud\n• Moncler logo\nSobib nii aktiivseks tegevuseks kui linnastiiliks.\nUnisex mudel' },
-    images: [
-      'images/moncler-apres-ski-1.jpg',
-      'images/moncler-apres-ski-2.jpg',
-    ],
+    descs: {
+      ru: 'Лёгкая Moncler куртка в спортивном alpine-стиле с вязаными рукавами.\n• лёгкий утеплённый корпус\n• вязаные рукава из мягкого трикотажа\n• спортивный горнолыжный дизайн\n• функциональные карманы на молнии\n• фирменный логотип Moncler\nПодходит как для активного отдыха, так и для стильного городского образа.\nУнисекс модель',
+      en: 'Lightweight Moncler jacket in sporty alpine style with knit sleeves.\n• lightweight padded body\n• soft knit sleeves\n• sporty ski design\n• functional zip pockets\n• Moncler logo\nSuitable for active outdoor activities and stylish city looks.\nUnisex model',
+      et: 'Kerge Moncler jope sportlikus alpine stiilis kootud varrukatega.\n• kerge soojustatud korpus\n• pehmed kootud varrukad\n• sportilik suusadisain\n• funktsionaalsed tõmblukuga taskud\n• Moncler logo\nSobib nii aktiivseks tegevuseks kui linnastiiliks.\nUnisex mudel',
+    },
+    images: ['images/moncler-apres-ski-1.jpg','images/moncler-apres-ski-2.jpg'],
     color: '#1A1A1A',
     brand: 'Moncler',
     colors: [
@@ -447,20 +405,15 @@ const PRODUCTS = [
   },
   {
     id: 14,
-    names: {
-      en: 'Moncler Retro Knit Wool Cardigan',
-      ru: 'Moncler Retro Knit Wool Cardigan',
-      et: 'Moncler Retro Knit Wool Cardigan',
-    },
+    names: { en: 'Moncler Retro Knit Wool Cardigan', ru: 'Moncler Retro Knit Wool Cardigan', et: 'Moncler Retro Knit Wool Cardigan' },
     category: 'light-jackets',
     cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
-    descs: { ru: 'Функциональная куртка-кардиган Moncler, сочетающая вязаный премиальный трикотаж и лёгкую пуховую конструкцию с капюшоном. Модель объединяет комфорт, тепло и современный городской стиль.\n• комбинированная конструкция: вязаный трикотаж + пуховая верхняя часть\n• качественное тёплое наполнение\n• прочный и комфортный материал\n• удобные карманы на молнии\n• фирменный логотип Moncler на рукаве\nИдеальный вариант для повседневных образов в прохладную погоду.\nУнисекс модель', en: 'Functional Moncler cardigan-jacket combining premium knit wool and a lightweight down construction with hood. Unites comfort, warmth and modern urban style.\n• combined construction: knit + down upper section\n• high-quality warm fill\n• durable and comfortable material\n• practical zip pockets\n• Moncler logo on sleeve\nIdeal for everyday looks in cool weather.\nUnisex model', et: 'Funktsionaalne Moncler kardigan-jope, mis ühendab premium kootud villa ja kerge sulejope konstruktsiooni kapuutsiga.\n• kombineeritud konstruktsioon: kudumine + suled\n• kvaliteetne soe täidis\n• vastupidav materjal\n• praktilised tõmblukuga taskud\n• Moncler logo varrukal\nIdeaalne igapäevaseks kandmiseks jahedas ilmas.\nUnisex mudel' },
-    images: [
-      'images/moncler-retro-knit-1.jpg',
-      'images/moncler-retro-knit-2.jpg',
-      'images/moncler-retro-knit-3.jpg',
-      'images/moncler-retro-knit-4.jpg',
-    ],
+    descs: {
+      ru: 'Куртка-кардиган Moncler — вязаный премиальный трикотаж и лёгкая пуховая конструкция с капюшоном.\n• комбинированная конструкция: вязаный трикотаж + пуховая верхняя часть\n• качественное тёплое наполнение\n• прочный и комфортный материал\n• удобные карманы на молнии\n• фирменный логотип Moncler на рукаве\nИдеальный вариант для повседневных образов в прохладную погоду.\nУнисекс модель',
+      en: 'Moncler cardigan-jacket combining premium knit wool and a lightweight down construction with hood.\n• combined construction: knit + down upper section\n• high-quality warm fill\n• durable and comfortable material\n• practical zip pockets\n• Moncler logo on sleeve\nIdeal for everyday looks in cool weather.\nUnisex model',
+      et: 'Moncler kardigan-jope, mis ühendab premium kootud villa ja kerge sulejope konstruktsiooni kapuutsiga.\n• kombineeritud konstruktsioon: kudumine + suled\n• kvaliteetne soe täidis\n• vastupidav materjal\n• praktilised tõmblukuga taskud\n• Moncler logo varrukal\nIdeaalne igapäevaseks kandmiseks jahedas ilmas.\nUnisex mudel',
+    },
+    images: ['images/moncler-retro-knit-1.jpg','images/moncler-retro-knit-2.jpg','images/moncler-retro-knit-3.jpg','images/moncler-retro-knit-4.jpg'],
     color: '#1A1A1A',
     brand: 'Moncler',
     colors: [
@@ -470,18 +423,15 @@ const PRODUCTS = [
   },
   {
     id: 15,
-    names: {
-      en: 'Parajumpers Jayden Hybrid Cardigan',
-      ru: 'Parajumpers Jayden Hybrid Cardigan',
-      et: 'Parajumpers Jayden Hybrid Cardigan',
-    },
+    names: { en: 'Parajumpers Jayden Hybrid Cardigan', ru: 'Parajumpers Jayden Hybrid Cardigan', et: 'Parajumpers Jayden Hybrid Cardigan' },
     category: 'light-jackets',
     cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
-    descs: { ru: 'Лёгкая гибридная куртка Parajumpers, сочетающая пуховую переднюю часть и эластичный трикотажный материал рукавов. Практичная модель для повседневного комфорта и современного городского стиля.\n• комбинированная конструкция: пуховая передняя часть + эластичные рукава\n• лёгкое и тёплое наполнение\n• прочный и комфортный материал\n• удобные карманы на молнии\n• фирменные элементы Parajumpers\nОтлично подходит для прохладной погоды и многослойных образов.\nМужская модель', en: 'Lightweight hybrid Parajumpers jacket combining a down front and elastic knit sleeves. Practical for everyday comfort and modern urban style.\n• combined construction: down front + elastic sleeves\n• light and warm fill\n• durable and comfortable material\n• practical zip pockets\n• Parajumpers signature details\nGreat for cool weather and layered looks.\nMen\'s model', et: 'Kerge hübriid Parajumpers jope, mis ühendab sulejope esiosa ja elastsed kootud varrukad.\n• kombineeritud konstruktsioon: suled esiosas + elastsed varrukad\n• kerge ja soe täidis\n• vastupidav materjal\n• praktilised tõmblukuga taskud\n• Parajumpers detailid\nSobib jahedaks ilmaks ja kihistatud väljanägemisteks.\nMeeste mudel' },
-    images: [
-      'images/parajumpers-jayden-1.jpg',
-      'images/parajumpers-jayden-2.jpg',
-    ],
+    descs: {
+      ru: 'Лёгкая гибридная куртка Parajumpers — пуховая передняя часть и эластичные трикотажные рукава.\n• комбинированная конструкция: пуховая передняя часть + эластичные рукава\n• лёгкое и тёплое наполнение\n• прочный и комфортный материал\n• удобные карманы на молнии\n• фирменные элементы Parajumpers\nОтлично подходит для прохладной погоды и многослойных образов.\nМужская модель',
+      en: 'Lightweight hybrid Parajumpers jacket combining a down front and elastic knit sleeves.\n• combined construction: down front + elastic sleeves\n• light and warm fill\n• durable and comfortable material\n• practical zip pockets\n• Parajumpers signature details\nGreat for cool weather and layered looks.\nMen\'s model',
+      et: 'Kerge hübriid Parajumpers jope, mis ühendab sulejope esiosa ja elastsed kootud varrukad.\n• kombineeritud konstruktsioon: suled esiosas + elastsed varrukad\n• kerge ja soe täidis\n• vastupidav materjal\n• praktilised tõmblukuga taskud\n• Parajumpers detailid\nSobib jahedaks ilmaks ja kihistatud väljanägemisteks.\nMeeste mudel',
+    },
+    images: ['images/parajumpers-jayden-1.jpg','images/parajumpers-jayden-2.jpg'],
     color: '#2C3E50',
     brand: 'Parajumpers',
     colors: [
@@ -491,18 +441,15 @@ const PRODUCTS = [
   },
   {
     id: 16,
-    names: {
-      en: 'Moncler Hooded Wool Cardigan',
-      ru: 'Moncler Hooded Wool Cardigan',
-      et: 'Moncler Hooded Wool Cardigan',
-    },
+    names: { en: 'Moncler Hooded Wool Cardigan', ru: 'Moncler Hooded Wool Cardigan', et: 'Moncler Hooded Wool Cardigan' },
     category: 'light-jackets',
     cats: { en: 'Light Jackets', ru: 'Лёгкие куртки', et: 'Kerged jakid' },
-    descs: { ru: 'Стильная Moncler гибридная куртка с капюшоном, сочетающая тепло пухового жилета и комфорт трикотажных рукавов. Идеальный баланс между спортивным стилем и повседневной элегантностью.\n• комбинированный дизайн: трикотаж + утеплённый перед\n• лёгкий и тёплый наполнитель\n• удобный капюшон\n• функциональные карманы\n• фирменный логотип Moncler\nОтличный вариант для весны, осени и прохладной погоды.\nУнисекс модель', en: 'Stylish Moncler hooded hybrid jacket combining the warmth of a down vest and comfort of knit sleeves. Perfect balance between sporty style and everyday elegance.\n• combined design: knit + padded front\n• light and warm fill\n• comfortable hood\n• functional pockets\n• Moncler logo\nGreat for spring, autumn and cool weather.\nUnisex model', et: 'Stiilne Moncler kapuutsiga hübriidjope, mis ühendab sulevesti soojuse ja kootud varrukatest mugavuse.\n• kombineeritud disain: kudumine + soojustatud esiosa\n• kerge ja soe täidis\n• mugav kapuuts\n• funktsionaalsed taskud\n• Moncler logo\nSobib kevadeks, sügiseks ja jahedaks ilmaks.\nUnisex mudel' },
-    images: [
-      'images/moncler-hooded-wool-1.jpg',
-      'images/moncler-hooded-wool-2.jpg',
-    ],
+    descs: {
+      ru: 'Стильная гибридная куртка Moncler с капюшоном — тепло пухового жилета и комфорт трикотажных рукавов.\n• комбинированный дизайн: трикотаж + утеплённый перед\n• лёгкий и тёплый наполнитель\n• удобный капюшон\n• функциональные карманы\n• фирменный логотип Moncler\nОтличный вариант для весны, осени и прохладной погоды.\nУнисекс модель',
+      en: 'Stylish Moncler hooded hybrid jacket combining the warmth of a down vest and comfort of knit sleeves.\n• combined design: knit + padded front\n• light and warm fill\n• comfortable hood\n• functional pockets\n• Moncler logo\nGreat for spring, autumn and cool weather.\nUnisex model',
+      et: 'Stiilne Moncler kapuutsiga hübriidjope, mis ühendab sulevesti soojuse ja kootud varrukatest mugavuse.\n• kombineeritud disain: kudumine + soojustatud esiosa\n• kerge ja soe täidis\n• mugav kapuuts\n• funktsionaalsed taskud\n• Moncler logo\nSobib kevadeks, sügiseks ja jahedaks ilmaks.\nUnisex mudel',
+    },
+    images: ['images/moncler-hooded-wool-1.jpg','images/moncler-hooded-wool-2.jpg'],
     color: '#1A1A1A',
     brand: 'Moncler',
     colors: [
@@ -513,18 +460,15 @@ const PRODUCTS = [
   },
   {
     id: 17,
-    names: {
-      en: 'Moncler Basic T-Shirt',
-      ru: 'Moncler Basic T-Shirt',
-      et: 'Moncler Basic T-Shirt',
-    },
+    names: { en: 'Moncler Basic T-Shirt', ru: 'Moncler Basic T-Shirt', et: 'Moncler Basic T-Shirt' },
     category: 't-shirts',
     cats: { en: 'T-Shirts', ru: 'Футболки', et: 'T-särgid' },
-    descs: { ru: '', en: '', et: '' },
-    images: [
-      'images/moncler-basic-tshirt-1.jpg',
-      'images/moncler-basic-tshirt-2.jpg',
-    ],
+    descs: {
+      ru: 'Классическая футболка Moncler из премиального хлопка с фирменным логотипом на груди.\n• мягкий премиальный хлопок\n• прямой крой, комфортная посадка\n• фирменный логотип Moncler на груди\n• устойчивость к деформации после стирки\nИдеальная базовая вещь для любого повседневного образа.\nУнисекс модель',
+      en: 'Classic Moncler T-shirt made from premium cotton with signature logo on the chest.\n• soft premium cotton\n• straight cut, comfortable fit\n• Moncler logo on chest\n• shape-retaining after washing\nThe perfect base layer for any everyday look.\nUnisex model',
+      et: 'Klassikaline Moncler T-särk premium puuvillast firma logoga rinnal.\n• pehme premium puuvill\n• sirge lõige, mugav istuvus\n• Moncler logo rinnal\n• vormi säilitav pärast pesemist\nIdeaalne baasese igale igapäevasele riietusele.\nUnisex mudel',
+    },
+    images: ['images/moncler-basic-tshirt-1.jpg','images/moncler-basic-tshirt-2.jpg'],
     color: '#1A1A1A',
     brand: 'Moncler',
     colors: [
@@ -535,18 +479,15 @@ const PRODUCTS = [
   },
   {
     id: 18,
-    names: {
-      en: 'Moncler Leather Badge T-Shirt',
-      ru: 'Moncler Leather Badge T-Shirt',
-      et: 'Moncler Leather Badge T-Shirt',
-    },
+    names: { en: 'Moncler Leather Badge T-Shirt', ru: 'Moncler Leather Badge T-Shirt', et: 'Moncler Leather Badge T-Shirt' },
     category: 't-shirts',
     cats: { en: 'T-Shirts', ru: 'Футболки', et: 'T-särgid' },
-    descs: { ru: '', en: '', et: '' },
-    images: [
-      'images/moncler-leather-badge-1.jpg',
-      'images/moncler-leather-badge-2.jpg',
-    ],
+    descs: {
+      ru: 'Стильная футболка Moncler с кожаным нашивным логотипом — характерная деталь, выделяющая её среди базовых вещей.\n• мягкий премиальный хлопок\n• кожаный нашивной логотип Moncler\n• прямой крой, комфортная посадка\n• деталь, которая делает образ завершённым\nУнисекс модель',
+      en: 'Stylish Moncler T-shirt with a leather badge logo — a signature detail that sets it apart from standard basics.\n• soft premium cotton\n• leather Moncler badge logo\n• straight cut, comfortable fit\n• detail that completes any look\nUnisex model',
+      et: 'Stiilne Moncler T-särk nahast pääsme logoga — iseloomulik detail, mis eristab seda tavalistest põhitoodetest.\n• pehme premium puuvill\n• nahast Moncler logo pääsme\n• sirge lõige, mugav istuvus\n• detail, mis viimistleb iga välimuse\nUnisex mudel',
+    },
+    images: ['images/moncler-leather-badge-1.jpg','images/moncler-leather-badge-2.jpg'],
     color: '#1A1A1A',
     brand: 'Moncler',
     colors: [
@@ -556,18 +497,15 @@ const PRODUCTS = [
   },
   {
     id: 19,
-    names: {
-      en: 'Moncler Blurred Logo T-Shirt',
-      ru: 'Moncler Blurred Logo T-Shirt',
-      et: 'Moncler Blurred Logo T-Shirt',
-    },
+    names: { en: 'Moncler Blurred Logo T-Shirt', ru: 'Moncler Blurred Logo T-Shirt', et: 'Moncler Blurred Logo T-Shirt' },
     category: 't-shirts',
     cats: { en: 'T-Shirts', ru: 'Футболки', et: 'T-särgid' },
-    descs: { ru: '', en: '', et: '' },
-    images: [
-      'images/moncler-blurred-logo-1.jpg',
-      'images/moncler-blurred-logo-2.jpg',
-    ],
+    descs: {
+      ru: 'Футболка Moncler с графическим размытым принтом логотипа — смелое прочтение классического фирменного стиля.\n• мягкий премиальный хлопок\n• графический принт с размытым логотипом Moncler\n• прямой крой, комфортная посадка\n• актуальный streetwear-образ\nУнисекс модель',
+      en: 'Moncler T-shirt with a graphic blurred logo print — a bold take on classic branding.\n• soft premium cotton\n• graphic blurred Moncler logo print\n• straight cut, comfortable fit\n• on-trend streetwear look\nUnisex model',
+      et: 'Moncler T-särk graafilise hägustatud logo trükiga — julge tõlgendus klassikalisest brändingust.\n• pehme premium puuvill\n• graafiline hägustatud Moncler logo trükk\n• sirge lõige, mugav istuvus\n• trendikas streetwear välimus\nUnisex mudel',
+    },
+    images: ['images/moncler-blurred-logo-1.jpg','images/moncler-blurred-logo-2.jpg'],
     color: '#1A1A1A',
     brand: 'Moncler',
     colors: [
@@ -577,18 +515,15 @@ const PRODUCTS = [
   },
   {
     id: 20,
-    names: {
-      en: 'Moncler Stripe Trim Zip Hoodie',
-      ru: 'Moncler Stripe Trim Zip Hoodie',
-      et: 'Moncler Stripe Trim Zip Hoodie',
-    },
+    names: { en: 'Moncler Stripe Trim Zip Hoodie', ru: 'Moncler Stripe Trim Zip Hoodie', et: 'Moncler Stripe Trim Zip Hoodie' },
     category: 'hoodies',
     cats: { en: 'Hoodies', ru: 'Худи', et: 'Kapuutsiga pusad' },
-    descs: { ru: '', en: '', et: '' },
-    images: [
-      'images/moncler-stripe-hoodie-1.jpg',
-      'images/moncler-stripe-hoodie-2.jpg',
-    ],
+    descs: {
+      ru: 'Спортивное худи Moncler на молнии с контрастными полосками на рукавах.\n• мягкий флисовый материал\n• молния по всей длине\n• контрастные полоски на рукавах\n• капюшон с регулировкой\n• фирменный логотип Moncler\nОтлично подходит для спортивного и casual-стиля.\nУнисекс модель',
+      en: 'Sporty Moncler zip hoodie with contrast stripe trim on the sleeves.\n• soft fleece material\n• full-length zip\n• contrast stripes on sleeves\n• adjustable hood\n• Moncler logo\nGreat for sporty and casual looks.\nUnisex model',
+      et: 'Sportilik Moncler tõmblukuga kapuutsiga pusa kontrastsete triipudega varrukatest.\n• pehme fliismaterjal\n• täispikk tõmblukk\n• kontrastsed triibud varrukatest\n• reguleeritav kapuuts\n• Moncler logo\nSobib sportlikuks ja casual stiiliks.\nUnisex mudel',
+    },
+    images: ['images/moncler-stripe-hoodie-1.jpg','images/moncler-stripe-hoodie-2.jpg'],
     color: '#1A1A1A',
     brand: 'Moncler',
     colors: [
@@ -599,18 +534,15 @@ const PRODUCTS = [
   },
   {
     id: 21,
-    names: {
-      en: 'Moncler Hera Logo Patch Sweatshirt',
-      ru: 'Moncler Hera Logo Patch Sweatshirt',
-      et: 'Moncler Hera Logo Patch Sweatshirt',
-    },
+    names: { en: 'Moncler Hera Logo Patch Sweatshirt', ru: 'Moncler Hera Logo Patch Sweatshirt', et: 'Moncler Hera Logo Patch Sweatshirt' },
     category: 'hoodies',
     cats: { en: 'Hoodies', ru: 'Худи', et: 'Kapuutsiga pusad' },
-    descs: { ru: '', en: '', et: '' },
-    images: [
-      'images/moncler-hera-sweatshirt-1.jpg',
-      'images/moncler-hera-sweatshirt-2.jpg',
-    ],
+    descs: {
+      ru: 'Классический свитшот Moncler с нашивным логотипом — комфортная, тёплая и стильная базовая вещь.\n• мягкий хлопково-флисовый материал\n• нашивной логотип Moncler на груди\n• рибана на манжетах и внизу\n• удобный крой\nОтлично сочетается с джинсами, брюками и верхней одеждой.\nУнисекс модель',
+      en: 'Classic Moncler sweatshirt with logo patch — comfortable, warm and stylish.\n• soft cotton-fleece material\n• Moncler logo patch on chest\n• ribbed cuffs and hem\n• comfortable cut\nPairs well with jeans, trousers and outerwear.\nUnisex model',
+      et: 'Klassikaline Moncler dressipluus logo pääsmega — mugav, soe ja stiilne.\n• pehme puuvill-fliis materjal\n• Moncler logo pääsme rinnal\n• riblõng käistele ja alläärele\n• mugav lõige\nSobib teksade, pükste ja pealisrõivastega.\nUnisex mudel',
+    },
+    images: ['images/moncler-hera-sweatshirt-1.jpg','images/moncler-hera-sweatshirt-2.jpg'],
     color: '#1A1A1A',
     brand: 'Moncler',
     colors: [
@@ -623,18 +555,15 @@ const PRODUCTS = [
   },
   {
     id: 22,
-    names: {
-      en: 'Moncler Polo Shirt',
-      ru: 'Moncler Polo Shirt',
-      et: 'Moncler Polo Shirt',
-    },
+    names: { en: 'Moncler Polo Shirt', ru: 'Moncler Polo Shirt', et: 'Moncler Polo Shirt' },
     category: 't-shirts',
     cats: { en: 'T-Shirts', ru: 'Футболки', et: 'T-särgid' },
-    descs: { ru: '', en: '', et: '' },
-    images: [
-      'images/moncler-polo-1.jpg',
-      'images/moncler-polo-2.jpg',
-    ],
+    descs: {
+      ru: 'Классическое поло Moncler из премиального пике — элегантная и универсальная вещь для повседневного и smart-casual образа.\n• премиальный хлопок пике\n• воротник с пуговицами\n• фирменный логотип Moncler на груди\n• комфортный прямой крой\nОтлично сочетается с брюками, шортами и лёгкими куртками.\nУнисекс модель',
+      en: 'Classic Moncler polo shirt made from premium piqué — elegant and versatile for everyday and smart-casual looks.\n• premium piqué cotton\n• button collar\n• Moncler logo on chest\n• comfortable straight cut\nPairs well with trousers, shorts and light jackets.\nUnisex model',
+      et: 'Klassikaline Moncler polo premium pikeest — elegantne ja mitmekülgne igapäevaseks ja smart-casual stiiliks.\n• premium piqué puuvill\n• nuppkraega\n• Moncler logo rinnal\n• mugav sirge lõige\nSobib pükste, lühikeste pükste ja kergete jopedega.\nUnisex mudel',
+    },
+    images: ['images/moncler-polo-1.jpg','images/moncler-polo-2.jpg'],
     color: '#1A1A1A',
     brand: 'Moncler',
     colors: [
@@ -645,18 +574,15 @@ const PRODUCTS = [
   },
   {
     id: 23,
-    names: {
-      en: 'Moncler Logo Patch Swimming Shorts',
-      ru: 'Moncler Logo Patch Swimming Shorts',
-      et: 'Moncler Logo Patch Swimming Shorts',
-    },
+    names: { en: 'Moncler Logo Patch Swimming Shorts', ru: 'Moncler Logo Patch Swimming Shorts', et: 'Moncler Logo Patch Swimming Shorts' },
     category: 'bottoms',
     cats: { en: 'Bottoms', ru: 'Низ', et: 'Alaosal' },
-    descs: { ru: '', en: '', et: '' },
-    images: [
-      'images/moncler-swim-shorts-1.jpg',
-      'images/moncler-swim-shorts-2.jpg',
-    ],
+    descs: {
+      ru: 'Плавательные шорты Moncler с фирменным логотипом — стиль и функциональность для пляжа и повседневного лета.\n• быстросохнущий материал\n• подкладка из сетки\n• фирменный логотип Moncler\n• боковые карманы\n• эластичный пояс с завязками\nОтлично подходит для активного отдыха и летних образов.\nМужская модель',
+      en: 'Moncler swimming shorts with signature logo patch — style and functionality for the beach and summer everyday wear.\n• quick-dry material\n• mesh lining\n• Moncler logo patch\n• side pockets\n• elastic waistband with drawstring\nPerfect for active leisure and summer looks.\nMen\'s model',
+      et: 'Moncler ujumislühikesed püksid firma logo pääsmega — stiil ja funktsionaalsus rannaks ja suvisteks riieteks.\n• kiirkuivav materjal\n• võrguvoodri\n• Moncler logo pääsme\n• külgtaskud\n• elastne vööpael paeltega\nSobib aktiivseks puhkuseks ja suviseks stiiliks.\nMeeste mudel',
+    },
+    images: ['images/moncler-swim-shorts-1.jpg','images/moncler-swim-shorts-2.jpg'],
     color: '#1A1A1A',
     brand: 'Moncler',
     colors: [
@@ -697,11 +623,9 @@ function applyTranslations() {
       el.textContent = val;
     }
   });
-
   document.querySelectorAll('.lang-btn').forEach((btn) => {
     btn.classList.toggle('active', btn.dataset.lang === currentLang);
   });
-
   document.documentElement.lang = currentLang;
 }
 
@@ -713,11 +637,9 @@ function buildTgLink(name) {
 function renderTicker() {
   const el = document.getElementById('ticker-inner');
   if (!el) return;
-
   const phrases = TICKER_PHRASES[currentLang] || TICKER_PHRASES.ru;
-  // дублируем для бесшовной прокрутки
   const all = [...phrases, ...phrases];
-  el.innerHTML = all.map((p, i) =>
+  el.innerHTML = all.map((p) =>
     `<span>${p}</span><span class="dot" aria-hidden="true">·</span>`
   ).join('');
 }
@@ -803,7 +725,6 @@ function openModal(product) {
   tgBtn.textContent  = t('modal_tg');
   if (textEl) textEl.textContent = t('modal_text');
 
-  // Render colors
   if (colorsEl) {
     colorsEl.innerHTML = '';
     const colors = product.colors || [];
@@ -835,12 +756,14 @@ function openModal(product) {
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
+
 function closeModal() {
   const overlay = document.getElementById('modal-overlay');
   if (!overlay) return;
   overlay.classList.remove('open');
   document.body.style.overflow = '';
 }
+
 function initModal() {
   const overlay  = document.getElementById('modal-overlay');
   const closeBtn = document.getElementById('modal-close');
@@ -862,7 +785,6 @@ function createProductCard(product) {
   card.className = 'product-card';
   card.dataset.category = product.category;
 
-  /* Фото */
   const thumb = document.createElement('div');
   thumb.className = 'pc-thumb';
 
@@ -886,7 +808,6 @@ function createProductCard(product) {
   cover.className = 'pc-cover';
   thumb.appendChild(cover);
 
-  /* Тело */
   const body = document.createElement('div');
   body.className = 'pc-body';
   body.innerHTML = `
@@ -940,7 +861,16 @@ function renderProductPage() {
   const desc = p.descs[currentLang] || p.descs.ru;
   const imgs = p.images && p.images.length ? p.images : [];
 
-  document.title = `${name} — Andrelook`;
+  document.title = `${name} | Moncler Tallinn — Andrelook`;
+
+  // Dynamic meta description
+  let metaDesc = document.querySelector('meta[name="description"]');
+  if (!metaDesc) { metaDesc = document.createElement('meta'); metaDesc.name = 'description'; document.head.appendChild(metaDesc); }
+  metaDesc.content = currentLang === 'ru'
+    ? `Купить ${name} в Таллинне или с доставкой по Европе. Пишите в Telegram.`
+    : currentLang === 'et'
+    ? `Osta ${name} Tallinnas või tarniga üle Euroopa. Kirjuta Telegramis.`
+    : `Buy ${name} in Tallinn or delivery across Europe. Write us on Telegram.`;
 
   document.querySelectorAll('[data-i18n="back_catalog"]').forEach(el => el.textContent = t('back_catalog'));
 
@@ -974,7 +904,6 @@ function renderProductPage() {
 
   const infoEl = document.getElementById('product-info');
   if (infoEl) {
-    // Build colors HTML
     const colors = p.colors || [];
     let colorsHtml = '';
     if (colors.length) {
@@ -992,7 +921,6 @@ function renderProductPage() {
       </div>`;
     }
 
-    // Build sizes HTML
     const sizes = ['S', 'M', 'L', 'XL', 'XXL'];
     const sizesLabel = currentLang === 'ru' ? 'Размеры' : currentLang === 'et' ? 'Suurused' : 'Sizes';
     const sizesHtml = `<div class="pd-sizes">
@@ -1032,20 +960,10 @@ function initProductPage() {
   renderProductPage();
 }
 
-/* ── URL filter ─────────────────────────────── */
-function initCatalogURLFilter() {
-  const filter = new URLSearchParams(location.search).get('filter');
-  if (!filter) return;
-  const btn = document.querySelector(`.filter-btn[data-filter="${filter}"]`);
-  if (!btn) return;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  renderProducts(filter);
-}
-
 /* ── Init ───────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   initHeader();
+  initMobileLang();
   applyTranslations();
   renderTicker();
   initReveal();
@@ -1067,7 +985,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     renderProducts(activeFilter);
-    // Показываем сетку только после рендера — убираем мигание
     const grid = document.getElementById('products-grid');
     if (grid) grid.classList.add('ready');
   }
@@ -1082,7 +999,6 @@ function initReviews() {
   const cards = Array.from(track.children);
   const total = cards.length;
 
-  // Сколько карточек видно за раз
   function perView() {
     if (window.innerWidth <= 560) return 1;
     if (window.innerWidth <= 900) return 2;
@@ -1091,7 +1007,6 @@ function initReviews() {
 
   let idx = 0;
 
-  // Создаём точки
   function buildDots() {
     dotsEl.innerHTML = '';
     const pages = Math.ceil(total / perView());
@@ -1107,7 +1022,7 @@ function initReviews() {
     const pv = perView();
     const pages = Math.ceil(total / pv);
     idx = (page + pages) % pages;
-    const cardW = cards[0].offsetWidth + 24; // width + gap
+    const cardW = cards[0].offsetWidth + 24;
     track.style.transform = `translateX(-${idx * pv * cardW}px)`;
     dotsEl.querySelectorAll('.rev-dot').forEach((d, i) => d.classList.toggle('on', i === idx));
   }
@@ -1117,4 +1032,29 @@ function initReviews() {
 
   buildDots();
   window.addEventListener('resize', () => { idx = 0; buildDots(); goTo(0); });
+}
+
+/* ── Mobile Lang Dropdown ───────────────────── */
+function initMobileLang() {
+  const btn = document.getElementById('mobile-lang-toggle');
+  const dropdown = document.getElementById('mobile-lang-dropdown');
+  if (!btn || !dropdown) return;
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdown.classList.toggle('open');
+  });
+
+  document.addEventListener('click', () => {
+    dropdown.classList.remove('open');
+  });
+
+  dropdown.querySelectorAll('.lang-btn').forEach((langBtn) => {
+    langBtn.addEventListener('click', () => {
+      setLang(langBtn.dataset.lang);
+      dropdown.classList.remove('open');
+      // update label
+      if (btn.querySelector('span')) btn.querySelector('span').textContent = langBtn.dataset.lang.toUpperCase();
+    });
+  });
 }
